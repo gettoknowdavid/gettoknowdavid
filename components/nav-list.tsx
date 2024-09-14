@@ -11,14 +11,14 @@ export const NavList: React.FC = () => {
 
   return (
     <nav>
-      <ul className="flex flex-col gap-8">
+      <ul className="flex flex-col gap-5 lg:gap-7">
         {siteConfig.navItems.map((item) => {
           const isCurrent = path === item.href;
 
           return (
             <NextLink
               key={item.href}
-              className={`text-xs font-medium tracking-wide [&.active]:text-primary-400 ${isCurrent ? "active" : ""}`}
+              className={`text-sm font-medium tracking-wide [&.active]:text-primary-400 ${isCurrent ? "active" : ""}`}
               color="foreground"
               href={item.href}
             >

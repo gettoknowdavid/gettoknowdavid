@@ -7,10 +7,9 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Frame } from "@/components/frame";
-import { Mask } from "@/components/mask";
-import { ThemeSwitch } from "@/components/theme-switch";
-import { MobileHeader } from "@/components/mobileHeader";
+import { MobileHeader } from "@/components/mobile-header";
+import { NavList } from "@/components/nav-list";
+import { Logo } from "@/components/logo";
 
 export const metadata: Metadata = {
   title: {
@@ -46,13 +45,28 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen overflow-hidden">
-            <Frame />
-            <Mask />
+            {/*<Frame />*/}
+            {/*<Mask />*/}
             <MobileHeader />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-              <ThemeSwitch />
-              {children}
-            </main>
+            <div className="relative z-0 flex flex-row h-full w-full overflow-hidden">
+              <header className="basis-1/2 hidden lg:flex justify-end">
+                <div className="py-pad-2x px-pad">
+                  <Logo />
+                </div>
+              </header>
+              <main className="basis-full flex-grow">
+                <div className="h-full px-pad">
+                  <div className="h-full flex justify-end items-end">
+                    {children}
+                  </div>
+                </div>
+              </main>
+              <header className="basis-1/2 hidden lg:flex items-end">
+                <div className="py-pad-2x px-pad">
+                  <NavList />
+                </div>
+              </header>
+            </div>
           </div>
         </Providers>
       </body>
