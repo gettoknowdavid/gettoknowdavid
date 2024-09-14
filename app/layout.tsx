@@ -10,6 +10,7 @@ import { fontSans } from "@/config/fonts";
 import { Frame } from "@/components/frame";
 import { Mask } from "@/components/mask";
 import { ThemeSwitch } from "@/components/theme-switch";
+import { MobileHeader } from "@/components/mobileHeader";
 
 export const metadata: Metadata = {
   title: {
@@ -44,10 +45,10 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="relative flex flex-col h-screen">
+          <div className="relative flex flex-col h-screen overflow-hidden">
             <Frame />
             <Mask />
-            Navbar
+            <MobileHeader />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               <ThemeSwitch />
               {children}
