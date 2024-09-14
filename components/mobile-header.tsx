@@ -5,7 +5,7 @@ import { Logo } from "@/components/logo";
 
 export const MobileHeader: React.FC = () => {
   return (
-    <header className="absolute z-40 top-pad left-pad p-pad flex lg:hidden flex-col gap-10">
+    <header className="absolute z-10 top-pad right-pad p-pad flex lg:hidden flex-col gap-8">
       <Logo />
       <NavList />
     </header>

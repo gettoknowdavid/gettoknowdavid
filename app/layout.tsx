@@ -10,6 +10,8 @@ import { fontSans } from "@/config/fonts";
 import { MobileHeader } from "@/components/mobile-header";
 import { NavList } from "@/components/nav-list";
 import { Logo } from "@/components/logo";
+import { Frame } from "@/components/frame";
+import { Mask } from "@/components/mask";
 
 export const metadata: Metadata = {
   title: {
@@ -44,21 +46,19 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="relative flex flex-col h-screen overflow-hidden">
-            {/*<Frame />*/}
-            {/*<Mask />*/}
+          <div className="fixed flex flex-col h-screen w-full">
+            <Frame />
+            <Mask />
             <MobileHeader />
-            <div className="relative z-0 flex flex-row h-full w-full overflow-hidden">
+            <div className="relative flex flex-row h-full w-full">
               <header className="basis-1/2 hidden lg:flex justify-end">
                 <div className="py-pad-2x px-pad">
                   <Logo />
                 </div>
               </header>
-              <main className="basis-full flex-grow">
-                <div className="h-full px-pad">
-                  <div className="h-full flex justify-end items-end">
-                    {children}
-                  </div>
+              <main className="basis-full h-full w-full overflow-auto no-scrollbar">
+                <div className="h-full flex px-pad-2x lg:px-pad">
+                  {children}
                 </div>
               </main>
               <header className="basis-1/2 hidden lg:flex items-end">

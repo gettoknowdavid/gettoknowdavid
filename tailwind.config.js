@@ -9,12 +9,20 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    screens: {
+        sm: "320px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+    },
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)"],
       },
       fontSize: {
         xxs: "0.625rem", // 10px
+        display: "4rem",
       },
       inset: {
         pad: "var(--pad)",
@@ -27,6 +35,7 @@ module.exports = {
         "pad-4x": "var(--pad-4x)",
       },
       spacing: {
+        display: "4rem",
         pad: "var(--pad)",
         "pad-2x": "var(--pad-2x)",
         "pad-4x": "var(--pad-4x)",
@@ -42,10 +51,10 @@ module.exports = {
               light: {
                   colors: {
                       background: "#FFFFFF",
-                      foreground: "#18181B",
+                      foreground: "#000000",
                       primary: {
                           DEFAULT: "#FFFFFF",
-                          foreground: "#18181B",
+                          foreground: "#000000",
                           50: "#FAFAFA",
                           100: "#F4F4F5",
                           200: "#E4E4E7",
@@ -61,10 +70,10 @@ module.exports = {
               },
               dark: {
                   colors: {
-                      background: "#18181B",
+                      background: "#000000",
                       foreground: "#FFFFFF",
                       primary: {
-                          DEFAULT: "#18181B",
+                          DEFAULT: "#000000",
                           foreground: "#FFFFFF",
                           50: "#18181B",
                           100: "#27272A",
