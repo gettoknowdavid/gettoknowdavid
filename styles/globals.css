@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --pad: max(20px, 4vmin);
+        --pad-2x: calc(var(--pad) * 2);
+        --pad-4x: calc(var(--pad) * 4);
+    }
+}
+
 @layer utilities {
     .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -12,3 +20,4 @@
         scrollbar-width: none;
     }
 }
+
