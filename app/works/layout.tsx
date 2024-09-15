@@ -18,9 +18,5 @@ export default function WorksLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <section>
-      <div>{children}</div>
-    </section>
-  );
+  return <section className="w-full pt-80 lg:pt-52">{children}</section>;
 }

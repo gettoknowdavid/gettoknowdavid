@@ -1,9 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { Suspense } from "react";
+
+import { WorksList } from "@/app/works/_components/works-list";
 
 export default function WorksPage() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      Works Page
-    </section>
+    <div className="block h-full place-content-end">
+      <Suspense fallback={<div>Loading...</div>}>
+        <WorksList />
+      </Suspense>
+    </div>
   );
 }

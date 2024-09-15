@@ -11,18 +11,24 @@ export const NavList: React.FC = () => {
 
   return (
     <nav>
-      <ul className="flex flex-col gap-4 lg:gap-7">
-        {siteConfig.navItems.map((item) => {
+      <ul className="flex flex-col gap-4 lg:gap-7 items-end lg:items-start">
+        {siteConfig.navItems.map((item, index) => {
           const isCurrent = path === item.href;
 
           return (
             <NextLink
               key={item.href}
-              className={`text-xs lg-text-sm font-medium text-right lg:text-left tracking-wide [&.active]:text-primary-400 ${isCurrent ? "active" : ""}`}
+              className={`text-xs lg-text-sm font-medium text-right lg:text-left flex-row flex items-center gap-2 tracking-wide [&.active]:text-primary-400 ${isCurrent ? "active" : ""}`}
               color="foreground"
               href={item.href}
             >
+              <div
+                className={`h-1.5 w-1.5 hidden lg:flex [&.active]:bg-primary-900 ${isCurrent ? "active" : ""}`}
+              />
               {item.label}
+              <div
+                className={`h-1.5 w-1.5 lg:hidden [&.active]:bg-primary-900 ${isCurrent ? "active" : ""}`}
+              />
             </NextLink>
           );
         })}

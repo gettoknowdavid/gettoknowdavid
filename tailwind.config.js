@@ -22,22 +22,28 @@ module.exports = {
       },
       fontSize: {
         xxs: "0.625rem", // 10px
-        display: "4rem",
+        display: ["3.5rem", 1],
+        "2xxl": ["1.75rem", "2rem"],
+        "3xxl": ["2.125rem", "2.25rem"],
+        "4xxl": ["2.5rem", "2.75rem"],
       },
       inset: {
         pad: "var(--pad)",
         "pad-2x": "var(--pad-2x)",
+        "pad-3x": "var(--pad-3x)",
         "pad-4x": "var(--pad-4x)",
       },
       paddingX: {
         pad: "var(--pad)",
         "pad-2x": "var(--pad-2x)",
+        "pad-3x": "var(--pad-3x)",
         "pad-4x": "var(--pad-4x)",
       },
       spacing: {
         display: "4rem",
         pad: "var(--pad)",
         "pad-2x": "var(--pad-2x)",
+        "pad-3x": "var(--pad-3x)",
         "pad-4x": "var(--pad-4x)",
       }
     },
