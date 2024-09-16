@@ -12,7 +12,7 @@ export const NavList: React.FC = () => {
   return (
     <nav>
       <ul className="flex flex-col gap-4 lg:gap-7 items-end lg:items-start">
-        {siteConfig.navItems.map((item, index) => {
+        {siteConfig.navItems.map((item) => {
           const isCurrent = path === item.href;
 
           return (

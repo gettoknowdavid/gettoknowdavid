@@ -89,4 +89,3 @@ export default function RootLayout({
     </html>
   );
 }
-// bg-pink-300 md:bg-purple-300 lg:bg-yellow-300 xl:bg-green-300 2xl:bg-white-300

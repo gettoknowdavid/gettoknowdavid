@@ -16,7 +16,7 @@ export type MainWorkLinkProps = {
   iconWeight?: IconWeight | undefined;
   textSize?: string | undefined;
   textWeight?: "light" | "regular" | "bold";
-  gap?: number | undefined;
+  gap?: string | undefined;
 };
 
 export type WorkLinkProps = MainWorkLinkProps & {
