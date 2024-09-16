@@ -19,10 +19,6 @@ export type MainWorkLinkProps = {
   gap?: string | undefined;
 };
 
-export type WorkLinkProps = MainWorkLinkProps & {
-  link: WorkLinkT;
-};
-
 export type WorkLinksProps = MainWorkLinkProps & {
   links: WorkLinkT[];
   isVertical?: boolean;
