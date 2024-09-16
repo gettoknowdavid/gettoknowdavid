@@ -6,7 +6,7 @@ import {
   RssSimple,
 } from "@phosphor-icons/react";
 
-import { WorkLinkProps, WorkLinksProps, WorkLinkT } from "@/types";
+import { WorkLinksProps, WorkLinkT } from "@/types";
 
 export const WorkLinks: React.FC<WorkLinksProps> = ({
   links,
@@ -24,7 +24,7 @@ export const WorkLinks: React.FC<WorkLinksProps> = ({
       {links.map((link) => (
         <li key={link._id}>
           <a
-            className={`flex flex-row ${gap} items-center text-primary-600 transition-opacity hover:opacity-30`}
+            className={`flex flex-row ${gap} items-center text-primary-500 transition-opacity hover:opacity-30`}
             href={link.link}
             rel="noopener noreferrer"
             target="_blank"
@@ -37,28 +37,6 @@ export const WorkLinks: React.FC<WorkLinksProps> = ({
         </li>
       ))}
     </ul>
-  );
-};
-export const WorkLink: React.FC<WorkLinkProps> = ({
-  link,
-  iconSize,
-  iconWeight,
-  textSize = "text-xs lg:text-sm",
-  textWeight = "regular",
-  gap = 1.5,
-}) => {
-  return (
-    <li>
-      <a
-        className={`flex flex-row gap-${gap} items-center text-primary-600 transition-opacity hover:opacity-30`}
-        href={link.link}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        {getLinkIcon({ link, size: iconSize, weight: iconWeight })}
-        <small className={`${textSize} font-${textWeight}`}>{link.type}</small>
-      </a>
-    </li>
   );
 };
 

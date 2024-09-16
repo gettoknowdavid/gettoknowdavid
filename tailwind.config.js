@@ -26,6 +26,7 @@ module.exports = {
         "2xxl": ["1.75rem", "2rem"],
         "3xxl": ["2.125rem", "2.25rem"],
         "4xxl": ["2.5rem", "2.75rem"],
+        "5xxl": ["3.5rem", 1],
       },
       inset: {
         pad: "var(--pad)",

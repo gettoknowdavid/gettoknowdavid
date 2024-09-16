@@ -4,7 +4,7 @@
 
 @layer base {
     :root {
-        --pad: max(20px, 4vmin);
+        --pad: max(20px, 5vmin);
         --pad-2x: calc(var(--pad) * 2);
         --pad-3x: calc(var(--pad) * 3);
         --pad-4x: calc(var(--pad) * 4);

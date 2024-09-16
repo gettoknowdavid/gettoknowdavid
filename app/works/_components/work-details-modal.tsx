@@ -23,7 +23,7 @@ export const WorkDetailsModal: React.FC<{
         header:
           "text-xl md:text-2xl font-medium text-foreground px-pad pt-pad flex items-center justify-between",
         closeButton: "hidden",
-        body: "no-scrollbar text-primary-600 text-sm lg:text-base px-pad py-pad gap-4",
+        body: "no-scrollbar text-primary-600 text-sm lg:text-base px-pad pb-pad gap-4",
       }}
       isOpen={isOpen}
       placement="top"

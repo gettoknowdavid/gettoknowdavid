@@ -26,16 +26,14 @@ export const WorkItem: React.FC<{ work: WorkT }> = ({ work }) => {
             size={"sm"}
             onPress={onOpen}
           >
-            <h1 className="text-2xl md:text-4xxl xl:text-5xl 2xl:text-6xl font-extralight">
+            <h1 className="text-2xl md:text-4xxl lg:text-5xl xl:text-5xxl 2xl:text-6xl font-extralight">
               {work.title}
             </h1>
           </Button>
         </div>
-        <button className={"text-left bg-transparent"} onClick={onOpen}>
-          <p className="text-xs xl:text-sm max-w-72 md:max-w-md lg:max-w-lg text-primary-500 block lg:hidden">
-            {work.brief}
-          </p>
-        </button>
+        <p className="text-xs xl:text-sm max-w-72 md:max-w-md lg:max-w-lg text-left lg:text-right text-primary-500">
+          {work.brief}
+        </p>
         <Spacer className="h-1.5 md:hidden" />
         <div className="flex md:hidden">
           <WorkLinks links={work.links.items} />
