@@ -11,6 +11,7 @@ import { MobileHeader } from "@/components/mobile-header";
 import { NavList } from "@/components/nav-list";
 import { Mask } from "@/components/mask";
 import { Frame } from "@/components/frame";
+import { ThemeSwitch } from "@/components/theme-switch";
 
 export const metadata: Metadata = {
   title: {
@@ -61,6 +62,7 @@ export default function RootLayout({
                     </p>
                   </div>
                   <NavList />
+                  <ThemeSwitch />
                   <div className="flex flex-col">
                     <small className="text-primary-800">
                       <span className="text-primary-500">
@@ -79,7 +81,7 @@ export default function RootLayout({
                 </div>
               </header>
               <main className="basis-full h-full overflow-auto">
-                <div className="h-full px-pad-2x lg:items-end lg:px-0 lg:py-pad-2x lg:pr-pad-2x overflow-auto no-scrollbar">
+                <div className="h-full px-pad-2x lg:items-end lg:py-pad-2x overflow-auto no-scrollbar">
                   {children}
                 </div>
               </main>

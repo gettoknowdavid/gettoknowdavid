@@ -21,12 +21,12 @@ export const WorkItem: React.FC<{ work: WorkT }> = ({ work }) => {
             <WorkLinks links={work.links.items} />
           </div>
           <Button
-            className="p-0 min-w-0 h-full bg-transparent data-[hover]:text-primary-300"
+            className="p-0 min-w-0 h-full bg-transparent text-foreground data-[hover]:text-primary-300"
             radius={"none"}
             size={"sm"}
             onPress={onOpen}
           >
-            <h1 className="text-2xl md:text-4xxl lg:text-5xl xl:text-5xxl 2xl:text-6xl font-extralight">
+            <h1 className="text-2xl md:text-4xxl lg:text-5xl xl:text-5xxl 2xl:text-6xl font-extralight text-foreground">
               {work.title}
             </h1>
           </Button>

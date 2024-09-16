@@ -22,7 +22,7 @@ export const Biography: React.FC = () => {
 
   return (
     <div>
-      <span className="text-sm md:text-lg lg:text-lg leading-relaxed lg:leading-loose text-left lg:text-right font-regular text-primary-600">
+      <span className="text-sm md:text-base leading-relaxed lg:leading-loose text-left lg:text-right font-regular text-foreground">
         {documentToReactComponents(bio, { preserveWhitespace: true })}
       </span>
     </div>
