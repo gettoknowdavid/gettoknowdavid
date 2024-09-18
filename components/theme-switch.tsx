@@ -1,76 +1,47 @@
 "use client";
 
-import { FC } from "react";
-import { VisuallyHidden } from "@react-aria/visually-hidden";
-import { SwitchProps, useSwitch } from "@nextui-org/switch";
+import React, { FC } from "react";
+import { SwitchProps } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
-import clsx from "clsx";
-import { Moon, Sun } from "@phosphor-icons/react";
+import { Radio, RadioGroup, RadioProps } from "@nextui-org/radio";
 
 export interface ThemeSwitchProps {
   className?: string;
   classNames?: SwitchProps["classNames"];
 }
 
-export const ThemeSwitch: FC<ThemeSwitchProps> = ({
-  className,
-  classNames,
-}) => {
+export const ThemeSwitch: FC<ThemeSwitchProps> = () => {
   const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
 
-  const onChange = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  };
+  return (
+    <RadioGroup
+      classNames={{ wrapper: "flex flex-row gap-6" }}
+      color={"default"}
+      size={"sm"}
+      value={isSSR ? "light" : theme}
+      onValueChange={setTheme}
+    >
+      <CustomRadio value="light">LIGHT</CustomRadio>
+      <CustomRadio value="dark">DARK</CustomRadio>
+    </RadioGroup>
+  );
+};
 
-  const {
-    Component,
-    slots,
-    isSelected,
-    getBaseProps,
-    getInputProps,
-    getWrapperProps,
-  } = useSwitch({
-    isSelected: theme === "light" || isSSR,
-    "aria-label": `Switch to ${theme === "light" || isSSR ? "dark" : "light"} mode`,
-    onChange,
-  });
+export const CustomRadio = (props: RadioProps) => {
+  const { children, ...otherProps } = props;
 
   return (
-    <Component
-      {...getBaseProps({
-        className: clsx(
-          "px-px transition-opacity hover:opacity-80 cursor-pointer",
-          className,
-          classNames?.base,
-        ),
-      })}
+    <Radio
+      {...otherProps}
+      classNames={{
+        label: "text-xs leading-none",
+        wrapper: `rounded-none w-3 h-3 `,
+        control: `rounded-none w-full h-full`,
+      }}
     >
-      <VisuallyHidden>
-        <input {...getInputProps()} />
-      </VisuallyHidden>
-      <div
-        {...getWrapperProps()}
-        className={slots.wrapper({
-          class: clsx(
-            [
-              "w-auto h-auto",
-              "bg-transparent",
-              "rounded-lg",
-              "flex items-center justify-center",
-              "group-data-[selected=true]:bg-transparent",
-              "!text-default-500",
-              "pt-px",
-              "px-0",
-              "mx-0",
-            ],
-            classNames?.wrapper,
-          ),
-        })}
-      >
-        {!isSelected || isSSR ? <Sun size={22} /> : <Moon size={22} />}
-      </div>
-    </Component>
+      {children}
+    </Radio>
   );
 };

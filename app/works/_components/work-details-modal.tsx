@@ -19,7 +19,7 @@ export const WorkDetailsModal: React.FC<{
       backdrop={"blur"}
       classNames={{
         wrapper: "",
-        base: "absolute border bg-background right-pad top-pad bottom-pad no-scrollbar h-auto max-h-full max-w-[280px] md:max-w-md",
+        base: "absolute border border-primary-900 bg-background right-pad top-pad bottom-pad no-scrollbar h-auto max-h-full max-w-[280px] md:max-w-md",
         header:
           "text-xl md:text-2xl font-medium text-foreground px-pad pt-pad flex items-center justify-between",
         closeButton: "hidden",

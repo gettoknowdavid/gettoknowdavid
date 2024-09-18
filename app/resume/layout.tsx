@@ -19,7 +19,7 @@ export default function ResumeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <section className="flex flex-col items-center justify-center w-full h-full">
       <div>{children}</div>
     </section>
   );

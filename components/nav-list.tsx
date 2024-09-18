@@ -18,16 +18,16 @@ export const NavList: React.FC = () => {
           return (
             <NextLink
               key={item.href}
-              className={`text-xs lg-text-sm font-medium text-right lg:text-left flex-row flex items-center gap-2 tracking-wide [&.active]:text-primary-400 ${isCurrent ? "active" : ""}`}
+              className={`text-xs lg:text-sm font-regular text-right lg:text-left flex-row flex items-center gap-2 tracking-wide [&.active]:text-primary-400`}
               color="foreground"
               href={item.href}
             >
               <div
-                className={`h-1.5 w-1.5 hidden lg:flex [&.active]:bg-primary-900 ${isCurrent ? "active" : ""}`}
+                className={`h-3 w-3 hidden lg:flex [&.active]:bg-primary-900 ${isCurrent ? "active" : ""}`}
               />
               {item.label}
               <div
-                className={`h-1.5 w-1.5 lg:hidden [&.active]:bg-primary-900 ${isCurrent ? "active" : ""}`}
+                className={`h-3 w-3 lg:hidden [&.active]:bg-primary-900 ${isCurrent ? "active" : ""}`}
               />
             </NextLink>
           );
