@@ -2,11 +2,8 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import { useTheme } from "next-themes";
 
 export const Mask: React.FC = () => {
-  const { theme } = useTheme();
-
   const inlineVariant = {
     visible: { opacity: 1, x: 0 },
     hiddenLeft: { opacity: 0.9, x: "calc(var(--pad) * -1)" },
