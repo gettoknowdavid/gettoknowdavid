@@ -36,8 +36,8 @@ export const CustomRadio = (props: RadioProps) => {
     <Radio
       {...otherProps}
       classNames={{
-        label: "text-xs leading-none",
-        wrapper: `rounded-none w-3 h-3 `,
+        label: "text-sm leading-none",
+        wrapper: `rounded-none w-2.5 h-2.5 `,
         control: `rounded-none w-full h-full`,
       }}
     >

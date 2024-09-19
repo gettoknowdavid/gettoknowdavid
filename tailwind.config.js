@@ -1,6 +1,7 @@
 import {nextui} from '@nextui-org/theme'
 
-/** @type {import('tailwindcss').Config} */
+
+/**   @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -21,7 +22,8 @@ module.exports = {
         sans: ["var(--font-sans)"],
       },
       fontSize: {
-        xxs: "0.625rem", // 10px
+        xxs: "0.625rem",
+        xbase: ["0.938rem", "1.25rem"],
         display: ["3.5rem", 1],
         "2xxl": ["1.75rem", "2rem"],
         "3xxl": ["2.125rem", "2.25rem"],
@@ -30,9 +32,13 @@ module.exports = {
       },
       inset: {
         pad: "var(--pad)",
+        "pad-x": "var(--pad-x)",
         "pad-2x": "var(--pad-2x)",
         "pad-3x": "var(--pad-3x)",
         "pad-4x": "var(--pad-4x)",
+        "pad-5x": "var(--pad-5x)",
+        "pad-6x": "var(--pad-6x)",
+        "pad-7x": "var(--pad-7x)",
       },
       paddingX: {
         pad: "var(--pad)",
@@ -43,9 +49,13 @@ module.exports = {
       spacing: {
         display: "4rem",
         pad: "var(--pad)",
+        "pad-x": "var(--pad-x)",
         "pad-2x": "var(--pad-2x)",
         "pad-3x": "var(--pad-3x)",
         "pad-4x": "var(--pad-4x)",
+        "pad-5x": "var(--pad-5x)",
+        "pad-6x": "var(--pad-6x)",
+        "pad-7x": "var(--pad-7x)",
       }
     },
   },

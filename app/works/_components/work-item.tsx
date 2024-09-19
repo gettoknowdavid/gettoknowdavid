@@ -12,14 +12,8 @@ export const WorkItem: React.FC<{ work: WorkT }> = ({ work }) => {
 
   return (
     <>
-      <li
-        key={work.id}
-        className="flex flex-col items-start lg:items-end text-left lg:text-right"
-      >
-        <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-1.5 md:gap-2 lg:gap-3 items-start md:items-end">
-          <div className="hidden md:flex">
-            <WorkLinks links={work.links.items} />
-          </div>
+      <li key={work.id} className="flex flex-col items-start text-left">
+        <div className="flex flex-col-reverse md:flex-row gap-1.5 md:gap-2 lg:gap-3 items-start md:items-end">
           <Button
             className="p-0 min-w-0 h-full bg-transparent text-foreground data-[hover]:text-primary-300"
             radius={"none"}
@@ -30,6 +24,9 @@ export const WorkItem: React.FC<{ work: WorkT }> = ({ work }) => {
               {work.title}
             </h1>
           </Button>
+          <div className="hidden md:flex">
+            <WorkLinks links={work.links.items} />
+          </div>
         </div>
         <p className="text-xs xl:text-sm max-w-72 md:max-w-md lg:max-w-lg text-left lg:text-right text-primary-500">
           {work.brief}

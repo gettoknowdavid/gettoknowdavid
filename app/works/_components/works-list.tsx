@@ -37,7 +37,7 @@ export const WorksList: React.FC = () => {
   const { data } = useSuspenseQuery(getWorks);
 
   return (
-    <ul className="flex flex-col items-start lg:items-end gap-5 md:gap-6 lg:gap-7 xl:gap-9">
+    <ul className="flex flex-col gap-5 md:gap-6 lg:gap-7 xl:gap-9">
       {data.workCollection.works.map((work) => (
         <WorkItem key={work.id} work={work} />
       ))}
