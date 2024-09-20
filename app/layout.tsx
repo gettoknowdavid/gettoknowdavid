@@ -8,7 +8,6 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { NavBar } from "@/components/navbar";
-import { ThemeSwitch } from "@/components/theme-switch";
 
 export const metadata: Metadata = {
   title: {
@@ -42,11 +41,8 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="fixed inset-pad">
+          <div className="w-full h-full relative">
             <NavBar />
-            <div className="absolute right-0 top-pad-2x my-2 mx-0">
-              <ThemeSwitch />
-            </div>
             <main className="h-full">{children}</main>
           </div>
         </Providers>

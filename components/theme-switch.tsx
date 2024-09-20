@@ -9,15 +9,18 @@ import { Radio, RadioGroup, RadioProps } from "@nextui-org/radio";
 export interface ThemeSwitchProps {
   className?: string;
   classNames?: SwitchProps["classNames"];
+  isVertical?: boolean;
 }
 
-export const ThemeSwitch: FC<ThemeSwitchProps> = () => {
+export const ThemeSwitch: FC<ThemeSwitchProps> = ({ isVertical }) => {
   const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
 
   return (
     <RadioGroup
-      classNames={{ wrapper: "flex flex-row gap-6" }}
+      classNames={{
+        wrapper: `flex ${isVertical ? "flex-col gap-8" : "flex-row gap-6"}`,
+      }}
       color={"default"}
       size={"sm"}
       value={isSSR ? "light" : theme}

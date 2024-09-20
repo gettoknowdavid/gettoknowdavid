@@ -18,7 +18,5 @@ export default function WorksLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <section className="w-full pt-80 pb-pad-2x lg:pt-52">{children}</section>
-  );
+  return <section className="no-scrollbar">{children}</section>;
 }

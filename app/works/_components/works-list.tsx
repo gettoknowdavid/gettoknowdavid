@@ -41,6 +41,21 @@ export const WorksList: React.FC = () => {
       {data.workCollection.works.map((work) => (
         <WorkItem key={work.id} work={work} />
       ))}
+      {data.workCollection.works.map((work) => (
+        <WorkItem key={work.id} work={work} />
+      ))}
+      {data.workCollection.works.map((work) => (
+        <WorkItem key={work.id} work={work} />
+      ))}
+      {data.workCollection.works.map((work) => (
+        <WorkItem key={work.id} work={work} />
+      ))}
+      {data.workCollection.works.map((work) => (
+        <WorkItem key={work.id} work={work} />
+      ))}
+      {data.workCollection.works.map((work) => (
+        <WorkItem key={work.id} work={work} />
+      ))}
     </ul>
   );
 };
