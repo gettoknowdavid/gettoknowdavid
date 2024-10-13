@@ -1,60 +1,15 @@
 "use client";
 
 import React from "react";
-import { gql, TypedDocumentNode, useSuspenseQuery } from "@apollo/client";
 
-import { WorksCollection } from "@/types";
+import { WorkT } from "@/types";
 import { WorkItem } from "@/app/works/_components/work-item";
 
-export const getWorks: TypedDocumentNode<{ workCollection: WorksCollection }> =
-  gql`
-    query WorksQuery {
-      workCollection(order: endDate_DESC) {
-        works: items {
-          id: _id
-          title
-          slug
-          brief
-          description
-          tools
-          image {
-            url
-            alt: description
-          }
-          links: linksCollection {
-            items {
-              _id
-              type
-              link
-            }
-          }
-        }
-      }
-    }
-  `;
-
-export const WorksList: React.FC = () => {
-  const { data } = useSuspenseQuery(getWorks);
-
+export const WorksList: React.FC<{ works: WorkT[] }> = ({ works }) => {
   return (
-    <ul className="flex flex-col gap-5 md:gap-6 lg:gap-7 xl:gap-9">
-      {data.workCollection.works.map((work) => (
-        <WorkItem key={work.id} work={work} />
-      ))}
-      {data.workCollection.works.map((work) => (
-        <WorkItem key={work.id} work={work} />
-      ))}
-      {data.workCollection.works.map((work) => (
-        <WorkItem key={work.id} work={work} />
-      ))}
-      {data.workCollection.works.map((work) => (
-        <WorkItem key={work.id} work={work} />
-      ))}
-      {data.workCollection.works.map((work) => (
-        <WorkItem key={work.id} work={work} />
-      ))}
-      {data.workCollection.works.map((work) => (
-        <WorkItem key={work.id} work={work} />
+    <ul className="grid grid-cols-1 gap-4 gap-y-12 md:grid-cols-2 md:gap-x-4 lg:grid-cols-3 lg:gap-x-6 lg:px-pad max-w-[1440px] mx-auto">
+      {works.map((work, index) => (
+        <WorkItem key={index} work={work} />
       ))}
     </ul>
   );

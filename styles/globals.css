@@ -12,6 +12,7 @@
         --pad-5x: calc(var(--pad) * 5);
         --pad-6x: calc(var(--pad) * 6);
         --pad-7x: calc(var(--pad) * 7);
+        --pad-8x: calc(var(--pad) * 8);
     }
 
     html {
@@ -19,6 +20,19 @@
             display: none;
         }
     }
+    /*@media (min-width: 320px) {*/
+    /*    :root {*/
+    /*        !*font-size: calc(0.625rem + ((1vw - 3.2px) * 0.25));*!*/
+    /*        font-size: calc(0.875rem + ((1vw - 3.2px) * 0));*/
+    /*        !*font-size: calc(1rem + ((1vw - 3.2px) * 0));*!*/
+    /*        min-height: 0vw;*/
+    /*    }*/
+    /*}*/
+    /*@media (min-width: 1920px) {*/
+    /*    :root {*/
+    /*        font-size: 14px;*/
+    /*    }*/
+    /*}*/
 }
 
 @layer utilities {
@@ -29,6 +43,22 @@
     .no-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
+    }
+
+    .backface-visible {
+        backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+    }
+
+    .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .transition-all-450 {
+        transition-property: all;
+        transition-duration: 450ms;
+        transition-timing-function: ease-in-out;
     }
 }
 

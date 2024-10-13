@@ -8,45 +8,45 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { NavBar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    template: `%s - ${siteConfig.name}`
   },
   description: siteConfig.description,
   icons: {
-    icon: "/icon.png",
-  },
+    icon: "/icon.png"
+  }
 };
 
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+    { media: "(prefers-color-scheme: dark)", color: "black" }
+  ]
 };
 
 export default function RootLayout({
-  children,
-}: {
+                                     children
+                                   }: {
   children: React.ReactNode;
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body
-        className={clsx(
-          "min-h-screen font-sans antialiased",
-          fontSans.variable,
-        )}
-      >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="w-full h-full relative">
-            <NavBar />
-            <main className="h-full">{children}</main>
-          </div>
-        </Providers>
-      </body>
+    <body
+      className={clsx(
+        "min-h-screen font-sans antialiased bg-background relative",
+        fontSans.className
+      )}
+    >
+    <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+      <NavBar />
+      <main>{children}</main>
+      <Footer />
+    </Providers>
+    </body>
     </html>
   );
 }

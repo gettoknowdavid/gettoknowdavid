@@ -15,7 +15,7 @@ export const Logo: React.FC<LogoProps> = ({ variant }) => {
             <Image
               alt="David Michael II Logo"
               priority={true}
-              sizes="(max-width: 768px) 50px, (max-width: 1200px) 85px, 85px"
+              sizes="(max-width: 768px) 36px, (max-width: 1200px) 42px, 42px"
               src={logo}
               style={{ width: "auto", height: "auto" }}
             />
@@ -24,10 +24,11 @@ export const Logo: React.FC<LogoProps> = ({ variant }) => {
       );
     case "text":
       return (
-        <Link href="/">
-          <h1 className="text-2xxl md:text-4xxl lg:text-7xl font-extralight leading-none">
-            David Michael II
-          </h1>
+        <Link
+          className="text-xl xl:text-2xl uppercase leading-none text-foreground mix-blend-difference"
+          href="/"
+        >
+          David Michael II
         </Link>
       );
     default:
