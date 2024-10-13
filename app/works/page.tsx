@@ -1,16 +1,32 @@
-"use client";
+import React from "react";
+import { Metadata } from "next";
 
-import React, { Suspense } from "react";
-
+import { siteConfig } from "@/config/site";
+import getWorks from "@/lib/get-works";
 import { WorksList } from "@/app/works/_components/works-list";
-import { WorksListSkeleton } from "@/app/works/_components/works-list-skeleton";
 
-export default function WorksPage() {
+export const metadata: Metadata = {
+  title: {
+    default: "Works",
+    template: `%s • ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: {
+    icon: "/icon.png",
+  },
+};
+
+export default async function WorksPage() {
+  const works = await getWorks();
+
   return (
-    <div className="block h-full place-content-end">
-      <Suspense fallback={<WorksListSkeleton />}>
-        <WorksList />
-      </Suspense>
-    </div>
+    <section className="flex flex-col w-full relative py-pad-3x md:py-pad-2x bg-transparent">
+      <div className="flex flex-row justify-center py-pad-2x">
+        <h1 className="text-xl tracking-widest uppercase font-light">
+          All Works
+        </h1>
+      </div>
+      <WorksList works={works} />
+    </section>
   );
 }

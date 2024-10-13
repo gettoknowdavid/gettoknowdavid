@@ -21,10 +21,8 @@ export const Biography: React.FC = () => {
   const bio = data.biography.content.json;
 
   return (
-    <div>
-      <span className="text-sm md:text-base leading-relaxed lg:leading-loose text-left lg:text-right font-regular text-foreground">
-        {documentToReactComponents(bio, { preserveWhitespace: true })}
-      </span>
+    <div className="text-base md:text-lg text-right leading-relaxed lg:leading-loose text-foreground">
+      {documentToReactComponents(bio, { preserveWhitespace: true })}
     </div>
   );
 };

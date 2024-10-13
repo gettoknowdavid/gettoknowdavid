@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: {
-    default: "Works",
+    default: "Shots",
     template: `%s • ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -13,12 +13,17 @@ export const metadata: Metadata = {
     icon: "/icon.png",
   },
 };
-export default function WorksLayout({
+export default function ShotsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <section className="w-full pt-80 pb-pad-2x lg:pt-52">{children}</section>
+    <section className="min-h-screen py-pad-3x md:py-pad-2x max-w-[1440px] mx-auto">
+      <div className="flex flex-row justify-center py-pad-2x">
+        <h1 className="text-xl tracking-widest uppercase font-light">Shots</h1>
+      </div>
+      {children}
+    </section>
   );
 }

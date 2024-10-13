@@ -25,14 +25,24 @@ export type WorkLinksProps = MainWorkLinkProps & {
 };
 
 export type WorkT = {
-  id: string;
+  sys: { id: string };
   title: string;
   slug: string;
   brief: string;
   description: string;
   tools: [string];
+  featured: boolean;
+  tags: [string];
   image: AssetT;
   links: WorkLinksCollection;
+  images: ImagesCollection;
+};
+
+export type ImagesCollection = {
+  total: number;
+  skip: number;
+  limit: number;
+  items: AssetT[];
 };
 
 export type WorkLinksCollection = {
@@ -47,4 +57,25 @@ export type WorksCollection = {
   skip: number;
   limit: number;
   works: WorkT[];
+};
+
+export type ShotT = {
+  id: string;
+  title: string;
+  description: undefined;
+  image: AssetT;
+};
+
+export type ShotsCollection = {
+  total: number;
+  skip: number;
+  limit: number;
+  shots: ShotT[];
+};
+
+export type BiographyT = {
+  title: string;
+  content: {
+    json: any;
+  };
 };
