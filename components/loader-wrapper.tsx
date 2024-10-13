@@ -3,10 +3,11 @@
 import React, { useEffect, useState } from "react";
 
 import { RootLoader } from "@/components/root-loader";
+import { AnimatePresence } from "framer-motion";
 
 export const LoaderWrapper: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+                                                                         children
+                                                                       }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -20,6 +21,6 @@ export const LoaderWrapper: React.FC<{ children: React.ReactNode }> = ({
   const finishLoading = () => setIsLoading(false);
 
   return (
-    <>{isLoading ? <RootLoader finishLoading={finishLoading} /> : children}</>
+    <AnimatePresence>{isLoading ? <RootLoader finishLoading={finishLoading} /> : children}</AnimatePresence>
   );
 };

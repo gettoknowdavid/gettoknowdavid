@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import React from "react";
+import { LoaderWrapper } from "@/components/loader-wrapper";
 
 import { Providers } from "./providers";
 
@@ -42,9 +43,11 @@ export default function RootLayout({
       )}
     >
     <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-      <NavBar />
-      <main>{children}</main>
-      <Footer />
+      <LoaderWrapper>
+        <NavBar />
+        <main>{children}</main>
+        <Footer />
+      </LoaderWrapper>
     </Providers>
     </body>
     </html>
