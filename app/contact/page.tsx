@@ -5,7 +5,6 @@ import {
   At,
   DiscordLogo,
   GithubLogo,
-  InstagramLogo,
   LinkedinLogo,
   ReadCvLogo,
   WhatsappLogo,
@@ -63,8 +62,8 @@ function getSocialIcon({ name }: { name: string }) {
       return <LinkedinLogo />;
     case "X":
       return <XLogo />;
-    case "Instagram":
-      return <InstagramLogo />;
+    // case "Instagram":
+    //   return <InstagramLogo />;
     default:
       return <DiscordLogo />;
   }

@@ -29,9 +29,9 @@ export const siteConfig = {
     },
     { name: "WhatsApp", url: "https://wa.link/ei1r9w" },
     { name: "GitHub", url: "https://github.com/gettoknowdavid" },
-    { name: "LinkedIn", url: "https://linkedin.com/in/gettoknowdave" },
+    { name: "LinkedIn", url: "https://linkedin.com/in/gettoknowdavid1" },
     { name: "X", url: "https://x.com/gettoknowdavid" },
-    { name: "Instagram", url: "https://instagram.com/gettoknowdavid" },
+    // { name: "Instagram", url: "https://instagram.com/gettoknowdavid" },
     { name: "Discord", url: "https://discord.gg/gettoknowdavid" },
   ],
 };
