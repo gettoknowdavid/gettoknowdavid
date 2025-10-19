@@ -1,55 +1,37 @@
-import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
-import clsx from "clsx";
-import React from "react";
-import { LoaderWrapper } from "@/components/loader-wrapper";
-
-import { Providers } from "./providers";
-
-import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
-import { NavBar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import type {Metadata} from "next";
+import "./globals.css";
+import type React from "react";
+import {Footer} from "@/components/footer";
+import {Header} from "@/components/header";
+import {LayoutProvider} from "@/components/layout-context";
+import {LayoutWrapper} from "@/components/layout-wrapper";
+import {satoshi} from "@/config/fonts";
+import {siteConfig} from "@/config/site";
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: "/icon.png"
-  }
+    title: {
+        default: `${siteConfig.name} • ${siteConfig.role}`,
+        template: `%s - ${siteConfig.name}`,
+    },
+    description: siteConfig.description,
+    icons: {
+        icon: "/icon.png",
+    },
 };
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" }
-  ]
-};
-
 export default function RootLayout({
-                                     children
-                                   }: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html suppressHydrationWarning lang="en">
-    <body
-      className={clsx(
-        "min-h-screen font-sans antialiased bg-background relative",
-        fontSans.className
-      )}
-    >
-    <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-      <LoaderWrapper>
-        <NavBar />
-        <main>{children}</main>
-        <Footer />
-      </LoaderWrapper>
-    </Providers>
-    </body>
-    </html>
-  );
+                                       children,
+                                   }: Readonly<{
+    children: React.ReactNode;
+}>) {
+    return (
+        <html lang='en'>
+        <body className={`${satoshi.variable} font-sans antialiased p-0 m-0`}>
+        <LayoutProvider>
+            <Header/>
+            <LayoutWrapper>{children}</LayoutWrapper>
+            <Footer/>
+        </LayoutProvider>
+        </body>
+        </html>
+    );
 }
