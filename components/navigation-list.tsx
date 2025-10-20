@@ -10,13 +10,13 @@ export const NavigationList: React.FC = () => {
     return (
         <div className='hidden md:flex h-full w-full items-center justify-end right-4 absolute'>
             <nav className='flex-grow flex justify-end items-start'>
-                <ul className='flex gap-4'>
+                <ul className='flex gap-9'>
                     {navItems.map((item) => {
                         return (
                             <li key={item.href}>
                                 <Link
                                     href={item.href}
-                                    className='text-sm font-medium uppercase tracking-widest hover:text-border transition duration-300'
+                                    className='text-sm font-medium uppercase tracking-widest hover:text-accent transition duration-300'
                                 >
                                     {item.label}
                                 </Link>
