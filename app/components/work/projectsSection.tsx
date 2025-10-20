@@ -3,7 +3,7 @@
 import {useLayoutProvider} from "@/components/layout-context";
 import React from "react";
 
-export const WorkSection = () => {
+export const ProjectsSection = () => {
     // Get the register function from context
     const {registerSection} = useLayoutProvider();
 
@@ -12,12 +12,12 @@ export const WorkSection = () => {
 
     // Register the element on mount
     React.useEffect(() => {
-        if (sectionRef.current) registerSection('work', sectionRef.current);
+        if (sectionRef.current) registerSection('projects', sectionRef.current);
     }, [registerSection]);
 
     return (
         <section
-            id='work'
+            id='projects'
             ref={sectionRef}
             className='h-screen w-full flex flex-col gap-8'
         >

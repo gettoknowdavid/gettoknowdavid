@@ -4,26 +4,23 @@ export const siteConfig = {
     name: "David Michael II",
     description: "Welcome to the Official portfolio page of David Michael II.",
     role: "Mobile Developer",
+    contact: "mailto:knowdavidmichael@gmail.com",
     navItems: [
         {
             label: "Intro",
-            href: "#",
+            href: "/",
         },
         {
-            label: "Work",
-            href: "#work",
-        },
-        {
-            label: "Blog",
-            href: "#blog",
+            label: "Projects",
+            href: "/projects",
         },
         {
             label: "Shots",
-            href: "#shots",
+            href: "/shots",
         },
         {
             label: "Contact",
-            href: "#contact",
+            href: "/contact",
         },
 
     ],

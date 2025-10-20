@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@property --border-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
 @theme inline {
     --font-sans: var(--font-satoshi);
     --color-background: var(--background);
@@ -40,6 +46,14 @@
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
+
+    --animate-rotate-border: border-rotate 3.5s linear infinite;
+
+    @keyframes border-rotate {
+        to {
+            --border-angle: 360deg;
+        }
+    }
 }
 
 :root {
@@ -114,6 +128,7 @@
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
 }
+
 
 @layer base {
     * {

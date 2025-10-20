@@ -18,22 +18,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="feat: update the navigation list &#10;&#10;- update the hover color to the accent color&#10;- increase the gap between each navigation link item">
-      <change afterPath="$PROJECT_DIR$/app/components/blog/blog-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/contact/contact-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/intro/intro-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/shots/shots-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/work/work-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/nav.tsx" afterDir="false" />
+    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/projects/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/shots/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/intro/intro-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/intro/intro-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/work/work-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/work/projectsSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout-context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout-wrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mobile-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mobile-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigation-list.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/nav.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/site.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/site.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +63,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/gettoknowdavid/gettoknowdavid.git&quot;,
-    &quot;accountId&quot;: &quot;2f69f53b-9495-4a3b-8a46-4eb64254a06f&quot;
+    &quot;accountId&quot;: &quot;8c5df795-9df8-4a8d-ae69-24be7a4ca5ff&quot;
   }
 }</component>
   <component name="OptimizeOnSaveOptions">
@@ -83,37 +77,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.Next.js: debug client-side.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;17102025&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.Next.js: debug client-side.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "17102025",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Run",
+    "settings.editor.selected.configurable": "com.android.studio.ml.bot.mainConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/projects" />
       <recent name="$PROJECT_DIR$/app/components" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/public/fonts" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -158,7 +152,8 @@
       <workItem from="1760913327307" duration="280000" />
       <workItem from="1760921209886" duration="5618000" />
       <workItem from="1760955020361" duration="2090000" />
-      <workItem from="1760963407998" duration="15451000" />
+      <workItem from="1760963407998" duration="22536000" />
+      <workItem from="1761000367859" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -176,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760961875217</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: restructure homepage and navigation&#10;&#10;- Split homepage into modular sections for better readability and scalability (Intro, Work, Blog, Shots, Contact).&#10;- Replaced the old navigation list with a new dedicated Nav component.&#10;- Implemented smooth scrolling for hash links.&#10;- Added Framer Motion animations for enhanced scrolling experience.&#10;- Updated layout context to support dynamic section registrations.">
+      <option name="closed" value="true" />
+      <created>1760987732921</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760987732921</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +188,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals." />
     <MESSAGE value="feat: update the navigation list &#10;&#10;- update the hover color to the accent color&#10;- increase the gap between each navigation link item" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update the navigation list &#10;&#10;- update the hover color to the accent color&#10;- increase the gap between each navigation link item" />
+    <MESSAGE value="feat: restructure homepage and navigation&#10;&#10;- Split homepage into modular sections for better readability and scalability (Intro, Work, Blog, Shots, Contact).&#10;- Replaced the old navigation list with a new dedicated Nav component.&#10;- Implemented smooth scrolling for hash links.&#10;- Added Framer Motion animations for enhanced scrolling experience.&#10;- Updated layout context to support dynamic section registrations." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: restructure homepage and navigation&#10;&#10;- Split homepage into modular sections for better readability and scalability (Intro, Work, Blog, Shots, Contact).&#10;- Replaced the old navigation list with a new dedicated Nav component.&#10;- Implemented smooth scrolling for hash links.&#10;- Added Framer Motion animations for enhanced scrolling experience.&#10;- Updated layout context to support dynamic section registrations." />
   </component>
 </project>

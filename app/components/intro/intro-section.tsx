@@ -1,63 +1,50 @@
-'use client';
+"use client";
 
-import {useLayoutProvider} from "@/components/layout-context";
-import {Aperture, Briefcase, UserRound} from "lucide-react";
+import { cn } from "@/lib/utils";
 import React from "react";
+import { siteConfig } from "@/config/site";
 
-const quickLinks = [
-    {
-        name: "Fun facts about me",
-        href: "/about",
-        icon: <UserRound className='w-3.5 h-3.5'/>,
-    },
-    {
-        name: "See my work",
-        href: "/work",
-        icon: <Briefcase className='w-3.5 h-3.5'/>,
-    },
-    {
-        name: "View my shots",
-        href: "/shots",
-        icon: <Aperture className='w-3.5 h-3.5'/>,
-    },
-];
-
-// grid-cols-[repeat(36,_minmax(0,_1fr))] gap-4 flex-col max-lg:grid-cols-6 max-md:flex max-md:gap-4 md:grid
 export const IntroSection = () => {
+  return (
+    <section className='h-screen w-full flex flex-col justify-center gap-8 px-4 md:px-12 py-14'>
+      <div className='w-fit flex items-center rounded-full gap-3 py-1.5 pl-3 pr-4 border border-zinc-600/75 bg-slate-950/25'>
+        <div className='relative size-3'>
+          <div className='absolute size-full rounded-full bg-green-300 animate-ping'></div>
+          <div className='drop-shadow-green-400 rounded-full size-full bg-green-400'></div>
+        </div>
+        <h3 className='max-sm:text-xs text-sm text-slate-200'>Open to Work</h3>
+      </div>
 
-    // Get the register function from context
-    const {registerSection} = useLayoutProvider();
+      <h1 className='text-4xl md:text-7xl lg:text-8xl tracking-tight'>
+        Hi, I'm David.
+        <br />A <span className='text-accent'>frontend engineer</span>.
+      </h1>
 
-    // Create a ref for the section's root element
-    const sectionRef = React.useRef<HTMLDivElement>(null);
+      <h2 className='text-2xl md:text-2xl lg:text-2xl max-w-2xl font-light leading-relaxed'>
+        Passionate about building functional websites and mobile applications
+        that help people. Beyond coding, I enjoy photography and music.
+      </h2>
 
-    // Register the element on mount
-    React.useEffect(() => {
-        if (sectionRef.current) registerSection('#', sectionRef.current);
-    }, [registerSection]);
-
-    return (
-        <section
-            id='#'
-            ref={sectionRef}
-            className='h-screen w-full flex flex-col justify-center gap-8 px-4 md:px-12 py-14'
+      <a href={siteConfig.contact} target='_blank' rel='noopener noreferrer'>
+        <div
+          className={cn(
+            "w-fit max-w-sm rounded-lg p-[1.8px] animate-rotate-border",
+            "bg-conic/[from_var(--border-angle)] from-black via-accent to-black",
+            "from-80% via-90% to-100%",
+            "cursor-pointer hover:scale-[1.03] transition duration-300",
+          )}
         >
-            <h1 className='text-4xl md:text-7xl lg:text-8xl tracking-tight'>
-                Hi, I'm David.
-                <br/>A <span className='text-accent'>frontend engineer</span>.
-            </h1>
-
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-14 md:grid-8'>
-                <h2 className='text-2xl md:text-2xl lg:text-3xl max-w-2xl leading-relaxed '>
-                    Passionate about building functional websites and mobile applications
-                    that help people. Beyond coding, I enjoy photography and music.
-                </h2>
-                <div className='hidden h-2xl'>
-                    <div className='h-full border-2 border-border rounded-lg'>
-                        s
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-}
+          <div
+            className={cn(
+              "px-8 py-3.5",
+              "bg-neutral-900 border border-neutral-800 rounded-lg",
+              "font-medium text-foreground",
+            )}
+          >
+            Get in Touch
+          </div>
+        </div>
+      </a>
+    </section>
+  );
+};
