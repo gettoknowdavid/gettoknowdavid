@@ -35,4 +35,9 @@ export const siteConfig = {
         {name: "Instagram", url: "https://instagram.com/gettoknowdavid"},
         {name: "Discord", url: "https://discord.gg/gettoknowdavid"},
     ],
+    quickLinks: [
+        {name: "Fun facts about me", href: "/about"},
+        {name: "See my works", href: "/works"},
+        {name: "View my shots", href: "/shots"},
+    ],
 };

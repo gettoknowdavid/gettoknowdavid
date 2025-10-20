@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
                         <div className='items-center left-4 flex absolute h-full'>
                             <Link
                                 href={"/"}
-                                className='bold font-medium tracking-widest z-50'
+                                className='font-medium text-accent tracking-widest z-50'
                                 onClick={closeMenu}
                             >
                                 David Michael II

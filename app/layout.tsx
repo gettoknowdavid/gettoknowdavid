@@ -25,7 +25,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-        <body className={`${satoshi.variable} font-sans antialiased p-0 m-0`}>
+        <body
+            className={`${satoshi.variable} dark text-foreground font-sans antialiased p-0 m-0`}
+        >
         <LayoutProvider>
             <Header/>
             <LayoutWrapper>{children}</LayoutWrapper>
