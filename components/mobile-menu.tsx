@@ -5,6 +5,8 @@ import type React from "react";
 import {useLayoutProvider} from "@/components/layout-context";
 import {siteConfig} from "@/config/site";
 import {cn} from "@/lib/utils";
+import {usePathname} from "next/navigation";
+import {Home} from "lucide-react";
 
 export const MobileMenu: React.FC = () => {
     const {isOpen} = useLayoutProvider();
@@ -25,14 +27,40 @@ export const MobileMenu: React.FC = () => {
 };
 
 const NavigationList: React.FC = () => {
-    const {isOpen, closeMenu} = useLayoutProvider();
+
+    const {closeMenu, isOpen, scrollToSection} = useLayoutProvider();
     const navItems = siteConfig.navItems;
+    const pathname = usePathname();
+    const isHome = pathname === '/';
+
+    // 3. Create the new handler
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        const targetHref = e.currentTarget.getAttribute("href");
+        if (!targetHref) return;
+
+        closeMenu(); // Close menu first
+        window.history.pushState(null, '', targetHref);
+
+        setTimeout(() => { // Keep the delay for menu to close
+            if (targetHref === '#') {
+                // 4. Animate scroll to top
+                scrollToSection();
+            } else {
+                const targetId = targetHref.substring(1);
+                // 5. This now uses our Framer Motion function
+                scrollToSection(targetId);
+            }
+        }, 100);
+    };
 
     return (
         <div className='flex h-full w-full justify-end md:absolute'>
             <nav className='flex-grow flex justify-end items-start'>
-                <ul className='flex flex-col gap-4 text-sm font-medium uppercase text-right mt-14'>
+                <ul className='flex flex-col gap-4 font-medium uppercase text-right mt-14'>
                     {navItems.map((item, index) => {
+                        const isHashLink = item.href.startsWith('#');
+
                         // Item Fade & Translate: Control individual item animation
                         const itemTranslate = isOpen
                             ? "translate-y-0 opacity-100"
@@ -45,14 +73,14 @@ const NavigationList: React.FC = () => {
                             <li
                                 key={item.href}
                                 style={{transitionDelay: delay}}
-                                className={`transition-all duration-300 ease-out ${itemTranslate}`}
+                                className={`transition-all duration-300 ease-out ${itemTranslate} text-right flex justify-end`}
                             >
                                 <Link
                                     href={item.href}
-                                    className='hover:text-gray-400 transition-colors duration-300'
-                                    onClick={closeMenu}
+                                    className='hover:text-gray-400 transition-colors duration-300 '
+                                    onClick={isHome && isHashLink ? handleSmoothScroll : closeMenu}
                                 >
-                                    {item.label}
+                                    {item.href === '#' ? <Home size={20}/> : item.label}
                                 </Link>
                             </li>
                         );

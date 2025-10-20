@@ -18,9 +18,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
+    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="feat: update the navigation list &#10;&#10;- update the hover color to the accent color&#10;- increase the gap between each navigation link item">
+      <change afterPath="$PROJECT_DIR$/app/components/blog/blog-section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/contact/contact-section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/intro/intro-section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/shots/shots-section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/work/work-section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/nav.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigation-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout-context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout-wrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mobile-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mobile-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigation-list.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/site.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/site.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,14 +94,14 @@
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/components&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/components&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.AIAssistantPromptsLibrary&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -95,6 +109,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/app" />
@@ -142,7 +157,8 @@
       <workItem from="1760880701782" duration="410000" />
       <workItem from="1760913327307" duration="280000" />
       <workItem from="1760921209886" duration="5618000" />
-      <workItem from="1760955020361" duration="1774000" />
+      <workItem from="1760955020361" duration="2090000" />
+      <workItem from="1760963407998" duration="15451000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -152,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760926815190</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: update the navigation list &#10;&#10;- update the hover color to the accent color&#10;- increase the gap between each navigation link item">
+      <option name="closed" value="true" />
+      <created>1760961875217</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760961875217</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +184,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals." />
+    <MESSAGE value="feat: update the navigation list &#10;&#10;- update the hover color to the accent color&#10;- increase the gap between each navigation link item" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update the navigation list &#10;&#10;- update the hover color to the accent color&#10;- increase the gap between each navigation link item" />
   </component>
 </project>

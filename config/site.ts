@@ -1,4 +1,4 @@
-export type SiteConfig = typeof siteConfig;
+// export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
     name: "David Michael II",
@@ -6,21 +6,26 @@ export const siteConfig = {
     role: "Mobile Developer",
     navItems: [
         {
-            label: "Home",
-            href: "/",
+            label: "Intro",
+            href: "#",
         },
         {
-            label: "Works",
-            href: "/works",
+            label: "Work",
+            href: "#work",
+        },
+        {
+            label: "Blog",
+            href: "#blog",
         },
         {
             label: "Shots",
-            href: "/shots",
+            href: "#shots",
         },
         {
             label: "Contact",
-            href: "/contact",
+            href: "#contact",
         },
+
     ],
     socials: [
         {name: "Email", url: "mailto:knowdavidmichael@gmail.com"},
@@ -37,7 +42,7 @@ export const siteConfig = {
     ],
     quickLinks: [
         {name: "Fun facts about me", href: "/about"},
-        {name: "See my works", href: "/works"},
+        {name: "See my work", href: "/work"},
         {name: "View my shots", href: "/shots"},
     ],
 };

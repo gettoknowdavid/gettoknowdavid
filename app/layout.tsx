@@ -1,12 +1,12 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import type React from "react";
-import {Footer} from "@/components/footer";
 import {Header} from "@/components/header";
 import {LayoutProvider} from "@/components/layout-context";
 import {LayoutWrapper} from "@/components/layout-wrapper";
 import {satoshi} from "@/config/fonts";
 import {siteConfig} from "@/config/site";
+import {Nav} from "@/components/nav";
 
 export const metadata: Metadata = {
     title: {
@@ -30,8 +30,10 @@ export default function RootLayout({
         >
         <LayoutProvider>
             <Header/>
-            <LayoutWrapper>{children}</LayoutWrapper>
-            <Footer/>
+            <Nav/>
+            <LayoutWrapper>
+                {children}
+            </LayoutWrapper>
         </LayoutProvider>
         </body>
         </html>

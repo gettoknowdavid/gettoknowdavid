@@ -7,7 +7,7 @@ import {cn} from "@/lib/utils";
 export const Footer: React.FC = () => {
     const socials = siteConfig.socials;
     return (
-        <footer className='hidden md:block bg-background bottom-0 w-full h-11 fixed z-50'>
+        <footer className='hidden md:block bottom-0 w-full h-11 fixed z-50'>
             <div className='h-full w-auto relative flex justify-between'>
                 <ul className='h-full w-full flex flex-row flex-wrap items-center justify-center gap-3'>
                     {socials.map((social) => {

@@ -3,6 +3,7 @@
 import type * as React from "react";
 import type {ReactNode} from "react";
 import {useLayoutProvider} from "@/components/layout-context";
+import {cn} from "@/lib/utils";
 
 interface LayoutWrapper {
     children: ReactNode;
@@ -15,7 +16,11 @@ export const LayoutWrapper: React.FC<LayoutWrapper> = ({children}) => {
     const contentFade = isOpen ? "opacity-0 pointer-events-none" : "opacity-100";
 
     return (
-        <main className={`transition duration-300 ease-in-out ${contentFade}`}>
+        <main className={cn(
+            'transition duration-300 ease-in-out',
+            'block min-h-screen w-full min-md:w-[70%] min-md:ml-[30%]',
+            contentFade
+        )}>
             {children}
         </main>
     );
