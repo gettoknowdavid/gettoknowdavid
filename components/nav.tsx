@@ -5,14 +5,14 @@ import React from "react";
 import {siteConfig} from "@/config/site";
 import {cn} from "@/lib/utils";
 import {usePathname} from "next/navigation";
-import {Home} from "lucide-react";
+import {HouseSimpleIcon} from "@phosphor-icons/react/dist/icons/HouseSimple";
 
 export const Nav: React.FC = () => {
     const {navItems, socials} = siteConfig;
     const pathname = usePathname();
 
     return (
-        <nav className='hidden md:flex flex-col justify-between fixed left-12 pt-28 pb-8 w-24 h-full'>
+        <nav className='hidden md:flex flex-col justify-between fixed left-[var(--app-margin)] pt-28 pb-8 w-24 h-full'>
             <div>
                 <ul className='flex flex-col gap-4'>
                     {navItems.map((item) => {
@@ -29,7 +29,7 @@ export const Nav: React.FC = () => {
                                         'transition duration-300'
                                     )}
                                 >
-                                    {item.href === '/' ? (<Home size={20}/>) : item.label}
+                                    {item.href === '/' ? (<HouseSimpleIcon size={20}/>) : item.label}
                                 </Link>
                             </li>
                         );

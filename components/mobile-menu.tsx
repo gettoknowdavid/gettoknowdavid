@@ -6,7 +6,7 @@ import {useLayoutProvider} from "@/components/layout-context";
 import {siteConfig} from "@/config/site";
 import {cn} from "@/lib/utils";
 import {usePathname} from "next/navigation";
-import {Home} from "lucide-react";
+import {HouseSimpleIcon} from "@phosphor-icons/react/dist/icons/HouseSimple";
 
 export const MobileMenu: React.FC = () => {
     const {isOpen} = useLayoutProvider();
@@ -80,7 +80,7 @@ const NavigationList: React.FC = () => {
                                     className='hover:text-gray-400 transition-colors duration-300 '
                                     onClick={isHome && isHashLink ? handleSmoothScroll : closeMenu}
                                 >
-                                    {item.href === '#' ? <Home size={20}/> : item.label}
+                                    {item.href === '#' ? <HouseSimpleIcon size={20}/> : item.label}
                                 </Link>
                             </li>
                         );

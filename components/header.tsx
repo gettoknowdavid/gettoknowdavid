@@ -24,10 +24,10 @@ export const Header: React.FC = () => {
 
     return (
         <>
-            <header className='max-sm:bg-background text-sm uppercase t-0 w-full h-14 md:h-14 block fixed z-50'>
+            <header className='max-sm:bg-background text-sm uppercase w-full h-14 block fixed z-50 app-margin'>
                 <div className='h-full w-auto block'>
                     <div className='h-full w-full relative flex justify-between'>
-                        <div className='items-center left-4 md:left-12 flex absolute h-full'>
+                        <div className='items-center flex absolute h-full'>
                             <Link
                                 href={"/"}
                                 className='text-xl font-medium text-accent tracking-widest z-50'

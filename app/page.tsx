@@ -1,17 +1,11 @@
-import { IntroSection } from "@/app/components/intro/intro-section";
-import { ProjectsSection } from "@/app/components/work/projectsSection";
-import { ShotsSection } from "@/app/components/shots/shots-section";
-import { BlogSection } from "@/app/components/blog/blog-section";
-import { ContactSection } from "@/app/components/contact/contact-section";
+import {Intro} from "@/app/components/intro";
+import {RecentProjects} from "@/app/components/recent-projects";
 
 export default function Home() {
-  return (
-    <div>
-      <IntroSection />
-      <ProjectsSection />
-      <ShotsSection />
-      <BlogSection />
-      <ContactSection />
-    </div>
-  );
+    return (
+        <>
+            <Intro/>
+            <RecentProjects/>
+        </>
+    );
 }
