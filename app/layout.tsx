@@ -7,6 +7,7 @@ import {LayoutWrapper} from "@/components/layout-wrapper";
 import {satoshi} from "@/config/fonts";
 import {siteConfig} from "@/config/site";
 import {Nav} from "@/components/nav";
+import {ApolloWrapper} from "@/app/apollo-wrapper";
 
 export const metadata: Metadata = {
     title: {
@@ -28,13 +29,15 @@ export default function RootLayout({
         <body
             className={`${satoshi.variable} dark text-foreground font-sans antialiased p-0 m-0`}
         >
-        <LayoutProvider>
-            <Header/>
-            <Nav/>
-            <LayoutWrapper>
-                {children}
-            </LayoutWrapper>
-        </LayoutProvider>
+        <ApolloWrapper>
+            <LayoutProvider>
+                <Header/>
+                <Nav/>
+                <LayoutWrapper>
+                    {children}
+                </LayoutWrapper>
+            </LayoutProvider>
+        </ApolloWrapper>
         </body>
         </html>
     );

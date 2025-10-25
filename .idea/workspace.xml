@@ -18,23 +18,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="feat: Add call-to-action to home page intro section">
-      <change afterPath="$PROJECT_DIR$/public/tongue-out.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apollo-client.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/apollo-wrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/graphql/github-contribution.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/date-formatter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AICommit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AICommit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/blog/blog-section.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/contact/contact-section.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/intro/intro-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/intro.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/shots/shots-section.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/work/projectsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/recent-projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/recent-projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/recent-projects.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout-wrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mobile-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mobile-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
@@ -46,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -85,30 +79,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.Next.js: debug client-side.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "17102025",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.Next.js: server-side.executor": "Run",
-    "settings.editor.selected.configurable": "com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.Next.js: debug client-side.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;17102025&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
@@ -172,7 +166,7 @@
       <workItem from="1761146365644" duration="318000" />
       <workItem from="1761147450967" duration="16361000" />
       <workItem from="1761253363136" duration="1583000" />
-      <workItem from="1761255133393" duration="1233000" />
+      <workItem from="1761255133393" duration="12686000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -206,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761000893336</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: Redesign homepage layout with new grid and components (17102025)&#10;&#10;Introduces a comprehensive redesign of the homepage, implementing a new&#10;CSS grid system and refactored components for a more structured and&#10;visually appealing layout.&#10;&#10;- Implemented a CSS grid-based layout system with new utility classes&#10;  (`section`, `content`, `app-margin`, `dashboard-card`) in globals.css.&#10;- Consolidated and removed deprecated section components (BlogSection,&#10;  ContactSection, ShotsSection).&#10;- Refactored IntroSection to Intro and ProjectsSection to RecentProjects,&#10;  integrating them with the new grid for a dashboard-like overview.&#10;- Migrated icon library from `lucide-react` to `@phosphor-icons/react`,&#10;  updating relevant files and Next.js configuration for optimization.&#10;- Aligned header and navigation components with the new margin variables&#10;  and grid structure for consistent spacing.">
+      <option name="closed" value="true" />
+      <created>1761257076816</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761257076816</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +221,16 @@
     <MESSAGE value="feat: restructure homepage and navigation&#10;&#10;- Split homepage into modular sections for better readability and scalability (Intro, Work, Blog, Shots, Contact).&#10;- Replaced the old navigation list with a new dedicated Nav component.&#10;- Implemented smooth scrolling for hash links.&#10;- Added Framer Motion animations for enhanced scrolling experience.&#10;- Updated layout context to support dynamic section registrations." />
     <MESSAGE value="feat: Add call-to-action to home page intro section" />
     <MESSAGE value="{&#10;    &quot;error&quot;: {&#10;        &quot;message&quot;: &quot;You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.&quot;,&#10;        &quot;type&quot;: &quot;invalid_request_error&quot;,&#10;        &quot;param&quot;: null,&#10;        &quot;code&quot;: null&#10;    }&#10;}" />
-    <option name="LAST_COMMIT_MESSAGE" value="{&#10;    &quot;error&quot;: {&#10;        &quot;message&quot;: &quot;You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.&quot;,&#10;        &quot;type&quot;: &quot;invalid_request_error&quot;,&#10;        &quot;param&quot;: null,&#10;        &quot;code&quot;: null&#10;    }&#10;}" />
+    <MESSAGE value="```&#10;feat(homepage): Redesign with new grid layout and components (17102025)&#10;&#10;Introduces a revamped homepage structure utilizing a new CSS grid system&#10;and dashboard-style components.&#10;&#10;- Deleted deprecated" />
+    <MESSAGE value="```&#10;feat(homepage): Redesign with new grid layout and components (17102025)&#10;&#10;Introduces a revamped homepage structure utilizing a new CSS grid system&#10;and dashboard-style components.&#10;&#10;- Deleted deprecated section components: BlogSection, ContactSection, and&#10;  ShotsSection.&#10;- Renamed and refactored IntroSection to Intro and ProjectsSection to&#10;  RecentProjects for improved modularity.&#10;- Implemented a robust CSS" />
+    <MESSAGE value="```&#10;feat(homepage): Redesign with new grid layout and components (17102025)&#10;&#10;Introduces a revamped homepage structure utilizing a new CSS grid system&#10;and dashboard-style components.&#10;&#10;- Deleted deprecated section components: BlogSection, ContactSection, and&#10;  ShotsSection.&#10;- Renamed and refactored IntroSection to Intro and ProjectsSection to&#10;  RecentProjects for improved modularity.&#10;- Implemented a robust CSS grid system with new utility classes and&#10;  dashboard-card styles in globals.css.&#10;- Updated app/page.tsx to leverage the new Intro and RecentProjects&#10;  components, integrating them with the new layout.&#10;- Mig" />
+    <MESSAGE value="```&#10;feat(homepage): Redesign with new grid layout and components (17102025)&#10;&#10;Introduces a revamped homepage structure utilizing a new CSS grid system&#10;and dashboard-style components.&#10;&#10;- Deleted deprecated section components: BlogSection, ContactSection, and&#10;  ShotsSection.&#10;- Renamed and refactored IntroSection to Intro and ProjectsSection to&#10;  RecentProjects for improved modularity.&#10;- Implemented a robust CSS grid system with new utility classes and&#10;  dashboard-card styles in globals.css.&#10;- Updated app/page.tsx to leverage the new Intro and RecentProjects&#10;  components, integrating them with the new layout.&#10;- Migrated icon library from lucide-react to @phosphor-icons/react,&#10;  updating related configurations and component usage (header, nav,&#10;  mobile-menu).&#10;- Adjusted header and main layout container to align with the" />
+    <MESSAGE value="```&#10;feat(homepage): Redesign with new grid layout and components (17102025)&#10;&#10;Introduces a revamped homepage structure utilizing a new CSS grid system&#10;and dashboard-style components.&#10;&#10;- Deleted deprecated section components: BlogSection, ContactSection, and&#10;  ShotsSection.&#10;- Renamed and refactored IntroSection to Intro and ProjectsSection to&#10;  RecentProjects for improved modularity.&#10;- Implemented a robust CSS grid system with new utility classes and&#10;  dashboard-card styles in globals.css.&#10;- Updated app/page.tsx to leverage the new Intro and RecentProjects&#10;  components, integrating them with the new layout.&#10;- Migrated icon library from lucide-react to @phosphor-icons/react,&#10;  updating related configurations and component usage (header, nav,&#10;  mobile-menu).&#10;- Adjusted header and main layout container to align with the new grid&#10;  and styling conventions.&#10;```" />
+    <MESSAGE value="feat: Redesign homepage layout with new grid and components (17102025)&#10;&#10;Introduces a comprehensive redesign of the homepage, implementing a new&#10;CSS grid system and refactored components for a more structured and&#10;" />
+    <MESSAGE value="feat: Redesign homepage layout with new grid and components (17102025)&#10;&#10;Introduces a comprehensive redesign of the homepage, implementing a new&#10;CSS grid system and refactored components for a more structured and&#10;visually appealing layout.&#10;&#10;- Implemented a CSS grid-based layout system with new utility classes&#10;  (`section`, `content`, `app-margin`, `dashboard-card`) in globals.css.&#10;- Consolidated and removed deprecated" />
+    <MESSAGE value="feat: Redesign homepage layout with new grid and components (17102025)&#10;&#10;Introduces a comprehensive redesign of the homepage, implementing a new&#10;CSS grid system and refactored components for a more structured and&#10;visually appealing layout.&#10;&#10;- Implemented a CSS grid-based layout system with new utility classes&#10;  (`section`, `content`, `app-margin`, `dashboard-card`) in globals.css.&#10;- Consolidated and removed deprecated section components (BlogSection,&#10;  ContactSection, ShotsSection).&#10;- Refactored IntroSection to Intro and ProjectsSection to RecentProjects,&#10;  integrating them with the new grid for a dashboard-like overview.&#10;-" />
+    <MESSAGE value="feat: Redesign homepage layout with new grid and components (17102025)&#10;&#10;Introduces a comprehensive redesign of the homepage, implementing a new&#10;CSS grid system and refactored components for a more structured and&#10;visually appealing layout.&#10;&#10;- Implemented a CSS grid-based layout system with new utility classes&#10;  (`section`, `content`, `app-margin`, `dashboard-card`) in globals.css.&#10;- Consolidated and removed deprecated section components (BlogSection,&#10;  ContactSection, ShotsSection).&#10;- Refactored IntroSection to Intro and ProjectsSection to RecentProjects,&#10;  integrating them with the new grid for a dashboard-like overview.&#10;- Migrated icon library from `lucide-react` to `@phosphor-icons/react`,&#10;  updating relevant files and Next.js configuration for optimization.&#10;- Aligned header and navigation components with the new margin variables&#10;  " />
+    <MESSAGE value="feat: Redesign homepage layout with new grid and components (17102025)&#10;&#10;Introduces a comprehensive redesign of the homepage, implementing a new&#10;CSS grid system and refactored components for a more structured and&#10;visually appealing layout.&#10;&#10;- Implemented a CSS grid-based layout system with new utility classes&#10;  (`section`, `content`, `app-margin`, `dashboard-card`) in globals.css.&#10;- Consolidated and removed deprecated section components (BlogSection,&#10;  ContactSection, ShotsSection).&#10;- Refactored IntroSection to Intro and ProjectsSection to RecentProjects,&#10;  integrating them with the new grid for a dashboard-like overview.&#10;- Migrated icon library from `lucide-react` to `@phosphor-icons/react`,&#10;  updating relevant files and Next.js configuration for optimization.&#10;- Aligned header and navigation components with the new margin variables&#10;  and grid structure for consistent spacing." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Redesign homepage layout with new grid and components (17102025)&#10;&#10;Introduces a comprehensive redesign of the homepage, implementing a new&#10;CSS grid system and refactored components for a more structured and&#10;visually appealing layout.&#10;&#10;- Implemented a CSS grid-based layout system with new utility classes&#10;  (`section`, `content`, `app-margin`, `dashboard-card`) in globals.css.&#10;- Consolidated and removed deprecated section components (BlogSection,&#10;  ContactSection, ShotsSection).&#10;- Refactored IntroSection to Intro and ProjectsSection to RecentProjects,&#10;  integrating them with the new grid for a dashboard-like overview.&#10;- Migrated icon library from `lucide-react` to `@phosphor-icons/react`,&#10;  updating relevant files and Next.js configuration for optimization.&#10;- Aligned header and navigation components with the new margin variables&#10;  and grid structure for consistent spacing." />
   </component>
 </project>
