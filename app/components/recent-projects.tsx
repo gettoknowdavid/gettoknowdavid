@@ -8,6 +8,14 @@ import tongueOut from "../../public/tongue-out.jpeg";
 import {ContributionDay, GET_CONTRIBUTIONS, GitHubGraphQLContributionResponse} from "@/app/graphql/github-contribution";
 import {useSuspenseQuery} from "@apollo/client/react";
 import {formatDateVerbose} from "@/utils/date-formatter";
+import {StackIcon} from "@phosphor-icons/react/dist/icons/Stack";
+import {ToolboxIcon} from "@phosphor-icons/react/dist/icons/Toolbox";
+
+import flutterIcon from '../../public/flutter.svg';
+import dartIcon from '../../public/dart.svg';
+import reactIcon from '../../public/react.svg';
+import kotlinIcon from '../../public/kotlin.svg';
+import firebaseIcon from '../../public/firebase.svg';
 
 const GITHUB_USERNAME = "gettoknowdavid";
 
@@ -173,7 +181,8 @@ export const RecentProjects = () => {
     return (
         <section className='h-screen w-full section items-center'>
             <div className='grid content'>
-                <div className='grid-eight auto-rows-[minmax(0,1fr)]'>
+                <div
+                    className='grid-cols-[repeat(36,_minmax(0,_1fr))] gap-4 flex-col auto-rows-[minmax(0,1fr)] max-lg:grid-cols-6 max-md:flex max-md:gap-4 md:grid'>
                     <div className='dashboard-card col-start-1 col-end-3 aspect-square row-start-1 row-end-8'>
                         <div className='dashboard-card-content'>
                             <div className='relative flex flex-col items-baseline h-full px-3 pb-5 pt-3 gap-3'>
@@ -208,17 +217,51 @@ export const RecentProjects = () => {
                     </div>
                     <div className='dashboard-card col-start-5 col-end-8 row-start-6 row-end-12'>
                         <div className='dashboard-card-content'>
-                            <div className='card-tag'>
-                                <GithubLogoIcon size={12}/>
-                                <h3>Tech Stack</h3>
+                            <div className='relative flex flex-col items-baseline h-full px-3 pb-5 pt-3 gap-3'>
+                                <div className='card-tag'>
+                                    <StackIcon size={12}/>
+                                    <h3>Tech Stack</h3>
+                                </div>
+                            </div>
+                            <div className='flex grow'>
+                                <div
+                                    className='relative flex w-full flex-col items-center justify-center overflow-hidden md:shadow-xl'>
+                                    <div
+                                        className="group flex overflow-hidden p-2 gap-8 flex-row">
+                                        <div className="tech-stack-component">
+                                            <Image src={flutterIcon} alt='Flutter Icon' unoptimized/>
+                                        </div>
+                                        <div className="tech-stack-component">
+                                            <Image src={dartIcon} alt='Dart Icon' unoptimized/>
+                                        </div>
+                                        <div className="tech-stack-component">
+                                            <Image src={reactIcon} alt='React Icon' unoptimized/>
+                                        </div>
+                                        <div className="tech-stack-component">
+                                            <Image src={kotlinIcon} alt='Kotlin Icon' unoptimized/>
+                                        </div>
+                                        <div className="tech-stack-component">
+                                            <Image src={firebaseIcon} alt='Firebase Icon' unoptimized/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="space-y-2 p-4">
+                                <p className="text-lg">Languages & Tools I'm familiar with</p>
+                                <p className="text-sm text-gray-300">
+                                    Primarily focused on mobile development with Flutter and Kotlin, but always
+                                    eager to explore and learn new technologies.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div className='dashboard-card col-start-5 col-end-8 row-start-12 row-end-15'>
                         <div className='dashboard-card-content'>
-                            <div className='card-tag'>
-                                <GithubLogoIcon size={12}/>
-                                <h3>Tools</h3>
+                            <div className='relative flex flex-col items-baseline h-full px-3 pb-5 pt-3 gap-3'>
+                                <div className='card-tag'>
+                                    <ToolboxIcon size={12}/>
+                                    <h3>Tools</h3>
+                                </div>
                             </div>
                         </div>
                     </div>

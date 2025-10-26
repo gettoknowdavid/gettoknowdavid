@@ -60,7 +60,7 @@
 
 :root {
     --grid--app-margin: 40px;
-    --grid--app-columns: var(--grid--app-columns-12);
+    /*--grid--app-columns: var(--grid--app-columns-12);*/
     --grid--app-columns-12: repeat(12, [col-start] 1fr);
     --grid--app-columns-8: repeat(8, [col-start] 1fr);
     --grid--app-columns-6: repeat(6, [col-start] 1fr);
@@ -157,18 +157,49 @@
 
 @utility app-margin {
     padding: 0 var(--grid--app-margin);
+
+    @media (max-width: 1020px) {
+        padding: 0 20px;
+    }
+}
+
+@utility grid--app-columns {
+    grid-template-columns: repeat(2, [col-start] 1fr);
+    gap: 16px;
+
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(6, [col-start] 1fr);
+        gap: 20px;
+    }
+
+    @media (min-width: 1020px) {
+        grid-template-columns: repeat(12, [col-start] 1fr);
+        gap: 20px;
+    }
 }
 
 @utility content {
-    grid-column: 5 / -1;
+    grid-column: 1 /-1;
+
+    @media (min-width: 768px) {
+        grid-column: 3 /-1;
+    }
+
+    @media (min-width: 1020px) {
+        grid-column: 5 /-1;
+    }
+
+    @media (min-width: 1280px) {
+        grid-column: 5 / -1;
+    }
 }
 
 @layer components {
     .section {
+        @apply app-margin;
+        @apply grid--app-columns;
         display: grid;
-        grid-template-columns: var(--grid--app-columns);
-        padding: 0 var(--grid--app-margin);
-        gap: var(--grid--app-gutter);
     }
 
     .grid-four {
@@ -233,7 +264,8 @@
         background-color: var(--background);
         flex-shrink: 1;
         padding-block: 0.5rem;
-        padding-inline: 0.75rem;
+        padding-left: 0.75rem;
+        padding-right: 1rem;
         /*position: absolute;*/
         /*left: 1rem;*/
         /*top: 1rem;*/
@@ -258,5 +290,15 @@
 
     .scrollbar::-webkit-scrollbar-thumb:active {
         background-color: var(--color-border);
+    }
+
+    .tech-stack-component {
+        @apply motion-reduce:animate-none;
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        gap: var(--grid--app-columns);
+        height: 3rem;
+        width: 3rem;
     }
 }

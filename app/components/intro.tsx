@@ -23,9 +23,9 @@ export const Intro = () => {
                     <br/>A <span className='text-accent'>frontend engineer</span>.
                 </h1>
 
-                <h2 className='text-2xl md:text-2xl lg:text-2xl max-w-2xl font-light leading-relaxed'>
-                    Passionate about building functional websites and mobile applications
-                    that help people. Beyond coding, I enjoy photography and music.
+                <h2 className='text-xl md:text-2xl lg:text-2xl max-w-2xl font-light leading-relaxed'>
+                    Passionate about building functional and performant applications
+                    that help people solve problems. Beyond coding, I enjoy photography and music.
                 </h2>
 
                 <a href={siteConfig.contact} target='_blank' rel='noopener noreferrer'>
