@@ -8,6 +8,7 @@ import {satoshi} from "@/config/fonts";
 import {siteConfig} from "@/config/site";
 import {Nav} from "@/components/nav";
 import {ApolloWrapper} from "@/app/apollo-wrapper";
+import {WarpBackground} from "@/components/warp-background";
 
 export const metadata: Metadata = {
     title: {
@@ -31,6 +32,7 @@ export default function RootLayout({
         >
         <ApolloWrapper>
             <LayoutProvider>
+                <WarpBackground/>
                 <Header/>
                 <Nav/>
                 <LayoutWrapper>

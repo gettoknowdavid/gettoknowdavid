@@ -10,7 +10,7 @@ export const Logo: React.FC = () => {
     return (
         <Link
             href={"/"}
-            className='text-xl font-medium text-accent tracking-widest z-50'
+            className='text-xl font-medium tracking-widest z-50'
             onClick={closeMenu}
         >
             David Michael II

@@ -7,7 +7,7 @@ import {cn} from "@/lib/utils";
 export const Intro = () => {
     return (
         // <section className='h-screen w-full flex flex-col justify-center gap-8 px-4 md:px-12 py-14'>
-        <section className='h-screen w-full section items-center'>
+        <section className='h-screen grid app-margin w-full gap-4 items-center grid--app-columns'>
             <div className='content flex flex-col gap-8'>
                 <div
                     className='w-fit flex items-center rounded-full gap-3 py-1.5 pl-3 pr-4 border border-zinc-600/75 bg-slate-950/25'>
@@ -18,12 +18,12 @@ export const Intro = () => {
                     <h3 className='max-sm:text-xs text-sm text-slate-200'>Open to Work</h3>
                 </div>
 
-                <h1 className='text-4xl md:text-7xl lg:text-8xl tracking-tight'>
+                <h1 className='text-4xl md:text-5xl lg:text-5xl xl:text-8xl tracking-tight'>
                     Hi, I'm David.
                     <br/>A <span className='text-accent'>frontend engineer</span>.
                 </h1>
 
-                <h2 className='text-xl md:text-2xl lg:text-2xl max-w-2xl font-light leading-relaxed'>
+                <h2 className='text-xl lg:text-2xl max-w-2xl font-light leading-relaxed'>
                     Passionate about building functional and performant applications
                     that help people solve problems. Beyond coding, I enjoy photography and music.
                 </h2>

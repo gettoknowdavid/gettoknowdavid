@@ -12,13 +12,12 @@ export const Nav: React.FC = () => {
     const pathname = usePathname();
 
     return (
-        <nav className='hidden md:flex flex-col justify-between fixed left-[var(--app-margin)] pt-28 pb-8 w-24 h-full'>
+        <nav
+            className='hidden md:flex flex-col justify-between fixed left-[var(--app-margin)] pt-28 pb-8 w-24 h-full'>
             <div>
                 <ul className='flex flex-col gap-4'>
                     {navItems.map((item) => {
-
                         const isActive = pathname == item.href;
-
                         return (
                             <li key={item.href}>
                                 <Link
@@ -46,7 +45,7 @@ export const Nav: React.FC = () => {
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className={cn(
-                                        "text-xs text-neutral-400 uppercase tracking-wider hover:opacity-30",
+                                        "text-xs uppercase tracking-wider hover:opacity-50",
                                         "transition duration-300",
                                     )}
                                 >
