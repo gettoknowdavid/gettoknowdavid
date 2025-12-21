@@ -9,6 +9,9 @@ interface LayoutContextType {
     toggleMenu: () => void;
     closeMenu: () => void;
 
+    introDone: boolean;
+    setIntroDone: (v: boolean) => void;
+
     sectionRefs: React.RefObject<Map<string, HTMLElement>>;
     registerSection: (id: string, element: HTMLElement) => void;
     scrollToSection: (id?: string | null) => void;
@@ -24,6 +27,8 @@ interface LayoutProviderProps {
 
 export const LayoutProvider: React.FC<LayoutProviderProps> = ({children}) => {
     const [isOpen, setIsOpen] = useState(false);
+
+    const [introDone, setIntroDone] = useState(false);
 
     // Use a ref to hold the map so it persists across renders without causing re-renders
     const sectionRefs = useRef(new Map<string, HTMLElement>());
@@ -45,7 +50,7 @@ export const LayoutProvider: React.FC<LayoutProviderProps> = ({children}) => {
             if (!element) return;
 
             const targetY = element.offsetTop;
-            
+
             // Use Framer Motion's animate function
             animate(currentY, targetY, {
                 type: "spring",
@@ -65,7 +70,16 @@ export const LayoutProvider: React.FC<LayoutProviderProps> = ({children}) => {
     };
 
     return (
-        <LayoutContext.Provider value={{isOpen, toggleMenu, closeMenu, sectionRefs, registerSection, scrollToSection}}>
+        <LayoutContext.Provider value={{
+            isOpen,
+            introDone,
+            setIntroDone,
+            toggleMenu,
+            closeMenu,
+            sectionRefs,
+            registerSection,
+            scrollToSection,
+        }}>
             {children}
         </LayoutContext.Provider>
     );

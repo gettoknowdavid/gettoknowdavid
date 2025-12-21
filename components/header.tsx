@@ -5,13 +5,21 @@ import {useLayoutProvider} from "@/components/layout-context";
 import {MobileMenu} from "@/components/mobile-menu";
 import {Hamburger} from "@/components/ui/hamburger";
 import {Logo} from "@/components/ui/logo";
+import {motion} from "framer-motion";
 
 export const Header: React.FC = () => {
-    const {isOpen, toggleMenu} = useLayoutProvider();
+    const {isOpen, introDone, toggleMenu} = useLayoutProvider();
+
+    if (!introDone) return null;
 
     return (
         <>
-            <header className='max-sm:bg-background text-sm uppercase fixed w-full h-14 app-margin z-[100]'>
+            <motion.header
+                initial={{opacity: 0, y: -20}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.3}}
+                className='max-sm:bg-background text-sm uppercase fixed w-full h-14 app-margin z-[100]'
+            >
                 <div className='h-full w-full flex justify-between items-center relative'>
                     <div className='h-full w-full relative flex justify-between'>
                         <div className='flex items-center h-full'>
@@ -22,7 +30,7 @@ export const Header: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </header>
+            </motion.header>
             <MobileMenu/>
         </>
     );

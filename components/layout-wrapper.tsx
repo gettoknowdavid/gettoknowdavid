@@ -10,13 +10,28 @@ interface LayoutWrapper {
 }
 
 export const LayoutWrapper: React.FC<LayoutWrapper> = ({children}) => {
-    const {isOpen} = useLayoutProvider();
+    // Grab introDone from context
+    const {isOpen, introDone} = useLayoutProvider();
 
-    // Conditional class for the main content fade-out
-    const contentFade = isOpen ? "opacity-0 pointer-events-none" : "opacity-100";
+    // Logic:
+    // 1. If Intro NOT done -> Hidden
+    // 2. If Menu Open -> Hidden
+    // 3. Otherwise -> Visible
+
+    let contentState = "opacity-100";
+
+    if (!introDone || isOpen) {
+        contentState = "opacity-0 pointer-events-none";
+    }
 
     return (
-        <main className={cn('transition duration-300 ease-in-out', contentFade)}>
+        <main
+            className={cn(
+                // Increased duration to 2000ms for a slow, cinematic fade-in of the content
+                'transition-all duration-[3000ms] ease-in-out',
+                contentState
+            )}
+        >
             {children}
         </main>
     );
