@@ -5,7 +5,6 @@ import type React from "react";
 import {useLayoutProvider} from "@/components/layout-context";
 import {siteConfig} from "@/config/site";
 import {cn} from "@/lib/utils";
-import {usePathname} from "next/navigation";
 import {HouseSimpleIcon} from "@phosphor-icons/react/dist/icons/HouseSimple";
 
 export const MobileMenu: React.FC = () => {
@@ -28,30 +27,25 @@ export const MobileMenu: React.FC = () => {
 
 const NavigationList: React.FC = () => {
 
-    const {closeMenu, isOpen, scrollToSection} = useLayoutProvider();
+    const {closeMenu, isOpen, scrollToSection, activeSection} = useLayoutProvider();
     const navItems = siteConfig.navItems;
-    const pathname = usePathname();
-    const isHome = pathname === '/';
 
-    // 3. Create the new handler
-    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        const targetHref = e.currentTarget.getAttribute("href");
-        if (!targetHref) return;
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        // Only prevent default for hash links
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const sectionId = href.substring(1);
 
-        closeMenu(); // Close menu first
-        window.history.pushState(null, '', targetHref);
+            closeMenu(); // Close menu first
 
-        setTimeout(() => { // Keep the delay for menu to close
-            if (targetHref === '#') {
-                // 4. Animate scroll to top
-                scrollToSection();
-            } else {
-                const targetId = targetHref.substring(1);
-                // 5. This now uses our Framer Motion function
-                scrollToSection(targetId);
-            }
-        }, 100);
+            // Small delay for menu close animation
+            setTimeout(() => {
+                scrollToSection(sectionId);
+            }, 300);
+        } else {
+            // For regular routes, just close menu and let Next.js handle navigation
+            closeMenu();
+        }
     };
 
     return (
@@ -59,7 +53,10 @@ const NavigationList: React.FC = () => {
             <nav className='flex-grow flex justify-end items-start'>
                 <ul className='flex flex-col gap-4 font-medium uppercase text-right mt-14'>
                     {navItems.map((item, index) => {
+                        const sectionId = item.href.startsWith('#') ? item.href.substring(1) : item.href;
                         const isHashLink = item.href.startsWith('#');
+                        const isActive = isHashLink && activeSection === sectionId;
+
 
                         // Item Fade & Translate: Control individual item animation
                         const itemTranslate = isOpen
@@ -77,10 +74,13 @@ const NavigationList: React.FC = () => {
                             >
                                 <Link
                                     href={item.href}
-                                    className='hover:text-gray-400 transition-colors duration-300 '
-                                    onClick={isHome && isHashLink ? handleSmoothScroll : closeMenu}
+                                    className={cn(
+                                        'hover:text-accent transition-colors duration-300',
+                                        isActive && 'text-accent'
+                                    )}
+                                    onClick={(e) => handleNavClick(e, item.href)}
                                 >
-                                    {item.href === '#' ? <HouseSimpleIcon size={20}/> : item.label}
+                                    {sectionId === 'intro' ? <HouseSimpleIcon size={20}/> : item.label}
                                 </Link>
                             </li>
                         );

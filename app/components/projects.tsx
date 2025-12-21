@@ -5,23 +5,23 @@ import {siteConfig} from "@/config/site";
 import {cn} from "@/lib/utils";
 import {useLayoutProvider} from "@/components/layout-context";
 
-export const Intro = () => {
+export const Projects = () => {
     const {registerSection, unregisterSection} = useLayoutProvider();
     const sectionRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
         if (sectionRef.current) {
-            registerSection('intro', sectionRef.current);
+            registerSection('projects', sectionRef.current);
         }
 
         // Cleanup on unmount
-        return () => unregisterSection('intro');
+        return () => unregisterSection('projects');
     }, [registerSection, unregisterSection]);
 
     return (
         // <section className='h-screen w-full flex flex-col justify-center gap-8 px-4 md:px-12 py-14'>
         <section
-            id={'intro'}
+            id={'projects'}
             ref={sectionRef}
             className='h-screen grid app-margin w-full gap-4 items-center grid--app-columns'
         >
@@ -36,8 +36,8 @@ export const Intro = () => {
                 </div>
 
                 <h1 className='text-4xl md:text-5xl lg:text-5xl xl:text-8xl tracking-tight'>
-                    Hi, I'm David.
-                    <br/>A <span className='text-accent'>frontend engineer</span>.
+                    Recent Projects of
+                    <br/>a <span className='text-accent'>frontend engineer</span>.
                 </h1>
 
                 <h2 className='text-xl lg:text-2xl max-w-2xl font-light leading-relaxed'>
