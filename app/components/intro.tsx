@@ -35,16 +35,16 @@ export const Intro = () => {
                     <h3 className='max-sm:text-xs text-sm text-slate-200'>Open to Work</h3>
                 </div>
 
-                <h1 className='text-4xl md:text-5xl lg:text-5xl xl:text-8xl tracking-tight font-sans'>
+                <h1 className='text-4xl md:text-5xl lg:text-5xl xl:text-8xl tracking-tight font-sans font-medium'>
                     Hi, I'm David.
                     <br/>A <span className='text-accent'>frontend engineer</span>.
                 </h1>
 
-                <h2 className='text-xl lg:text-2xl max-w-2xl font-light leading-relaxed font-sans'>
+                <p className='text-xl lg:text-2xl max-w-2xl font-light leading-relaxed font-sans'>
                     Passionate about building functional and performant applications
                     that help people solve problems. Specifically focusing on Flutter and
                     KMP. Beyond coding, I enjoy photography and music.
-                </h2>
+                </p>
 
                 <a href={siteConfig.contact} target='_blank' rel='noopener noreferrer'>
                     <div
