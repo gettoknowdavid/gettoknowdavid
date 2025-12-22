@@ -10,8 +10,9 @@
 }
 
 @theme inline {
-
     --font-sans: var(--font-satoshi);
+    --font-inter: var(--font-inter);
+    --font-neue: var(--font-neue);
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-sidebar-ring: var(--sidebar-ring);
@@ -152,6 +153,9 @@
     body {
         @apply bg-background text-foreground;
         font-size: 18px;
+        font-feature-settings: "palt";
+        font-synthesis: none;
+        -webkit-text-size-adjust: none;
         /*background-size: 25px 25px;*/
         /*background-image: radial-gradient(rgba(255, 0, 0, 0.35) 1px, var(--background) 0);*/
     }

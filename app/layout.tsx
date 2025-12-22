@@ -28,7 +28,7 @@ export default function RootLayout({
     return (
         <html lang='en'>
         <body
-            className={`${satoshi.variable} dark text-foreground font-sans antialiased p-0 m-0`}
+            className={`${satoshi.className} dark text-foreground font-sans antialiased p-0 m-0`}
         >
         <ApolloWrapper>
             <LayoutProvider>

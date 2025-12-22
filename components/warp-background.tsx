@@ -20,7 +20,7 @@ export const WarpBackground = () => {
         const DOT_RADIUS = 1.0;
         const MOUSE_RADIUS = 132.0;
         const STRENGTH = 0.3;
-        const BASE_OPACITY = 0.1;
+        const BASE_OPACITY = 0.05;
         const HOVER_OPACITY = 1.0;
 
         const TEXT_VISIBLE_DURATION = 2500;
