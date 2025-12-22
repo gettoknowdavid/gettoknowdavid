@@ -4,7 +4,7 @@ import type React from "react";
 import {Header} from "@/components/header";
 import {LayoutProvider} from "@/components/layout-context";
 import {LayoutWrapper} from "@/components/layout-wrapper";
-import {satoshi} from "@/config/fonts";
+import {neue} from "@/config/fonts";
 import {siteConfig} from "@/config/site";
 import {Nav} from "@/components/nav";
 import {ApolloWrapper} from "@/app/apollo-wrapper";
@@ -28,7 +28,7 @@ export default function RootLayout({
     return (
         <html lang='en'>
         <body
-            className={`${satoshi.className} dark text-foreground font-sans antialiased p-0 m-0`}
+            className={`${neue.className} dark text-foreground font-sans antialiased p-0 m-0`}
         >
         <ApolloWrapper>
             <LayoutProvider>

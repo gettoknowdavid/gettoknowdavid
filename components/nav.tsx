@@ -7,10 +7,12 @@ import {cn} from "@/lib/utils";
 import {HouseSimpleIcon} from "@phosphor-icons/react/dist/icons/HouseSimple";
 import {useLayoutProvider} from "@/components/layout-context";
 import {motion} from "framer-motion";
+import {usePathname} from "next/navigation";
 
 export const Nav: React.FC = () => {
     const {navItems, socials} = siteConfig;
     const {activeSection, introDone, scrollToSection} = useLayoutProvider();
+    const pathname = usePathname();
 
     if (!introDone) return null;
 
@@ -36,7 +38,9 @@ export const Nav: React.FC = () => {
                     {navItems.map((item, index) => {
                         const sectionId = item.href.startsWith('#') ? item.href.substring(1) : item.href;
                         const isHashLink = item.href.startsWith('#');
-                        const isActive = isHashLink && activeSection === sectionId;
+                        const isScrollActive = isHashLink && activeSection === sectionId;
+                        const isRouteActive = pathname.startsWith(`/${sectionId}`);
+                        const isActive = isScrollActive || isRouteActive;
 
                         return (
                             <motion.li
