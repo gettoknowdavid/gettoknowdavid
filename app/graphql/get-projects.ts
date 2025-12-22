@@ -1,6 +1,7 @@
-import {gql} from "@apollo/client";
+import {gql, TypedDocumentNode} from "@apollo/client";
+import {ProjectItemT} from "@/type";
 
-export const GET_PROJECTS = gql`
+export const GET_PROJECTS: TypedDocumentNode<{ workCollection: { projects: ProjectItemT[] } }> = gql`
   query ProjectsQuery {
     workCollection(order: endDate_DESC) {
       projects: items {
@@ -10,26 +11,7 @@ export const GET_PROJECTS = gql`
         title
         slug
         brief
-        description
         tools
-        tags
-        image {
-          url
-          alt: description
-        }
-        images: imagesCollection {
-          items {
-            url
-            alt: description
-          }
-        }
-        links: linksCollection {
-          items {
-            _id
-            type
-           link
-          }
-        }
       }
     }
   }

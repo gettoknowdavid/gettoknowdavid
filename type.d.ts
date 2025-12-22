@@ -79,3 +79,40 @@ export type BiographyT = {
         json: any;
     };
 };
+
+export interface ProjectLinkT {
+    sys: { id: string };
+    type: string;
+    link: string;
+}
+
+export interface ProjectLinksCollection {
+    total: number;
+    skip: number;
+    limit: number;
+    items: ProjectLinkT[];
+}
+
+export interface Project {
+    sys: { id: string };
+    featured: boolean;
+    title: string;
+    subtitle?: string;
+    slug: string;
+    brief: string;
+    description: { json: any };
+    keyFeatures: { json: any };
+    tools: [string];
+    startDate: string;
+    endDate: string;
+    tags: [string];
+    client: string;
+    role: string;
+    liveUrl?: string;
+    gitHubUrl?: string;
+    links: ProjectLinksCollection;
+    image?: AssetT;
+    gallery?: AssetT[];
+}
+
+export type ProjectItemT = Pick<Project, 'sys' | 'title' | 'brief' | 'slug' | 'tools'>
