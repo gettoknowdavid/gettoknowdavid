@@ -19,10 +19,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/graphql/get-project.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/back-button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/project-link-icon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/get-projects.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/get-projects.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/projects/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/projects/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -86,7 +90,7 @@
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/public/fonts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/graphql&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -101,11 +105,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/graphql" />
       <recent name="$PROJECT_DIR$/public/fonts" />
       <recent name="$PROJECT_DIR$/app/components" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/projects/[slug]" />
@@ -179,7 +183,8 @@
       <workItem from="1766357656603" duration="3992000" />
       <workItem from="1766394238937" duration="4599000" />
       <workItem from="1766399087821" duration="4000" />
-      <workItem from="1766407635203" duration="12630000" />
+      <workItem from="1766407635203" duration="20509000" />
+      <workItem from="1766489802945" duration="13963000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -277,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766398832321</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/graphql/get-projects.ts` to fetch project summaries&#10;  optimized for list display.&#10;- Implemented dynamic project fetching in `app/components/projects.tsx`&#10;  using `useSuspenseQuery`, replacing static `fakeProjects` data.&#10;- Introduced `Project` and `ProjectItemT` types in `type.d.ts` to&#10;  align with Contentful data structure.&#10;- Added a loading skeleton for the project list for improved user&#10;  experience.&#10;- Refined project item display, including a structured list for tools.">
+      <option name="closed" value="true" />
+      <created>1766424578927</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1766424578927</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,10 +298,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="```&#10;feat(layout): Implement new grid system and dynamic background (17102025)&#10;&#10;Refactor core UI layout, introduce a dynamic background, and begin&#10;Contentful integration.&#10;&#10;- Implemented a new 36-column CSS grid system in `app/globals.css`&#10;  applied to `intro.tsx`, `app/projects/page.tsx`, and&#10;  `recent-projects.tsx` for consistent layout.&#10;- Added a `WarpBackground` component for a dynamic visual effect,&#10;  integrated into `app/layout.tsx`.&#10;- Initiated Contentful integration: added necessary packages, GraphQL&#10;  query (`app/graphql/get-projects" />
-    <MESSAGE value="```&#10;feat(layout): Implement new grid system and dynamic background (17102025)&#10;&#10;Refactor core UI layout, introduce a dynamic background, and begin&#10;Contentful integration.&#10;&#10;- Implemented a new 36-column CSS grid system in `app/globals.css`&#10;  applied to `intro.tsx`, `app/projects/page.tsx`, and&#10;  `recent-projects.tsx` for consistent layout.&#10;- Added a `WarpBackground` component for a dynamic visual effect,&#10;  integrated into `app/layout.tsx`.&#10;- Initiated Contentful integration: added necessary packages, GraphQL&#10;  query (`app/graphql/get-projects.ts`), custom types (`type.d.ts`),&#10;  and updated `next.config.ts` for image domains.&#10;- Extracted GitHub contributions graph into a dedicated component,&#10;  `app/components/github-" />
-    <MESSAGE value="```&#10;feat(layout): Implement new grid system and dynamic background (17102025)&#10;&#10;Refactor core UI layout, introduce a dynamic background, and begin&#10;Contentful integration.&#10;&#10;- Implemented a new 36-column CSS grid system in `app/globals.css`&#10;  applied to `intro.tsx`, `app/projects/page.tsx`, and&#10;  `recent-projects.tsx` for consistent layout.&#10;- Added a `WarpBackground` component for a dynamic visual effect,&#10;  integrated into `app/layout.tsx`.&#10;- Initiated Contentful integration: added necessary packages, GraphQL&#10;  query (`app/graphql/get-projects.ts`), custom types (`type.d.ts`),&#10;  and updated `next.config.ts` for image domains.&#10;- Extracted GitHub contributions graph into a dedicated component,&#10;  `app/components/github-contributions-graph.tsx`, improving modularity.&#10;- Applied minor styling adjustments to `nav.tsx` and `logo.tsx`.&#10;- Updated `intro.tsx` text sizes for improved responsiveness.&#10;```" />
-    <MESSAGE value="feat(layout): Implement new grid system and dynamic background (17102025)&#10;&#10;Refactor core UI layout, introduce a dynamic background, and begin&#10;Contentful integration.&#10;&#10;- Implemented a new 36-column CSS grid system in `app/globals.css`&#10;  applied to `intro.tsx`, `app/projects/page.tsx`, and&#10;  `recent-projects.tsx` for consistent layout.&#10;- Added a `WarpBackground` component for a dynamic visual effect,&#10;  integrated into `app/layout.tsx`.&#10;- Initiated Contentful integration: added necessary packages, GraphQL&#10;  query (`app/graphql/get-projects.ts`), custom types (`type.d.ts`),&#10;  and updated `next.config.ts` for image domains.&#10;- Extracted GitHub contributions graph into a dedicated component,&#10;  `app/components/github-contributions-graph.tsx`, improving modularity.&#10;- Applied minor styling adjustments to `nav.tsx` and `logo.tsx`.&#10;- Updated `intro.tsx` text sizes for improved responsiveness." />
     <MESSAGE value="```&#10;feat(intro): Implement loading sequence and phased content reveal (17102025)&#10;&#10;- Introduce an `introDone` state in `LayoutContext` to manage the&#10;  completion of the initial loading animation.&#10;" />
     <MESSAGE value="```&#10;feat(intro): Implement loading sequence and phased content reveal (17102025)&#10;&#10;- Introduce an `introDone` state in `LayoutContext` to manage the&#10;  completion of the initial loading animation.&#10;- Refactor `WarpBackground` to include a phased intro animation:&#10;  displaying an initial text, then animating a wave-like reveal&#10;  of the background dots. This component sets `introDone` to true&#10;  " />
     <MESSAGE value="```&#10;feat(intro): Implement loading sequence and phased content reveal (17102025)&#10;&#10;- Introduce an `introDone` state in `LayoutContext` to manage the&#10;  completion of the initial loading animation.&#10;- Refactor `WarpBackground` to include a phased intro animation:&#10;  displaying an initial text, then animating a wave-like reveal&#10;  of the background dots. This component sets `introDone` to true&#10;  upon completion.&#10;- Conditionally render `Nav` and `Header` components, and animate their&#10;  entry using Framer Motion, ensuring they appear only after the intro.&#10;- Update `LayoutWrapper` to control the main content" />
@@ -310,6 +319,10 @@
     <MESSAGE value="```&#10;feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;  applied new styling.&#10;- Removed the deprecated `app/projects/page.tsx` file.&#10;- Enhanced `config/fonts.ts` to support multiple weights for Neue Montreal&#10;  font and set it as the primary app font.&#10;- Adjusted font weights and sizes in `app/components/intro.tsx` to&#10;  align with the new typography system.&#10;- Improved navigation in `components/nav.tsx` to highlight active&#10;  project routes" />
     <MESSAGE value="```&#10;feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;  applied new styling.&#10;- Removed the deprecated `app/projects/page.tsx` file.&#10;- Enhanced `config/fonts.ts` to support multiple weights for Neue Montreal&#10;  font and set it as the primary app font.&#10;- Adjusted font weights and sizes in `app/components/intro.tsx` to&#10;  align with the new typography system.&#10;- Improved navigation in `components/nav.tsx` to highlight active&#10;  project routes.&#10;```" />
     <MESSAGE value="feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;  applied new styling.&#10;- Removed the deprecated `app/projects/page.tsx` file.&#10;- Enhanced `config/fonts.ts` to support multiple weights for Neue Montreal&#10;  font and set it as the primary app font.&#10;- Adjusted font weights and sizes in `app/components/intro.tsx` to&#10;  align with the new typography system.&#10;- Improved navigation in `components/nav.tsx` to highlight active&#10;  project routes." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;  applied new styling.&#10;- Removed the deprecated `app/projects/page.tsx` file.&#10;- Enhanced `config/fonts.ts` to support multiple weights for Neue Montreal&#10;  font and set it as the primary app font.&#10;- Adjusted font weights and sizes in `app/components/intro.tsx` to&#10;  align with the new typography system.&#10;- Improved navigation in `components/nav.tsx` to highlight active&#10;  project routes." />
+    <MESSAGE value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/" />
+    <MESSAGE value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/graphql/get-projects.ts` to fetch project summaries&#10;  optimized for list display.&#10;- Implemented dynamic project fetching in `app/components/projects.tsx`&#10;  using `useSuspenseQuery`, replacing static `" />
+    <MESSAGE value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/graphql/get-projects.ts` to fetch project summaries&#10;  optimized for list display.&#10;- Implemented dynamic project fetching in `app/components/projects.tsx`&#10;  using `useSuspenseQuery`, replacing static `fakeProjects` data.&#10;- Introduced `Project` and `ProjectItemT` types in `type.d.ts` to&#10;  align with Contentful data structure.&#10;- Added a loading skeleton for the project list for improved" />
+    <MESSAGE value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/graphql/get-projects.ts` to fetch project summaries&#10;  optimized for list display.&#10;- Implemented dynamic project fetching in `app/components/projects.tsx`&#10;  using `useSuspenseQuery`, replacing static `fakeProjects` data.&#10;- Introduced `Project` and `ProjectItemT` types in `type.d.ts` to&#10;  align with Contentful data structure.&#10;- Added a loading skeleton for the project list for improved user&#10;  experience.&#10;- Refined project item display, including a structured list for tools." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/graphql/get-projects.ts` to fetch project summaries&#10;  optimized for list display.&#10;- Implemented dynamic project fetching in `app/components/projects.tsx`&#10;  using `useSuspenseQuery`, replacing static `fakeProjects` data.&#10;- Introduced `Project` and `ProjectItemT` types in `type.d.ts` to&#10;  align with Contentful data structure.&#10;- Added a loading skeleton for the project list for improved user&#10;  experience.&#10;- Refined project item display, including a structured list for tools." />
   </component>
 </project>

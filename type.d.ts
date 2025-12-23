@@ -110,9 +110,14 @@ export interface Project {
     role: string;
     liveUrl?: string;
     gitHubUrl?: string;
-    links: ProjectLinksCollection;
+    linksCollection: ProjectLinksCollection;
     image?: AssetT;
-    gallery?: AssetT[];
+    galleryCollection?: {
+        total: number;
+        skip: number;
+        limit: number;
+        items: AssetT[];
+    };
 }
 
 export type ProjectItemT = Pick<Project, 'sys' | 'title' | 'brief' | 'slug' | 'tools'>
