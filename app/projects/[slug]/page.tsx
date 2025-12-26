@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols
+
 import {GET_PROJECT} from "@/app/graphql/get-project";
 import makeClient from "@/app/client";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -11,7 +13,7 @@ import {ProjectLinkIcon} from "@/components/project-link-icon";
 import Link from "next/link";
 import Image from "next/image";
 import {BackButton} from "@/components/back-button";
-import {AssetT} from "@/type";
+import {ProjectGallery} from "@/app/projects/_components/project-gallery";
 
 export const metadata: Metadata = {
     title: {
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
 export default async function ProjectDetails({params}: { params: Promise<{ slug: string }> }) {
     const {slug} = await params;
     const client = makeClient();
-    const {data, error} = await client.query({
+    const {data} = await client.query({
         query: GET_PROJECT,
         variables: {slug},
         context: {fetchOptions: {next: {revalidate: 3600}}},
@@ -49,12 +51,12 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
     const options = {
         preserveWhitespace: true,
         renderNode: {
-            [BLOCKS.HEADING_5]: (node: any, children: any) => (
+            [BLOCKS.HEADING_5]: (_node: any, children: any) => (
                 <CardHeader>
                     <CardTitle>{children}</CardTitle>
                 </CardHeader>
             ),
-            [BLOCKS.PARAGRAPH]: (node: any, children: any) => (
+            [BLOCKS.PARAGRAPH]: (_node: any, children: any) => (
                 <CardContent>
                     <p className="leading-relaxed text-base">{children}</p>
                 </CardContent>
@@ -70,17 +72,17 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
     const keyFeatureOptions = {
         preserveWhitespace: true,
         renderNode: {
-            [BLOCKS.HEADING_5]: (node: any, children: any) => (
+            [BLOCKS.HEADING_5]: (_node: any, children: any) => (
                 <CardHeader>
                     <CardTitle>{children}</CardTitle>
                 </CardHeader>
             ),
-            [BLOCKS.UL_LIST]: (node: any, children: any) => (
+            [BLOCKS.UL_LIST]: (_node: any, children: any) => (
                 <CardContent>
                     <ul className="flex flex-col ml-4 list-disc">{children}</ul>
                 </CardContent>
             ),
-            [BLOCKS.LIST_ITEM]: (node: any, children: any) => (
+            [BLOCKS.LIST_ITEM]: (_node: any, children: any) => (
                 <li className="leading-loose text-base">
                     {children}
                 </li>
@@ -119,7 +121,7 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
                     </div>
                 )}
                 <CardHeader className="relative">
-                    <h1 className="text-3xl md:text-6xl font-medium md:font-thin">{project.title}</h1>
+                    <h1 className="text-2xl md:text-6xl font-medium md:font-thin">{project.title}</h1>
                     <h2 className="text-base mt-1 md:mt-3">{project.subtitle}</h2>
                     <p className="text-sm md:text-base text-neutral-300">{project.brief}</p>
                 </CardHeader>
@@ -186,32 +188,8 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
                         </CardContent>
                     </Card>
                 </div>
-                {hasGallery && (
-                    <div className="grid md:col-span-full">
-                        <Card className="w-full bg-card/80 gap-4">
-                            <CardHeader>
-                                <CardTitle>Project Gallery</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {project.galleryCollection!.items.map((item: AssetT, index: number) => (
-                                        <li key={index}
-                                            className="relative w-full aspect-video overflow-hidden rounded-lg">
-                                            <Image
-                                                src={item.url}
-                                                alt={item.alt || project.title}
-                                                fill
-                                                className="object-cover"
-                                                sizes="(max-width: 768px) 100vw, 50vw"
-                                            />
-                                        </li>
-                                    ))}
-                                </ul>
-                            </CardContent>
-                        </Card>
-                    </div>
-                )}
             </div>
+            {hasGallery && <ProjectGallery items={project.galleryCollection!.items}/>}
         </div>
     );
 }
