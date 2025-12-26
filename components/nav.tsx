@@ -5,25 +5,16 @@ import React from "react";
 import {siteConfig} from "@/config/site";
 import {cn} from "@/lib/utils";
 import {HouseSimpleIcon} from "@phosphor-icons/react/dist/icons/HouseSimple";
-import {useLayoutProvider} from "@/components/layout-context";
 import {motion} from "framer-motion";
 import {usePathname} from "next/navigation";
+import {useLayoutProvider} from "@/components/layout-context";
 
 export const Nav: React.FC = () => {
     const {navItems, socials} = siteConfig;
-    const {activeSection, introDone, scrollToSection} = useLayoutProvider();
     const pathname = usePathname();
+    const {introDone} = useLayoutProvider();
 
     if (!introDone) return null;
-
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        // Only handle hash links (same-page navigation)
-        if (href.startsWith('#')) {
-            e.preventDefault();
-            const sectionId = href.substring(1); // Remove the '#'
-            scrollToSection(sectionId);
-        }
-    };
 
 
     return (
@@ -36,12 +27,7 @@ export const Nav: React.FC = () => {
             <div>
                 <ul className='flex flex-col gap-4'>
                     {navItems.map((item, index) => {
-                        const sectionId = item.href.startsWith('#') ? item.href.substring(1) : item.href;
-                        const isHashLink = item.href.startsWith('#');
-                        const isScrollActive = isHashLink && activeSection === sectionId;
-                        const isRouteActive = pathname.startsWith(`/${sectionId}`);
-                        const isActive = isScrollActive || isRouteActive;
-
+                        const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
                         return (
                             <motion.li
                                 key={item.href}
@@ -55,16 +41,13 @@ export const Nav: React.FC = () => {
                             >
                                 <Link
                                     href={item.href}
-                                    onClick={(e) => {
-                                        handleNavClick(e, item.href);
-                                    }}
                                     className={cn(
                                         'text-sm font-medium uppercase tracking-widest hover:text-accent',
                                         isActive ? 'text-accent' : '',
                                         'transition duration-300'
                                     )}
                                 >
-                                    {item.href === '#intro' ? (<HouseSimpleIcon size={20}/>) : item.label}
+                                    {item.href === '/' ? (<HouseSimpleIcon size={20}/>) : item.label}
                                 </Link>
                             </motion.li>
                         );

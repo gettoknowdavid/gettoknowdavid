@@ -12,7 +12,7 @@ import dartIcon from '../../public/dart.svg';
 import reactIcon from '../../public/react.svg';
 import kotlinIcon from '../../public/kotlin.svg';
 import firebaseIcon from '../../public/firebase.svg';
-import {GithubContributionGraph} from "@/app/components/github-contributions-graph";
+import {GithubContributionGraph} from "@/app/_components/github-contributions-graph";
 
 export const RecentProjects = () => {
     return (
