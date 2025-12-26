@@ -8,11 +8,11 @@ export const siteConfig = {
     navItems: [
         {
             label: "Intro",
-            href: "#intro",
+            href: "/",
         },
         {
             label: "Projects",
-            href: "#projects",
+            href: "/projects",
         },
         {
             label: "Shots",

@@ -20,16 +20,10 @@ export const metadata: Metadata = {
         icon: "/icon.png",
     },
 };
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang='en'>
-        <body
-            className={`${neue.className} dark text-foreground font-sans antialiased p-0 m-0`}
-        >
+        <body className={`${neue.className} dark text-foreground font-sans antialiased p-0 m-0`}>
         <ApolloWrapper>
             <LayoutProvider>
                 <WarpBackground/>
