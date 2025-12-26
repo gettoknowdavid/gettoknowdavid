@@ -110,7 +110,7 @@
 
 .dark {
     /*--background: oklch(0.145 0 0);*/
-    --background: #10100e;
+    --background: #000000;
     --foreground: oklch(0.985 0 0);
     /*--foreground: #ffffe3;*/
     /*--card: oklch(0.205 0 0);*/
@@ -209,6 +209,11 @@
     /*@media (min-width: 1280px) {*/
     /*    grid-column: 5 / -1;*/
     /*}*/
+}
+
+
+@utility ringed-card {
+    @apply ring-1 ring-offset-8 ring-neutral-500/40 ring-offset-neutral-950;
 }
 
 @utility section {
@@ -342,5 +347,55 @@
         gap: var(--grid--app-columns);
         height: 3rem;
         width: 3rem;
+    }
+
+    /* Add to your globals.css or tailwind.css */
+    /* Custom Scrollbar - Default */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* For Firefox */
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    }
+
+    /* Enhanced scrollbar for code blocks - VS Code/Android Studio style */
+    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-track {
+        background: #1e1e1e;
+        border-radius: 4px;
+    }
+
+    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-thumb {
+        background: #424242;
+        border-radius: 4px;
+        border: 2px solid #1e1e1e;
+    }
+
+    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-thumb:hover {
+        background: #4e4e4e;
+    }
+
+    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-corner {
+        background: #1e1e1e;
     }
 }

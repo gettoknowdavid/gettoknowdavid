@@ -1,52 +1,92 @@
 "use client";
 
-import React from "react";
-import {siteConfig} from "@/config/site";
+import React, {ReactNode} from "react";
+import {useSuspenseQuery} from "@apollo/client/react";
+import {GET_HERO} from "@/app/graphql/get-hero";
+import {BLOCKS, MARKS} from "@contentful/rich-text-types";
+import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
+import {Persona} from "@/type";
+import Link from "next/link";
 import {cn} from "@/lib/utils";
+import {Card} from "@/components/ui/card";
+
 
 export const Intro = () => {
+    const {data} = useSuspenseQuery(GET_HERO, {variables: {name: 'Intro'}});
+
+    const hero = data.heroCollection.items[0];
+    const personas = hero.personasCollection.items;
+
+    const [selectedPersonaIndex, setSelectedPersonaIndex] = React.useState<number>(0);
+    const currentPersona: Persona = personas[selectedPersonaIndex];
+    const isEngineerPersona = currentPersona.buttonLabel.toLowerCase().includes('engineer');
+
+    const normalOptions = {
+        renderText: _renderText,
+        preserveWhitespace: true,
+        renderNode: {
+            [BLOCKS.PARAGRAPH]: (_node: any, children: any) => (
+                <p className="m-0 leading-18 text-xl lg:text-6xl font-medium">
+                    {children}
+                </p>
+            ),
+        },
+        renderMark: {[MARKS.UNDERLINE]: (text: any) => <span className="underline decoration-accent">{text}</span>},
+    };
+    const codeOptions = {
+        renderText: _renderText,
+        preserveWhitespace: true,
+        renderNode: {
+            [BLOCKS.PARAGRAPH]: (_node: any, children: any) => (
+                <p className="m-0 font-mono text-sm whitespace-pre-wrap">{children}</p>
+            )
+        },
+        renderMark: {
+            [MARKS.UNDERLINE]: (text: any) => <span className="text-purple-400">{text}</span>,
+            [MARKS.BOLD]: (text: any) => <span className="text-amber-300 font-semibold">{text}</span>,
+            [MARKS.ITALIC]: (text: any) => <span className="text-gray-400 italic">{text}</span>,
+        },
+    };
+    const bodyOptions = isEngineerPersona ? codeOptions : normalOptions;
+    const body = documentToReactComponents(currentPersona.body.json, bodyOptions);
+
     return (
-        <div className="flex flex-col gap-8">
-            <div
-                className='w-fit flex items-center rounded-full gap-3 py-1.5 pl-3 pr-4 border border-zinc-600/75 bg-slate-950/25'>
-                <div className='relative size-3'>
-                    <div className='absolute size-full rounded-full bg-green-300 animate-ping'></div>
-                    <div className='drop-shadow-green-400 rounded-full size-full bg-green-400'></div>
-                </div>
-                <h3 className='max-sm:text-xs text-sm text-slate-200'>Open to Work</h3>
+        <div className="flex flex-col h-screen justify-center">
+            <div className="flex-shrink-0">
+                <ul className="flex flex-row mb-8 p-0 gap-5">
+                    {personas.map((persona: Persona, index) => {
+                        const isSelected = selectedPersonaIndex === index;
+                        return (
+                            <li key={persona.sys.id} className="font-medium tracking-wide">
+                                <Link
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setSelectedPersonaIndex(index);
+                                    }}
+                                    className={cn(
+                                        isSelected ? "text-accent" : "text-foreground hover:opacity-30",
+                                        "transition-all duration-500",
+                                    )}
+                                >
+                                    {persona.buttonLabel}
+                                </Link>
+                            </li>
+                        );
+                    })}
+                </ul>
             </div>
-
-            <h1 className='text-4xl md:text-5xl lg:text-5xl xl:text-9xl font-sans font-light'>
-                Hi, I'm David.
-                <br/>A <span className='text-accent'>frontend engineer</span>.
-            </h1>
-
-            <p className='text-xl lg:text-xl max-w-2xl font-regular text-neutral-300 tracking-wide leading-relaxed font-sans'>
-                Passionate about building functional and performant applications
-                that help people solve problems. Specifically focusing on Flutter and
-                KMP. Beyond coding, I enjoy photography and music.
-            </p>
-
-            <a href={siteConfig.contact} target='_blank' rel='noopener noreferrer'>
-                <div
-                    className={cn(
-                        "w-fit max-w-sm rounded-lg p-[1.8px] animate-rotate-border",
-                        "bg-conic/[from_var(--border-angle)] from-black via-accent to-black",
-                        "from-80% via-90% to-100%",
-                        "cursor-pointer hover:scale-[1.03] transition duration-300",
-                    )}
-                >
-                    <div
-                        className={cn(
-                            "px-8 py-3.5",
-                            "bg-neutral-900 border border-neutral-800 rounded-lg",
-                            "font-medium text-foreground",
-                        )}
-                    >
-                        Get in Touch
-                    </div>
-                </div>
-            </a>
+            {isEngineerPersona ? (
+                <Card className="max-h-[60vh] h-full ringed-card bg-neutral-900 px-6">{body}</Card>
+            ) : (
+                <div className="flex-shrink-1 max-h-[60vh] h-full">{body}</div>
+            )}
         </div>
     );
 };
+
+function _renderText(text: String): ReactNode {
+    return text.split("\n").flatMap((textSegment, index) => {
+        return index === 0 ? [textSegment] : [<br key={`br-${index}`}/>, textSegment];
+    });
+}

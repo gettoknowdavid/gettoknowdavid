@@ -121,3 +121,29 @@ export interface Project {
 }
 
 export type ProjectItemT = Pick<Project, 'sys' | 'title' | 'brief' | 'slug' | 'tools'>
+
+export interface Persona {
+    sys: { id: string };
+    isDefault: boolean;
+    buttonLabel: string;
+    body: { json: any }
+}
+
+export interface Hero {
+    sys: { id: string };
+    heading?: { json: any };
+    enablePersonas: boolean;
+    personasCollection: {
+        total: number;
+        skip: number;
+        limit: number;
+        items: Persona[];
+    }
+}
+
+export interface HeroCollection {
+    total: number;
+    skip: number;
+    limit: number;
+    items: Hero[];
+}

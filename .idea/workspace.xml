@@ -19,13 +19,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/_components/intro.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/graphql/get-hero.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/github-contributions-graph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/github-contributions-graph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/intro.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/recent-projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/recent-projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/intro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -75,32 +74,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.Next.js: debug client-side.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "17102025",
-    "javascript.preferred.runtime.type.id": "node",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/projects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.Next.js: server-side.executor": "Run",
-    "settings.editor.selected.configurable": "com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.Next.js: debug client-side.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;17102025&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/projects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/projects" />
@@ -183,7 +182,8 @@
       <workItem from="1766399087821" duration="4000" />
       <workItem from="1766407635203" duration="20509000" />
       <workItem from="1766489802945" duration="14748000" />
-      <workItem from="1766744650496" duration="12885000" />
+      <workItem from="1766744650496" duration="27760000" />
+      <workItem from="1766789561770" duration="1717000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -313,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766757397888</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-9xl`.&#10;- Rename `Home` page component to `HomePage` in `app/page.tsx`.&#10;- Remove scroll-based active section tracking and smooth scrolling&#10;  functionality from `Nav` component, simplifying its logic and relying&#10;  on Next.js pathname for active link highlighting.">
+      <option name="closed" value="true" />
+      <created>1766759017315</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1766759017315</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,12 +329,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(intro): change font weight of main intro header text and `h1` tag of the summary to `p`" />
-    <MESSAGE value="```&#10;feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;" />
-    <MESSAGE value="```&#10;feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project" />
-    <MESSAGE value="```&#10;feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;  applied new styling.&#10;- Removed the deprecated `app/projects/page.tsx` file.&#10;- Enhanced `config/fonts.ts` to support multiple weights for Neue Montreal&#10;  font and set it as the primary app" />
-    <MESSAGE value="```&#10;feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;  applied new styling.&#10;- Removed the deprecated `app/projects/page.tsx` file.&#10;- Enhanced `config/fonts.ts` to support multiple weights for Neue Montreal&#10;  font and set it as the primary app font.&#10;- Adjusted font weights and sizes in `app/components/intro.tsx` to&#10;  align with the new typography system.&#10;- Improved navigation in `components/nav.tsx` to highlight active&#10;  project routes" />
-    <MESSAGE value="```&#10;feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;  applied new styling.&#10;- Removed the deprecated `app/projects/page.tsx` file.&#10;- Enhanced `config/fonts.ts` to support multiple weights for Neue Montreal&#10;  font and set it as the primary app font.&#10;- Adjusted font weights and sizes in `app/components/intro.tsx` to&#10;  align with the new typography system.&#10;- Improved navigation in `components/nav.tsx` to highlight active&#10;  project routes.&#10;```" />
     <MESSAGE value="feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;  applied new styling.&#10;- Removed the deprecated `app/projects/page.tsx` file.&#10;- Enhanced `config/fonts.ts` to support multiple weights for Neue Montreal&#10;  font and set it as the primary app font.&#10;- Adjusted font weights and sizes in `app/components/intro.tsx` to&#10;  align with the new typography system.&#10;- Improved navigation in `components/nav.tsx` to highlight active&#10;  project routes." />
     <MESSAGE value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/" />
     <MESSAGE value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/graphql/get-projects.ts` to fetch project summaries&#10;  optimized for list display.&#10;- Implemented dynamic project fetching in `app/components/projects.tsx`&#10;  using `useSuspenseQuery`, replacing static `" />
@@ -346,6 +348,12 @@
     <MESSAGE value="```&#10;feat(projects): Implement interactive project gallery (17102025)&#10;&#10;Refactor project image gallery into a new dedicated component to&#10;improve modularity and user experience.&#10;&#10;- Create `ProjectGallery` component at `app/projects/_components/`.&#10;- Migrate gallery rendering logic from `app/projects/[slug]/page.tsx`&#10;  to the new `ProjectGallery` component.&#10;- Integrate Radix UI `Dialog` and Embla Carousel for full-screen&#10;  interactive image viewing.&#10;- Add new dependencies: `@radix-ui/react-dialog`,&#10;  `@radix-ui/react-visually-hidden`, `embla-carousel" />
     <MESSAGE value="```&#10;feat(projects): Implement interactive project gallery (17102025)&#10;&#10;Refactor project image gallery into a new dedicated component to&#10;improve modularity and user experience.&#10;&#10;- Create `ProjectGallery` component at `app/projects/_components/`.&#10;- Migrate gallery rendering logic from `app/projects/[slug]/page.tsx`&#10;  to the new `ProjectGallery` component.&#10;- Integrate Radix UI `Dialog` and Embla Carousel for full-screen&#10;  interactive image viewing.&#10;- Add new dependencies: `@radix-ui/react-dialog`,&#10;  `@radix-ui/react-visually-hidden`, `embla-carousel-react`, and&#10;  `lucide-react`.&#10;- Adjust `h1` text size on project detail pages.&#10;```" />
     <MESSAGE value="feat(projects): Implement interactive project gallery (17102025)&#10;&#10;Refactor project image gallery into a new dedicated component to&#10;improve modularity and user experience.&#10;&#10;- Create `ProjectGallery` component at `app/projects/_components/`.&#10;- Migrate gallery rendering logic from `app/projects/[slug]/page.tsx`&#10;  to the new `ProjectGallery` component.&#10;- Integrate Radix UI `Dialog` and Embla Carousel for full-screen&#10;  interactive image viewing.&#10;- Add new dependencies: `@radix-ui/react-dialog`,&#10;  `@radix-ui/react-visually-hidden`, `embla-carousel-react`, and&#10;  `lucide-react`.&#10;- Adjust `h1` text size on project detail pages." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(projects): Implement interactive project gallery (17102025)&#10;&#10;Refactor project image gallery into a new dedicated component to&#10;improve modularity and user experience.&#10;&#10;- Create `ProjectGallery` component at `app/projects/_components/`.&#10;- Migrate gallery rendering logic from `app/projects/[slug]/page.tsx`&#10;  to the new `ProjectGallery` component.&#10;- Integrate Radix UI `Dialog` and Embla Carousel for full-screen&#10;  interactive image viewing.&#10;- Add new dependencies: `@radix-ui/react-dialog`,&#10;  `@radix-ui/react-visually-hidden`, `embla-carousel-react`, and&#10;  `lucide-react`.&#10;- Adjust `h1` text size on project detail pages." />
+    <MESSAGE value="```&#10;refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `Recent" />
+    <MESSAGE value="```&#10;refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `" />
+    <MESSAGE value="```&#10;refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-" />
+    <MESSAGE value="```&#10;refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-9xl`.&#10;- Rename `Home` page component to `HomePage` in `app/page.tsx`.&#10;- Remove scroll-based active section tracking and smooth scrolling&#10;  functionality from `Nav` component, simplifying its logic" />
+    <MESSAGE value="```&#10;refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-9xl`.&#10;- Rename `Home` page component to `HomePage` in `app/page.tsx`.&#10;- Remove scroll-based active section tracking and smooth scrolling&#10;  functionality from `Nav` component, simplifying its logic and relying&#10;  on Next.js pathname for active link highlighting.&#10;```" />
+    <MESSAGE value="refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-9xl`.&#10;- Rename `Home` page component to `HomePage` in `app/page.tsx`.&#10;- Remove scroll-based active section tracking and smooth scrolling&#10;  functionality from `Nav` component, simplifying its logic and relying&#10;  on Next.js pathname for active link highlighting." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-9xl`.&#10;- Rename `Home` page component to `HomePage` in `app/page.tsx`.&#10;- Remove scroll-based active section tracking and smooth scrolling&#10;  functionality from `Nav` component, simplifying its logic and relying&#10;  on Next.js pathname for active link highlighting." />
   </component>
 </project>
