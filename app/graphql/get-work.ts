@@ -1,8 +1,8 @@
 import {gql, TypedDocumentNode} from "@apollo/client";
-import {Project} from "@/type";
+import {Work} from "@/type";
 
-export const GET_PROJECT: TypedDocumentNode<{ workCollection: { items: Project[] } }> = gql`
-  query GetProject($slug: String!) {
+export const GET_WORK: TypedDocumentNode<{ workCollection: { items: Work[] } }> = gql`
+  query GetWork($slug: String!) {
     workCollection(where: { slug: $slug }, limit: 1) {
       items {
         sys {

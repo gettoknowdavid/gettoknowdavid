@@ -1,41 +1,6 @@
-import {IconWeight} from "@phosphor-icons/react";
-
 export type AssetT = {
     url: string;
     alt: string;
-};
-
-export type WorkLinkT = {
-    _id: string;
-    type: string;
-    link: string;
-};
-
-export type MainWorkLinkProps = {
-    iconSize?: number | undefined;
-    iconWeight?: IconWeight | undefined;
-    textSize?: string | undefined;
-    textWeight?: "light" | "regular" | "bold";
-    gap?: string | undefined;
-};
-
-export type WorkLinksProps = MainWorkLinkProps & {
-    links: WorkLinkT[];
-    isVertical?: boolean;
-};
-
-export type WorkT = {
-    sys: { id: string };
-    title: string;
-    slug: string;
-    brief: string;
-    description: string;
-    tools: [string];
-    featured: boolean;
-    tags: [string];
-    image: AssetT;
-    links: WorkLinksCollection;
-    images: ImagesCollection;
 };
 
 export type ImagesCollection = {
@@ -45,19 +10,6 @@ export type ImagesCollection = {
     items: AssetT[];
 };
 
-export type WorkLinksCollection = {
-    total: number;
-    skip: number;
-    limit: number;
-    items: WorkLinkT[];
-};
-
-export type WorksCollection = {
-    total: number;
-    skip: number;
-    limit: number;
-    works: WorkT[];
-};
 
 export type ShotT = {
     id: string;
@@ -73,27 +25,20 @@ export type ShotsCollection = {
     shots: ShotT[];
 };
 
-export type BiographyT = {
-    title: string;
-    content: {
-        json: any;
-    };
-};
-
-export interface ProjectLinkT {
+export interface WorkLinkT {
     sys: { id: string };
     type: string;
     link: string;
 }
 
-export interface ProjectLinksCollection {
+export interface WorkLinksCollection {
     total: number;
     skip: number;
     limit: number;
-    items: ProjectLinkT[];
+    items: WorkLinkT[];
 }
 
-export interface Project {
+export interface Work {
     sys: { id: string };
     featured: boolean;
     title: string;
@@ -103,6 +48,7 @@ export interface Project {
     description: { json: any };
     keyFeatures: { json: any };
     tools: [string];
+    toolsShort: [string];
     startDate: string;
     endDate: string;
     tags: [string];
@@ -110,7 +56,7 @@ export interface Project {
     role: string;
     liveUrl?: string;
     gitHubUrl?: string;
-    linksCollection: ProjectLinksCollection;
+    linksCollection: WorkLinksCollection;
     image?: AssetT;
     galleryCollection?: {
         total: number;
@@ -120,7 +66,7 @@ export interface Project {
     };
 }
 
-export type ProjectItemT = Pick<Project, 'sys' | 'title' | 'brief' | 'slug' | 'tools'>
+export type WorkItemT = Pick<Work, 'sys' | 'title' | 'brief' | 'slug' | 'toolsShort' | 'role' | 'startDate' | 'endDate'>
 
 export interface Persona {
     sys: { id: string };

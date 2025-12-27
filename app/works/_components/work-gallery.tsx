@@ -15,7 +15,7 @@ import {AssetT} from "@/type";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 
 
-export const ProjectGallery = ({items}: { items: AssetT[] }) => {
+export const WorkGallery = ({items}: { items: AssetT[] }) => {
     const [open, setOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [api, setApi] = useState<CarouselApi>();
@@ -33,7 +33,7 @@ export const ProjectGallery = ({items}: { items: AssetT[] }) => {
     return (
         <Card className="w-full bg-card/80 gap-4">
             <CardHeader>
-                <CardTitle>Project Gallery</CardTitle>
+                <CardTitle>Gallery</CardTitle>
             </CardHeader>
             <CardContent>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">

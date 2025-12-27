@@ -3,11 +3,11 @@
 import {IconWeight} from "@phosphor-icons/react";
 import {GitBranchIcon, PackageIcon, RssSimpleIcon} from "@phosphor-icons/react/dist/ssr";
 import React from "react";
-import {ProjectLinkT} from "@/type";
+import {WorkLinkT} from "@/type";
 
 
-export const ProjectLinkIcon = ({link, size = 14, weight = "regular"}: {
-    link: ProjectLinkT;
+export const WorkLinkIcon = ({link, size = 14, weight = "regular"}: {
+    link: WorkLinkT;
     size?: number;
     weight?: IconWeight | undefined;
 }) => {

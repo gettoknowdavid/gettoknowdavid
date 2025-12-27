@@ -4,7 +4,7 @@ import {siteConfig} from "@/config/site";
 
 export const metadata: Metadata = {
     title: {
-        default: `My Projects • ${siteConfig.name}`,
+        default: `My Works • ${siteConfig.name}`,
         template: `%s - ${siteConfig.name}`,
     },
     description: siteConfig.description,
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ProjectsLayout({children}: Readonly<{ children: React.ReactNode }>) {
+export default function WorkLayout({children}: Readonly<{ children: React.ReactNode }>) {
     return (
         <section className='grid app-margin w-full gap-4 grid--app-columns'>
             <div className='content'>

@@ -19,11 +19,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/graphql/get-hero.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_components/recent-works.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/works/[slug]/loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/works/loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/skeleton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/spinner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/date-formatter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/intro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/recent-projects.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/get-project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/get-work.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/get-projects.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/get-works.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/projects/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/projects/_components/project-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/projects/_components/projects-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/works-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/projects/_components/projects-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/works-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/projects/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project-link-icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-link-icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/site.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/site.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +49,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -74,41 +89,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.Next.js: debug client-side.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;17102025&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/projects&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.Next.js: debug client-side.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "17102025",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/works",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Run",
+    "settings.editor.selected.configurable": "com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/works" />
       <recent name="$PROJECT_DIR$/app/projects" />
       <recent name="$PROJECT_DIR$/app/projects/_components" />
       <recent name="$PROJECT_DIR$/app/graphql" />
       <recent name="$PROJECT_DIR$/public/fonts" />
-      <recent name="$PROJECT_DIR$/app/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/works/_components" />
       <recent name="$PROJECT_DIR$/app/projects/[slug]" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/app/components" />
@@ -183,7 +199,7 @@
       <workItem from="1766407635203" duration="20509000" />
       <workItem from="1766489802945" duration="14748000" />
       <workItem from="1766744650496" duration="27760000" />
-      <workItem from="1766789561770" duration="1717000" />
+      <workItem from="1766789561770" duration="7830000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -321,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766759017315</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat(homepage): Dynamic hero, personas, and work experience section (17102025)&#10;&#10;- Refactor `Intro` component to fetch dynamic content from Contentful,&#10;  enabling a persona-driven display with rich text rendering.&#10;- Introduce `GET_HERO` GraphQL query and TypeScript types (`Persona`,&#10;  `Hero`) for Contentful integration.&#10;- Add a new &quot;Work Experience&quot; section to the homepage, showcasing&#10;  placeholder job roles and durations using UI cards.&#10;- Update global CSS with a new `ringed-card` utility, custom scrollbar&#10;  styles, and a refined dark theme background color.">
+      <option name="closed" value="true" />
+      <created>1766791359024</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1766791359024</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,9 +353,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;  applied new styling.&#10;- Removed the deprecated `app/projects/page.tsx` file.&#10;- Enhanced `config/fonts.ts` to support multiple weights for Neue Montreal&#10;  font and set it as the primary app font.&#10;- Adjusted font weights and sizes in `app/components/intro.tsx` to&#10;  align with the new typography system.&#10;- Improved navigation in `components/nav.tsx` to highlight active&#10;  project routes." />
-    <MESSAGE value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/" />
-    <MESSAGE value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/graphql/get-projects.ts` to fetch project summaries&#10;  optimized for list display.&#10;- Implemented dynamic project fetching in `app/components/projects.tsx`&#10;  using `useSuspenseQuery`, replacing static `" />
     <MESSAGE value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/graphql/get-projects.ts` to fetch project summaries&#10;  optimized for list display.&#10;- Implemented dynamic project fetching in `app/components/projects.tsx`&#10;  using `useSuspenseQuery`, replacing static `fakeProjects` data.&#10;- Introduced `Project` and `ProjectItemT` types in `type.d.ts` to&#10;  align with Contentful data structure.&#10;- Added a loading skeleton for the project list for improved" />
     <MESSAGE value="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/graphql/get-projects.ts` to fetch project summaries&#10;  optimized for list display.&#10;- Implemented dynamic project fetching in `app/components/projects.tsx`&#10;  using `useSuspenseQuery`, replacing static `fakeProjects` data.&#10;- Introduced `Project` and `ProjectItemT` types in `type.d.ts` to&#10;  align with Contentful data structure.&#10;- Added a loading skeleton for the project list for improved user&#10;  experience.&#10;- Refined project item display, including a structured list for tools." />
     <MESSAGE value="feat(projects, contentful, ui): Implement dynamic project detail pages (17102025)&#10;&#10;This commit replaces static project data with dynamic content fetched from&#10;Contentful, significantly enhancing the project detail pages.&#10;&#10;-" />
@@ -354,6 +375,9 @@
     <MESSAGE value="```&#10;refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-9xl`.&#10;- Rename `Home` page component to `HomePage` in `app/page.tsx`.&#10;- Remove scroll-based active section tracking and smooth scrolling&#10;  functionality from `Nav` component, simplifying its logic" />
     <MESSAGE value="```&#10;refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-9xl`.&#10;- Rename `Home` page component to `HomePage` in `app/page.tsx`.&#10;- Remove scroll-based active section tracking and smooth scrolling&#10;  functionality from `Nav` component, simplifying its logic and relying&#10;  on Next.js pathname for active link highlighting.&#10;```" />
     <MESSAGE value="refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-9xl`.&#10;- Rename `Home` page component to `HomePage` in `app/page.tsx`.&#10;- Remove scroll-based active section tracking and smooth scrolling&#10;  functionality from `Nav` component, simplifying its logic and relying&#10;  on Next.js pathname for active link highlighting." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-9xl`.&#10;- Rename `Home` page component to `HomePage` in `app/page.tsx`.&#10;- Remove scroll-based active section tracking and smooth scrolling&#10;  functionality from `Nav` component, simplifying its logic and relying&#10;  on Next.js pathname for active link highlighting." />
+    <MESSAGE value="feat(homepage): Dynamic hero, personas, and work experience section (17102025)&#10;&#10;- Refactor `Intro` component to fetch dynamic content from Contentful,&#10;  enabling a persona-driven display with" />
+    <MESSAGE value="feat(homepage): Dynamic hero, personas, and work experience section (17102025)&#10;&#10;- Refactor `Intro` component to fetch dynamic content from Contentful,&#10;  enabling a persona-driven display with rich text rendering.&#10;- Introduce `GET_HERO` GraphQL query and TypeScript types (`Persona`,&#10;  `Hero`) for Contentful integration.&#10;- Add a new &quot;Work Experience&quot; section to the homepage, showcasing&#10;  " />
+    <MESSAGE value="feat(homepage): Dynamic hero, personas, and work experience section (17102025)&#10;&#10;- Refactor `Intro` component to fetch dynamic content from Contentful,&#10;  enabling a persona-driven display with rich text rendering.&#10;- Introduce `GET_HERO` GraphQL query and TypeScript types (`Persona`,&#10;  `Hero`) for Contentful integration.&#10;- Add a new &quot;Work Experience&quot; section to the homepage, showcasing&#10;  placeholder job roles and durations using UI cards.&#10;- Update global CSS with a new `ringed-card` utility, custom scrollbar&#10;  styles, and a refined dark theme background color." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(homepage): Dynamic hero, personas, and work experience section (17102025)&#10;&#10;- Refactor `Intro` component to fetch dynamic content from Contentful,&#10;  enabling a persona-driven display with rich text rendering.&#10;- Introduce `GET_HERO` GraphQL query and TypeScript types (`Persona`,&#10;  `Hero`) for Contentful integration.&#10;- Add a new &quot;Work Experience&quot; section to the homepage, showcasing&#10;  placeholder job roles and durations using UI cards.&#10;- Update global CSS with a new `ringed-card` utility, custom scrollbar&#10;  styles, and a refined dark theme background color." />
   </component>
 </project>

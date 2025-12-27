@@ -216,6 +216,13 @@
     @apply ring-1 ring-offset-8 ring-neutral-500/40 ring-offset-neutral-950;
 }
 
+@utility hovered-ringed-card {
+    @apply ring-1 ring-offset-8 ring-accent/40 ring-offset-neutral-950 border-accent/20;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
 @utility section {
     @apply app-margin;
     display: grid;

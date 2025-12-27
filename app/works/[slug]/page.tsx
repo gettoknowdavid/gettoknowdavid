@@ -1,6 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {GET_PROJECT} from "@/app/graphql/get-project";
+import {GET_WORK} from "@/app/graphql/get-work";
 import makeClient from "@/app/client";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import React, {ReactNode} from "react";
@@ -9,15 +9,16 @@ import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import type {Metadata} from "next";
 import {siteConfig} from "@/config/site";
 import {Button} from "@/components/ui/button";
-import {ProjectLinkIcon} from "@/components/project-link-icon";
 import Link from "next/link";
 import Image from "next/image";
 import {BackButton} from "@/components/back-button";
-import {ProjectGallery} from "@/app/projects/_components/project-gallery";
+import {WorkGallery} from "@/app/works/_components/work-gallery";
+import {longDatesFormatter} from "@/lib/date-formatter";
+import {WorkLinkIcon} from "@/app/works/_components/work-link-icon";
 
 export const metadata: Metadata = {
     title: {
-        default: `My Projects • ${siteConfig.name}`,
+        default: `My Works • ${siteConfig.name}`,
         template: `%s - ${siteConfig.name}`,
     },
     description: siteConfig.description,
@@ -26,11 +27,11 @@ export const metadata: Metadata = {
     },
 };
 
-export default async function ProjectDetails({params}: { params: Promise<{ slug: string }> }) {
+export default async function WorkDetails({params}: { params: Promise<{ slug: string }> }) {
     const {slug} = await params;
     const client = makeClient();
     const {data} = await client.query({
-        query: GET_PROJECT,
+        query: GET_WORK,
         variables: {slug},
         context: {fetchOptions: {next: {revalidate: 3600}}},
     });
@@ -46,7 +47,7 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
         );
     }
 
-    const project = data.workCollection.items[0];
+    const work = data.workCollection.items[0];
 
     const options = {
         preserveWhitespace: true,
@@ -95,24 +96,21 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
         },
     };
 
-    const dateFormatter = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: "short"});
-    const startDate = Date.parse(project.startDate);
-    const endDate = Date.parse(project.endDate);
-    const formattedStartDate = dateFormatter.format(startDate);
-    const formattedEndDate = dateFormatter.format(endDate);
+    const formattedStartDate = longDatesFormatter(work.startDate);
+    const formattedEndDate = longDatesFormatter(work.endDate);
 
-    const hasGallery = project.galleryCollection && project.galleryCollection.items.length > 0;
+    const hasGallery = work.galleryCollection && work.galleryCollection.items.length > 0;
 
 
     return (
         <div className='flex flex-col gap-8 py-16'>
             <BackButton/>
             <Card className="relative overflow-hidden bg-card/80 min-h-[320px] flex flex-col justify-end">
-                {project.image && (
+                {work.image && (
                     <div className="absolute inset-0 z-0">
                         <Image
-                            src={project.image.url}
-                            alt={project.image.alt || project.title}
+                            src={work.image.url}
+                            alt={work.image.alt || work.title}
                             fill
                             className="object-cover"
                             priority
@@ -121,17 +119,17 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
                     </div>
                 )}
                 <CardHeader className="relative">
-                    <h1 className="text-2xl md:text-6xl font-medium md:font-thin">{project.title}</h1>
-                    <h2 className="text-base mt-1 md:mt-3">{project.subtitle}</h2>
-                    <p className="text-sm md:text-base text-neutral-300">{project.brief}</p>
+                    <h1 className="text-2xl md:text-6xl font-medium md:font-thin">{work.title}</h1>
+                    <h2 className="text-base mt-1 md:mt-3">{work.subtitle}</h2>
+                    <p className="text-sm md:text-base text-neutral-300">{work.brief}</p>
                 </CardHeader>
             </Card>
             <div className='grid md:grid-cols-12 gap-4 items-start'>
                 <div className="grid col-span-7 md:col-span-8">
                     <Card className="w-full bg-card/80 gap-2">
-                        {documentToReactComponents(project.description.json, options)}
+                        {documentToReactComponents(work.description.json, options)}
                         <span className="h-5"/>
-                        {documentToReactComponents(project.keyFeatures.json, keyFeatureOptions)}
+                        {documentToReactComponents(work.keyFeatures.json, keyFeatureOptions)}
                     </Card>
                 </div>
                 <div className="grid col-span-5 md:col-span-4">
@@ -142,7 +140,7 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
                         <CardContent className="flex flex-col gap-4">
                             <div>
                                 <p className="text-sm text-neutral-400">Client</p>
-                                <p className="text-base">{project.client}</p>
+                                <p className="text-base">{work.client}</p>
                             </div>
                             <div>
                                 <p className="text-sm text-neutral-400">Timeline</p>
@@ -150,7 +148,7 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
                             </div>
                             <div>
                                 <p className="text-sm text-neutral-400">Role</p>
-                                <p className="text-base">{project.role}</p>
+                                <p className="text-base">{work.role}</p>
                             </div>
                         </CardContent>
                     </Card>
@@ -161,7 +159,7 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
                         </CardHeader>
                         <CardContent>
                             <ul className="flex flex-row flex-wrap gap-2">
-                                {project.tools.map((tool, index) =>
+                                {work.tools.map((tool, index) =>
                                     <li key={index}
                                         className="flex flex-row text-base items-center after:content-[','] last:after:hidden">
                                         {tool}
@@ -177,10 +175,10 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
                         </CardHeader>
                         <CardContent>
                             <ul className="flex flex-row flex-wrap gap-2">
-                                {project.linksCollection.items.map((link, index) =>
+                                {work.linksCollection.items.map((link, index) =>
                                     <Button key={index} variant="outline" size="sm" asChild>
                                         <Link href={link.link} target="_blank" rel="noopener noreferrer">
-                                            <ProjectLinkIcon link={link}/> {link.type}
+                                            <WorkLinkIcon link={link}/> {link.type}
                                         </Link>
                                     </Button>
                                 )}
@@ -189,7 +187,7 @@ export default async function ProjectDetails({params}: { params: Promise<{ slug:
                     </Card>
                 </div>
             </div>
-            {hasGallery && <ProjectGallery items={project.galleryCollection!.items}/>}
+            {hasGallery && <WorkGallery items={work.galleryCollection!.items}/>}
         </div>
     );
 }
