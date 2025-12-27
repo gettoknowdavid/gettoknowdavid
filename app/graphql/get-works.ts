@@ -15,6 +15,7 @@ export const GET_WORKS: TypedDocumentNode<{ workCollection: { works: WorkItemT[]
         role
         startDate
         endDate
+        client
       }
     }
   }

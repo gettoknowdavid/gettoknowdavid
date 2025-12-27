@@ -9,7 +9,7 @@ export const onlyYearDateFormatter = (value: string): string => {
 }
 
 export const getYearRange = ({start, end}: { start: string, end: string }) => {
-    const dateFormatter = new Intl.DateTimeFormat('en-US', {year: 'numeric'});
+    const dateFormatter = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: "short"});
     const startYear = dateFormatter.format(Date.parse(start));
     const endYear = dateFormatter.format(Date.parse(end));
     if (startYear === endYear) {

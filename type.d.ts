@@ -66,7 +66,7 @@ export interface Work {
     };
 }
 
-export type WorkItemT = Pick<Work, 'sys' | 'title' | 'brief' | 'slug' | 'toolsShort' | 'role' | 'startDate' | 'endDate'>
+export type WorkItemT = Pick<Work, 'sys' | 'title' | 'brief' | 'slug' | 'toolsShort' | 'role' | 'startDate' | 'endDate' | 'client'>
 
 export interface Persona {
     sys: { id: string };

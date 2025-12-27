@@ -2,7 +2,7 @@
 
 import React from "react";
 import {Work, WorkItemT} from "@/type";
-import {WorkItem, WorkItemSkeleton} from "@/app/works/_components/works-item";
+import {WorkItem, WorkItemSkeleton} from "@/app/works/_components/work-item";
 
 export const WorksList = ({works}: { works: Work[] | WorkItemT[] }) => {
     return (

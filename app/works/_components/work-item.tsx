@@ -17,7 +17,9 @@ export const WorkItem = ({work}: { work: WorkItemT }) => {
                         {work.title}
                         <span className="text-sm text-neutral-400">{range}</span>
                     </CardTitle>
-                    <p className="text-sm text-neutral-400">{work.role}</p>
+                    <p className="text-sm text-neutral-400">
+                        {`${work.role} — ${work.client}`}
+                    </p>
                 </CardHeader>
                 <CardContent>{work.brief}</CardContent>
                 <CardFooter>
