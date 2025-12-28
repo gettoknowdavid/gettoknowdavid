@@ -20,11 +20,14 @@
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/get-works.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/get-works.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/works/_components/works-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_components/recent-works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/recent-works.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/_components/work-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/_components/work-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-item.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/works/_components/works-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/works-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/date-formatter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/date-formatter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/back-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/back-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/card.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,32 +77,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.Next.js: debug client-side.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "17102025",
-    "javascript.preferred.runtime.type.id": "node",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/works",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.Next.js: server-side.executor": "Run",
-    "settings.editor.selected.configurable": "com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.Next.js: debug client-side.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;17102025&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/works&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/works" />
@@ -184,7 +187,8 @@
       <workItem from="1766407635203" duration="20509000" />
       <workItem from="1766489802945" duration="14748000" />
       <workItem from="1766744650496" duration="27760000" />
-      <workItem from="1766789561770" duration="9742000" />
+      <workItem from="1766789561770" duration="9829000" />
+      <workItem from="1766876466419" duration="5977000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -338,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766797777482</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;- Updated `app/works/_components/works-list.tsx` to reflect the&#10;  component rename.&#10;- Added `client` field to the `Work` GraphQL query in&#10;  `app/graphql/get-works.ts`.&#10;- Included `client` in the `WorkItemT` type definition in `type.d.ts`.&#10;- Displayed the `client` alongside the `role` in the `WorkItem`&#10;  component.&#10;- Enhanced `lib/date-formatter.ts` to include short month names&#10;  in date ranges.">
+      <option name="closed" value="true" />
+      <created>1766800092795</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1766800092795</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,10 +358,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(projects, contentful, ui): Implement dynamic project detail pages (17102025)&#10;&#10;This commit replaces static project data with dynamic content fetched from&#10;Contentful, significantly enhancing the project detail pages.&#10;&#10;- Integrated Contentful GraphQL API to fetch individual project details&#10;  using a new `GET_PROJECT` query.&#10;- Refactored `app/projects/[slug]/page.tsx` to display dynamic content,&#10;  including rich text descriptions, key features, images, and links.&#10;- Introduced `@radix-ui/react-slot` dependency for UI components.&#10;- Added `BackButton` and `ProjectLinkIcon` components for improved UX.&#10;- Updated `type.d.ts` to reflect Contentful's `linksCollection` and&#10;  `galleryCollection` structure.&#10;- Applied minor styling adjustments in `app/globals.css`, including&#10;  card background and grid layout" />
-    <MESSAGE value="feat(projects, contentful, ui): Implement dynamic project detail pages (17102025)&#10;&#10;This commit replaces static project data with dynamic content fetched from&#10;Contentful, significantly enhancing the project detail pages.&#10;&#10;- Integrated Contentful GraphQL API to fetch individual project details&#10;  using a new `GET_PROJECT` query.&#10;- Refactored `app/projects/[slug]/page.tsx` to display dynamic content,&#10;  including rich text descriptions, key features, images, and links.&#10;- Introduced `@radix-ui/react-slot` dependency for UI components.&#10;- Added `BackButton` and `ProjectLinkIcon` components for improved UX.&#10;- Updated `type.d.ts` to reflect Contentful's `linksCollection` and&#10;  `galleryCollection` structure.&#10;- Applied minor styling adjustments in `app/globals.css`, including&#10;  card background and grid layout refinements.&#10;- Implemented dynamic metadata generation for project detail pages." />
-    <MESSAGE value="feat(projects, routing): Implement dedicated projects page (17102025)&#10;&#10;Migrate project listings from the homepage to a new dedicated '/projects'&#10;route, enhancing navigation and content organization.&#10;&#10;- Introduce a new" />
-    <MESSAGE value="feat(projects, routing): Implement dedicated projects page (17102025)&#10;&#10;Migrate project listings from the homepage to a new dedicated '/projects'&#10;route, enhancing navigation and content organization.&#10;&#10;- Introduce a new `/projects` page with its own layout and dynamic project&#10;  listing, replacing the previous homepage section.&#10;- Refactor the existing `Projects` component into `ProjectsList` and&#10;  `ProjectItem` components for better modularity" />
     <MESSAGE value="feat(projects, routing): Implement dedicated projects page (17102025)&#10;&#10;Migrate project listings from the homepage to a new dedicated '/projects'&#10;route, enhancing navigation and content organization.&#10;&#10;- Introduce a new `/projects` page with its own layout and dynamic project&#10;  listing, replacing the previous homepage section.&#10;- Refactor the existing `Projects` component into `ProjectsList` and&#10;  `ProjectItem` components for better modularity and reusability.&#10;- Update navigation links in `config/site.ts` to reflect the new routing&#10;  structure.&#10;- Improve the layout and responsiveness of individual project detail&#10;  pages (`/projects/[slug]`)," />
     <MESSAGE value="feat(projects, routing): Implement dedicated projects page (17102025)&#10;&#10;Migrate project listings from the homepage to a new dedicated '/projects'&#10;route, enhancing navigation and content organization.&#10;&#10;- Introduce a new `/projects` page with its own layout and dynamic project&#10;  listing, replacing the previous homepage section.&#10;- Refactor the existing `Projects` component into `ProjectsList` and&#10;  `ProjectItem` components for better modularity and reusability.&#10;- Update navigation links in `config/site.ts` to reflect the new routing&#10;  structure.&#10;- Improve the layout and responsiveness of individual project detail&#10;  pages (`/projects/[slug]`), including a refined grid system and&#10;  component styling.&#10;- Adjust global CSS and navigation component for consistency with the&#10;  new project structure." />
     <MESSAGE value="```&#10;feat(projects): Implement interactive project gallery (17102025)&#10;&#10;Refactor project image gallery into a new dedicated component to&#10;improve modularity and user experience.&#10;&#10;- Create `ProjectGallery` component at" />
@@ -371,6 +379,10 @@
     <MESSAGE value="feat(works): Rename projects to works and enhance portfolio section (17102025)&#10;&#10;- Renamed all 'Projects' related routes, components, and GraphQL&#10;  queries to 'Works' for improved clarity and consistency.&#10;- Introduced `lib/date-formatter.ts` for consistent date formatting&#10;  across the application.&#10;- Added new UI components: `Spinner` and `Skeleton` for better&#10;  loading state feedback.&#10;- Implemented dedicated loading states for both the works list and&#10;  individual work detail pages.&#10;- Refactored the homepage to integrate a new `RecentWorks` component,&#10;  dynamically showcasing recent projects and replacing the prior&#10;  static" />
     <MESSAGE value="feat(works): Rename projects to works and enhance portfolio section (17102025)&#10;&#10;- Renamed all 'Projects' related routes, components, and GraphQL&#10;  queries to 'Works' for improved clarity and consistency.&#10;- Introduced `lib/date-formatter.ts` for consistent date formatting&#10;  across the application.&#10;- Added new UI components: `Spinner` and `Skeleton` for better&#10;  loading state feedback.&#10;- Implemented dedicated loading states for both the works list and&#10;  individual work detail pages.&#10;- Refactored the homepage to integrate a new `RecentWorks` component,&#10;  dynamically showcasing recent projects and replacing the prior&#10;  static 'Work Experience' section.&#10;- Updated `config/site.ts` to reflect the new 'Works' navigation link.&#10;- Enhanced `app/globals.css` with a new `hovered-ringed-card`" />
     <MESSAGE value="feat(works): Rename projects to works and enhance portfolio section (17102025)&#10;&#10;- Renamed all 'Projects' related routes, components, and GraphQL&#10;  queries to 'Works' for improved clarity and consistency.&#10;- Introduced `lib/date-formatter.ts` for consistent date formatting&#10;  across the application.&#10;- Added new UI components: `Spinner` and `Skeleton` for better&#10;  loading state feedback.&#10;- Implemented dedicated loading states for both the works list and&#10;  individual work detail pages.&#10;- Refactored the homepage to integrate a new `RecentWorks` component,&#10;  dynamically showcasing recent projects and replacing the prior&#10;  static 'Work Experience' section.&#10;- Updated `config/site.ts` to reflect the new 'Works' navigation link.&#10;- Enhanced `app/globals.css` with a new `hovered-ringed-card` utility&#10;  for improved interactive styling.&#10;- Adjusted `type.d.ts` to align with the new `Work` data structure,&#10;  including `toolsShort`, `role`, `startDate`, and `endDate` fields." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(works): Rename projects to works and enhance portfolio section (17102025)&#10;&#10;- Renamed all 'Projects' related routes, components, and GraphQL&#10;  queries to 'Works' for improved clarity and consistency.&#10;- Introduced `lib/date-formatter.ts` for consistent date formatting&#10;  across the application.&#10;- Added new UI components: `Spinner` and `Skeleton` for better&#10;  loading state feedback.&#10;- Implemented dedicated loading states for both the works list and&#10;  individual work detail pages.&#10;- Refactored the homepage to integrate a new `RecentWorks` component,&#10;  dynamically showcasing recent projects and replacing the prior&#10;  static 'Work Experience' section.&#10;- Updated `config/site.ts` to reflect the new 'Works' navigation link.&#10;- Enhanced `app/globals.css` with a new `hovered-ringed-card` utility&#10;  for improved interactive styling.&#10;- Adjusted `type.d.ts` to align with the new `Work` data structure,&#10;  including `toolsShort`, `role`, `startDate`, and `endDate` fields." />
+    <MESSAGE value="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;" />
+    <MESSAGE value="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;- Updated `app/works/_components/works-list.tsx` to reflect the&#10;  component rename.&#10;- Added `client` field to the `Work` GraphQL query in&#10;  `app/graphql/get-works.ts`." />
+    <MESSAGE value="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;- Updated `app/works/_components/works-list.tsx` to reflect the&#10;  component rename.&#10;- Added `client` field to the `Work` GraphQL query in&#10;  `app/graphql/get-works.ts`.&#10;- Included `client` in the `WorkItemT` type definition in `type.d.ts`.&#10;- Displayed the `client` alongside the `role` in the `WorkItem`&#10;  component.&#10;-" />
+    <MESSAGE value="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;- Updated `app/works/_components/works-list.tsx` to reflect the&#10;  component rename.&#10;- Added `client` field to the `Work` GraphQL query in&#10;  `app/graphql/get-works.ts`.&#10;- Included `client` in the `WorkItemT` type definition in `type.d.ts`.&#10;- Displayed the `client` alongside the `role` in the `WorkItem`&#10;  component.&#10;- Enhanced `lib/date-formatter.ts` to include short month names&#10;  in date ranges." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;- Updated `app/works/_components/works-list.tsx` to reflect the&#10;  component rename.&#10;- Added `client` field to the `Work` GraphQL query in&#10;  `app/graphql/get-works.ts`.&#10;- Included `client` in the `WorkItemT` type definition in `type.d.ts`.&#10;- Displayed the `client` alongside the `role` in the `WorkItem`&#10;  component.&#10;- Enhanced `lib/date-formatter.ts` to include short month names&#10;  in date ranges." />
   </component>
 </project>

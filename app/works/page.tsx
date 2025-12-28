@@ -22,7 +22,6 @@ export default async function WorksPage() {
         <div className='flex flex-col gap-8 py-16'>
             <div className='flex items-center gap-4'>
                 <h1 className="text-nowrap uppercase tracking-widest text-base">My Works</h1>
-                <span className="h-px w-full bg-accent"/>
             </div>
             <WorksList works={data.workCollection.works}/>
         </div>

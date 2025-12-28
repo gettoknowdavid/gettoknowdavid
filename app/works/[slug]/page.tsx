@@ -103,8 +103,10 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
 
 
     return (
-        <div className='flex flex-col gap-8 py-16'>
-            <BackButton/>
+        <div className='flex flex-col gap-4 py-16'>
+            <div className="flex">
+                <BackButton/>
+            </div>
             <Card className="relative overflow-hidden bg-card/80 min-h-[320px] flex flex-col justify-end">
                 {work.image && (
                     <div className="absolute inset-0 z-0">
@@ -132,7 +134,7 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
                         {documentToReactComponents(work.keyFeatures.json, keyFeatureOptions)}
                     </Card>
                 </div>
-                <div className="grid col-span-5 md:col-span-4">
+                <div className="grid gap-4 col-span-5 md:col-span-4">
                     <Card className="w-full bg-card/80 gap-2">
                         <CardHeader className="py-0 my-0 mb-0">
                             <CardTitle className="py-0 my-0 mb-0">Project Details</CardTitle>
@@ -152,7 +154,6 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
                             </div>
                         </CardContent>
                     </Card>
-                    <span className="h-5"/>
                     <Card className="w-full bg-card/80 gap-2">
                         <CardHeader>
                             <CardTitle>Technologies & Tools</CardTitle>
@@ -168,7 +169,6 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
                             </ul>
                         </CardContent>
                     </Card>
-                    <span className="h-5"/>
                     <Card className="w-full bg-card/80 gap-2">
                         <CardHeader>
                             <CardTitle>Links</CardTitle>

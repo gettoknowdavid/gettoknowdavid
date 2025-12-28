@@ -36,11 +36,14 @@ export const WorkGallery = ({items}: { items: AssetT[] }) => {
                 <CardTitle>Gallery</CardTitle>
             </CardHeader>
             <CardContent>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <ul
+                    className="grid grid-cols-1 md:grid-cols-2 gap-[1.5px]"
+                    style={{background: 'var(--border)'}}
+                >
                     {items.map((item: AssetT, index: number) => (
                         <li
                             key={index}
-                            className="relative w-full aspect-video overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+                            className="relative w-full aspect-video overflow-hidden cursor-pointer hover:opacity-80 transition-opacity"
                             onClick={() => handleImageClick(index)}
                         >
                             <Image
@@ -66,7 +69,7 @@ export const WorkGallery = ({items}: { items: AssetT[] }) => {
                                             <div className="relative w-full h-full">
                                                 <Image
                                                     alt={`Full view ${index + 1}`}
-                                                    className="object-contain rounded-lg border-2"
+                                                    className="object-contain"
                                                     fill
                                                     priority={index === selectedIndex}
                                                     sizes="90vw"

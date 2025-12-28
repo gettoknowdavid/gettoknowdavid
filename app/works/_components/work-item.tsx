@@ -6,12 +6,27 @@ import {WorkItemT} from "@/type";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {getYearRange} from "@/lib/date-formatter";
 import {Skeleton} from "@/components/ui/skeleton";
+import {cn} from "@/lib/utils";
 
-export const WorkItem = ({work}: { work: WorkItemT }) => {
+export type WorkItemProps = {
+    work: WorkItemT;
+    isLeftColumn?: boolean;
+    isLastRow?: boolean;
+}
+export  type WorkItemSkeletonProps = Pick<WorkItemProps, 'isLastRow' | 'isLeftColumn'>;
+
+export const WorkItem = (props: WorkItemProps) => {
+    const {work, isLastRow, isLeftColumn} = props;
     const range = getYearRange({start: work.startDate, end: work.endDate});
     return (
         <Link href={`/works/${work.slug}`}>
-            <Card className="grid cols-span-1 bg-neutral-900 ringed-card hover:bg-card transition-all duration-700">
+            <Card
+                className={cn(
+                    "grid cols-span-1 border-0 hover:bg-neutral-900 transition-all duration-700",
+                    isLeftColumn && "border-r",
+                    !isLastRow && "border-b",
+                )}
+            >
                 <CardHeader className="gap-0">
                     <CardTitle className="flex items-start justify-between text-xl font-normal">
                         {work.title}
@@ -21,12 +36,12 @@ export const WorkItem = ({work}: { work: WorkItemT }) => {
                         {`${work.role} — ${work.client}`}
                     </p>
                 </CardHeader>
-                <CardContent>{work.brief}</CardContent>
+                <CardContent className="text-base tracking-wide">{work.brief}</CardContent>
                 <CardFooter>
                     <ul className="flex flex-row flex-wrap gap-1 text-neutral-400">
                         {work.toolsShort.map((tool, i) =>
                             <li key={i} className="flex flex-row items-center after:content-[','] last:after:hidden">
-                                <small className="text-base font-normal tracking-wide ">
+                                <small className="text-sm font-normal tracking-wide ">
                                     {tool}
                                 </small>
                             </li>
@@ -39,9 +54,15 @@ export const WorkItem = ({work}: { work: WorkItemT }) => {
 }
 
 
-export const WorkItemSkeleton = () => {
+export const WorkItemSkeleton = (props: WorkItemSkeletonProps) => {
     return (
-        <Card className="grid cols-span-1 bg-neutral-900">
+        <Card
+            className={cn(
+                "grid cols-span-1 border-0 hover:bg-neutral-900 transition-all duration-700",
+                props.isLeftColumn && "border-r",
+                !props.isLastRow && "border-b",
+            )}
+        >
             <CardHeader className="gap-0">
                 <div className="flex items-start justify-between">
                     <Skeleton className="h-7 w-3/4"/>
