@@ -4,7 +4,7 @@ import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import {WorksList, WorksListSkeleton} from "@/app/works/_components/works-list";
 import {useSuspenseQuery} from "@apollo/client/react";
-import {GET_WORKS} from "@/app/graphql/get-works";
+import {GET_WORKS} from "@/app/_graphql/get-works";
 import React from "react";
 
 export const RecentWorks = () => {

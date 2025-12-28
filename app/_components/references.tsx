@@ -1,10 +1,10 @@
 'use client';
 
 import {useSuspenseQuery} from "@apollo/client/react";
-import {GET_REFERENCES} from "@/app/graphql/get-references";
+import {GET_REFERENCES} from "@/app/_graphql/get-references";
 import React from "react";
 import {Reference} from "@/type";
-import {ReferenceItem, ReferenceItemSkeleton} from "@/app/components/reference-item";
+import {ReferenceItem, ReferenceItemSkeleton} from "@/app/_components/reference-item";
 
 export const References = () => {
     const {data} = useSuspenseQuery(GET_REFERENCES, {variables: {limit: 6}});

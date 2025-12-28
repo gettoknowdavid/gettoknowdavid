@@ -2,7 +2,7 @@
 
 import React, {ReactNode} from "react";
 import {useSuspenseQuery} from "@apollo/client/react";
-import {GET_HERO} from "@/app/graphql/get-hero";
+import {GET_HERO} from "@/app/_graphql/get-hero";
 import {BLOCKS, MARKS} from "@contentful/rich-text-types";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import {Persona} from "@/type";

@@ -1,7 +1,7 @@
-import {Intro} from "@/app/components/intro";
+import {Intro} from "@/app/_components/intro";
 import React from "react";
-import {RecentWorks} from "@/app/components/recent-works";
-import {References} from "@/app/components/references";
+import {RecentWorks} from "@/app/_components/recent-works";
+import {References} from "@/app/_components/references";
 
 export default function HomePage() {
     return (

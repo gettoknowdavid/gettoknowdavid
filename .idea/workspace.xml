@@ -19,9 +19,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/recent-works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/recent-works.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/references.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/references.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/github-contributions-graph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/github-contributions-graph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/intro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/recent-works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/recent-works.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/reference-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/reference-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/references.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/references.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/get-hero.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/_graphql/get-hero.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/get-references.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/_graphql/get-references.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/get-work.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/_graphql/get-work.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/get-works.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/_graphql/get-works.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/github-contribution.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/_graphql/github-contribution.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +194,7 @@
       <workItem from="1766744650496" duration="27760000" />
       <workItem from="1766789561770" duration="9829000" />
       <workItem from="1766876466419" duration="15361000" />
-      <workItem from="1766913912858" duration="777000" />
+      <workItem from="1766913912858" duration="1133000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -401,7 +412,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766894196807</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="refactor(homepage): Adjust section heights and recent works count (17102025)&#10;&#10;Increased the limit for recent works displayed from 4 to 5.&#10;Updated the `RecentWorks` and `References` sections to use `h-screen`&#10;for full viewport height. Added `justify-center` to `References` for&#10;vertical alignment.">
+      <option name="closed" value="true" />
+      <created>1766914772184</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1766914772184</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,9 +428,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="```&#10;refactor(ui, works): refine layout and standardize styling (17102025)&#10;&#10;This commit introduces a comprehensive overhaul of styling and layout&#10;across the works section and core UI components to achieve a more&#10;cohesive and modern design.&#10;&#10;Key changes include:&#10;- Standardized `Card` components to use `rounded-none` for a sharper look.&#10;- Replaced `gap` based grid layouts with `border` based layouts in&#10;  `WorksList` and `WorkGallery` for a cleaner separation.&#10;- Removed redundant horizontal separator `span` elements from&#10;  `Works` and `RecentWorks` pages.&#10;- Enhanced `WorkItem` component with" />
-    <MESSAGE value="```&#10;refactor(ui, works): refine layout and standardize styling (17102025)&#10;&#10;This commit introduces a comprehensive overhaul of styling and layout&#10;across the works section and core UI components to achieve a more&#10;cohesive and modern design.&#10;&#10;Key changes include:&#10;- Standardized `Card` components to use `rounded-none` for a sharper look.&#10;- Replaced `gap` based grid layouts with `border` based layouts in&#10;  `WorksList` and `WorkGallery` for a cleaner separation.&#10;- Removed redundant horizontal separator `span` elements from&#10;  `Works` and `RecentWorks` pages.&#10;- Enhanced `WorkItem` component with conditional borders based on&#10;  position within the grid, and refined text sizing.&#10;- Adjusted spacing and removed unnecessary vertical separators on&#10;  individual work detail pages.&#10;- Updated `BackButton` styling to match the new `rounded-none" />
-    <MESSAGE value="```&#10;refactor(ui, works): refine layout and standardize styling (17102025)&#10;&#10;This commit introduces a comprehensive overhaul of styling and layout&#10;across the works section and core UI components to achieve a more&#10;cohesive and modern design.&#10;&#10;Key changes include:&#10;- Standardized `Card` components to use `rounded-none` for a sharper look.&#10;- Replaced `gap` based grid layouts with `border` based layouts in&#10;  `WorksList` and `WorkGallery` for a cleaner separation.&#10;- Removed redundant horizontal separator `span` elements from&#10;  `Works` and `RecentWorks` pages.&#10;- Enhanced `WorkItem` component with conditional borders based on&#10;  position within the grid, and refined text sizing.&#10;- Adjusted spacing and removed unnecessary vertical separators on&#10;  individual work detail pages.&#10;- Updated `BackButton` styling to match the new `rounded-none` aesthetic.&#10;```" />
     <MESSAGE value="refactor(ui, works): refine layout and standardize styling (17102025)&#10;&#10;This commit introduces a comprehensive overhaul of styling and layout&#10;across the works section and core UI components to achieve a more&#10;cohesive and modern design.&#10;&#10;Key changes include:&#10;- Standardized `Card` components to use `rounded-none` for a sharper look.&#10;- Replaced `gap` based grid layouts with `border` based layouts in&#10;  `WorksList` and `WorkGallery` for a cleaner separation.&#10;- Removed redundant horizontal separator `span` elements from&#10;  `Works` and `RecentWorks` pages.&#10;- Enhanced `WorkItem` component with conditional borders based on&#10;  position within the grid, and refined text sizing.&#10;- Adjusted spacing and removed unnecessary vertical separators on&#10;  individual work detail pages.&#10;- Updated `BackButton` styling to match the new `rounded-none` aesthetic." />
     <MESSAGE value="feat(ui): Implement scroll fade for persona list (17102025)&#10;&#10;This commit introduces a horizontal scroll fade effect for the persona&#10;selection list, enhancing usability and visual cues when the list&#10;overflows its container.&#10;&#10;" />
     <MESSAGE value="feat(ui): Implement scroll fade for persona list (17102025)&#10;&#10;This commit introduces a horizontal scroll fade effect for the persona&#10;selection list, enhancing usability and visual cues when the list&#10;overflows its container.&#10;&#10;Key updates include:&#10;- Added interactive left and right fade gradients to the persona list.&#10;- Implemented scroll and resize event listeners to dynamically manage&#10;  fade visibility based on scroll position.&#10;- Refined persona list styling to ensure" />
@@ -434,6 +450,9 @@
     <MESSAGE value="refactor(works, ui): refine works section layout and styling (17102025)&#10;&#10;Standardized `Card` components to use `bg-background` and `border-none`&#10;across work details, gallery" />
     <MESSAGE value="refactor(works, ui): refine works section layout and styling (17102025)&#10;&#10;Standardized `Card` components to use `bg-background` and `border-none`&#10;across work details, gallery, and list items. Replaced `border` based&#10;layouts with `gap` based layouts in `WorksList` for improved spacing&#10;and responsiveness. Enhanced `WorkItem` component by removing&#10;conditional borders, making its background transparent, and adjusting" />
     <MESSAGE value="refactor(works, ui): refine works section layout and styling (17102025)&#10;&#10;Standardized `Card` components to use `bg-background` and `border-none`&#10;across work details, gallery, and list items. Replaced `border` based&#10;layouts with `gap` based layouts in `WorksList` for improved spacing&#10;and responsiveness. Enhanced `WorkItem` component by removing&#10;conditional borders, making its background transparent, and adjusting&#10;typography for better readability. Streamlined the grid layout in&#10;`WorkDetail` page, removing redundant `gap` declarations and&#10;standardizing `Card` styling." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(works, ui): refine works section layout and styling (17102025)&#10;&#10;Standardized `Card` components to use `bg-background` and `border-none`&#10;across work details, gallery, and list items. Replaced `border` based&#10;layouts with `gap` based layouts in `WorksList` for improved spacing&#10;and responsiveness. Enhanced `WorkItem` component by removing&#10;conditional borders, making its background transparent, and adjusting&#10;typography for better readability. Streamlined the grid layout in&#10;`WorkDetail` page, removing redundant `gap` declarations and&#10;standardizing `Card` styling." />
+    <MESSAGE value="```&#10;refactor(homepage): Adjust section heights and recent works count (17102025)&#10;&#10;Increased the limit for recent works displayed from 4 to 5.&#10;Updated the `RecentWorks` and `References" />
+    <MESSAGE value="```&#10;refactor(homepage): Adjust section heights and recent works count (17102025)&#10;&#10;Increased the limit for recent works displayed from 4 to 5.&#10;Updated the `RecentWorks` and `References` sections to use `h-screen`&#10;for full viewport height. Added `justify-center` to `References` for&#10;vertical alignment.&#10;```" />
+    <MESSAGE value="refactor(homepage): Adjust section heights and recent works count (17102025)&#10;&#10;Increased the limit for recent works displayed from 4 to 5.&#10;Updated the `RecentWorks` and `References` sections to use `h-screen`&#10;for full viewport height. Added `justify-center` to `References` for&#10;vertical alignment." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(homepage): Adjust section heights and recent works count (17102025)&#10;&#10;Increased the limit for recent works displayed from 4 to 5.&#10;Updated the `RecentWorks` and `References` sections to use `h-screen`&#10;for full viewport height. Added `justify-center` to `References` for&#10;vertical alignment." />
   </component>
 </project>

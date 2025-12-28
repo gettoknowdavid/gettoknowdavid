@@ -2,7 +2,11 @@
 
 import {GithubLogoIcon} from "@phosphor-icons/react/dist/icons/GithubLogo";
 import React from "react";
-import {ContributionDay, GET_CONTRIBUTIONS, GitHubGraphQLContributionResponse} from "@/app/graphql/github-contribution";
+import {
+    ContributionDay,
+    GET_CONTRIBUTIONS,
+    GitHubGraphQLContributionResponse
+} from "@/app/_graphql/github-contribution";
 import {useSuspenseQuery} from "@apollo/client/react";
 import {formatDateVerbose} from "@/utils/date-formatter";
 
