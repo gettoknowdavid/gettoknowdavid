@@ -60,7 +60,7 @@ export const Intro = () => {
         preserveWhitespace: true,
         renderNode: {
             [BLOCKS.PARAGRAPH]: (_node: any, children: any) => (
-                <p className="m-0 md:leading-18 text-3xl lg:text-6xl font-medium">
+                <p className="m-0 md:leading-snug lg:leading-18 text-3xl md:text-4xl lg:text-6xl font-medium">
                     {children}
                 </p>
             ),
@@ -73,7 +73,7 @@ export const Intro = () => {
         preserveWhitespace: true,
         renderNode: {
             [BLOCKS.PARAGRAPH]: (_node: any, children: any) => (
-                <p className="m-0 font-mono text-[13px] md:text-sm whitespace-pre-wrap">{children}</p>
+                <p className="m-0 leading-[1.5] font-mono text-[13px] md:text-sm whitespace-pre-wrap">{children}</p>
             )
         },
         renderMark: {

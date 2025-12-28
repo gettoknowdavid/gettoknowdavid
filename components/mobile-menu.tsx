@@ -13,7 +13,7 @@ export const MobileMenu: React.FC = () => {
     return (
         <div
             className={cn(
-                "fixed inset-0 z-40 bg-background md:hidden transition-opacity duration-500",
+                "fixed inset-0 z-40 bg-background lg:hidden transition-opacity duration-500",
                 isOpen ? "opacity-100 visible" : "opacity-0 invisible",
             )}
         >
@@ -49,7 +49,7 @@ const NavigationList: React.FC = () => {
     };
 
     return (
-        <div className='flex h-full w-full justify-end md:absolute'>
+        <div className='flex h-full w-full justify-end lg:absolute'>
             <nav className='flex-grow flex justify-end items-start'>
                 <ul className='flex flex-col gap-4 font-medium uppercase text-right mt-14'>
                     {navItems.map((item, index) => {
