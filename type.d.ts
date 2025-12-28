@@ -15,7 +15,12 @@ export type ShotT = {
     id: string;
     title: string;
     description: undefined;
-    image: AssetT;
+    image: {
+        url: string;
+        alt: string;
+        height: number;
+        width: number;
+    };
 };
 
 export type ShotsCollection = {

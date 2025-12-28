@@ -11,7 +11,7 @@ export const References = () => {
     const references = data?.referenceCollection.items || [];
 
     return (
-        <div className='flex flex-col gap-8 h-screen justify-center'>
+        <div className='flex flex-col gap-8 lg:h-screen justify-center pb-24'>
             <div className='flex items-center justify-between gap-4'>
                 <h1 className="text-nowrap uppercase tracking-widest text-base">References</h1>
             </div>
