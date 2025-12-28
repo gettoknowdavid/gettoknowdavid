@@ -21,24 +21,59 @@ export const Intro = () => {
     const currentPersona: Persona = personas[selectedPersonaIndex];
     const isEngineerPersona = currentPersona.buttonLabel.toLowerCase().includes('engineer');
 
+    // Scroll fade state
+    const scrollContainerRef = React.useRef<HTMLUListElement>(null);
+    const [showLeftFade, setShowLeftFade] = React.useState(false);
+    const [showRightFade, setShowRightFade] = React.useState(false);
+
+    const checkScroll = () => {
+        const container = scrollContainerRef.current;
+        if (!container) return;
+
+        const {scrollLeft, scrollWidth, clientWidth} = container;
+
+        // Show left fade if scrolled from the start
+        setShowLeftFade(scrollLeft > 10);
+
+        // Show right fade if not at the end
+        setShowRightFade(scrollLeft < scrollWidth - clientWidth - 10);
+    };
+
+    React.useEffect(() => {
+        checkScroll(); // Check on mount
+        const container = scrollContainerRef.current;
+        if (container) {
+            container.addEventListener('scroll', checkScroll);
+            // Also check on resize
+            window.addEventListener('resize', checkScroll);
+        }
+        return () => {
+            if (container) {
+                container.removeEventListener('scroll', checkScroll);
+            }
+            window.removeEventListener('resize', checkScroll);
+        };
+    }, []);
+
     const normalOptions = {
         renderText: _renderText,
         preserveWhitespace: true,
         renderNode: {
             [BLOCKS.PARAGRAPH]: (_node: any, children: any) => (
-                <p className="m-0 leading-18 text-xl lg:text-6xl font-medium">
+                <p className="m-0 md:leading-18 text-3xl lg:text-6xl font-medium">
                     {children}
                 </p>
             ),
         },
         renderMark: {[MARKS.UNDERLINE]: (text: any) => <span className="underline decoration-accent">{text}</span>},
     };
+
     const codeOptions = {
         renderText: _renderText,
         preserveWhitespace: true,
         renderNode: {
             [BLOCKS.PARAGRAPH]: (_node: any, children: any) => (
-                <p className="m-0 font-mono text-sm whitespace-pre-wrap">{children}</p>
+                <p className="m-0 font-mono text-[13px] md:text-sm whitespace-pre-wrap">{children}</p>
             )
         },
         renderMark: {
@@ -52,12 +87,26 @@ export const Intro = () => {
 
     return (
         <div className="flex flex-col h-screen justify-center">
-            <div className="flex-shrink-0">
-                <ul className="flex flex-row mb-8 p-0 gap-5">
+            <div className="flex-shrink-0 relative">
+                {/* Left fade gradient */}
+                <div
+                    className={cn(
+                        "absolute left-0 top-0 bottom-0 w-16 pointer-events-none z-10 transition-opacity duration-300",
+                        "bg-gradient-to-r from-black to-transparent",
+                        showLeftFade ? "opacity-100" : "opacity-0"
+                    )}
+                />
+
+                {/* Scrollable container */}
+                <ul
+                    ref={scrollContainerRef}
+                    className="flex flex-row flex-nowrap overflow-x-scroll mb-8 p-0 gap-5"
+                    style={{scrollbarWidth: "none", userSelect: "none"}}
+                >
                     {personas.map((persona: Persona, index) => {
                         const isSelected = selectedPersonaIndex === index;
                         return (
-                            <li key={persona.sys.id} className="font-medium tracking-wide">
+                            <li key={persona.sys.id} className="font-medium tracking-wide flex text-nowrap">
                                 <Link
                                     href="#"
                                     onClick={(e) => {
@@ -65,7 +114,7 @@ export const Intro = () => {
                                         setSelectedPersonaIndex(index);
                                     }}
                                     className={cn(
-                                        isSelected ? "text-accent" : "text-foreground hover:opacity-30",
+                                        isSelected ? "text-accent" : "text-neutral-400 hover:opacity-30",
                                         "transition-all duration-500",
                                     )}
                                 >
@@ -75,11 +124,20 @@ export const Intro = () => {
                         );
                     })}
                 </ul>
+
+                {/* Right fade gradient */}
+                <div
+                    className={cn(
+                        "absolute right-0 top-0 bottom-0 w-16 pointer-events-none z-10 transition-opacity duration-300",
+                        "bg-gradient-to-l from-black to-transparent",
+                        showRightFade ? "opacity-100" : "opacity-0"
+                    )}
+                />
             </div>
             {isEngineerPersona ? (
-                <Card className="max-h-[60vh] h-full ringed-card bg-neutral-900 px-6">{body}</Card>
+                <Card className="max-h-[70vh] md:max-h-[60vh] h-full bg-neutral-900 pl-4 md:px-6">{body}</Card>
             ) : (
-                <div className="flex-shrink-1 max-h-[60vh] h-full">{body}</div>
+                <div className="flex-shrink-1 max-h-[70vh] md:max-h-[60vh] h-full">{body}</div>
             )}
         </div>
     );
