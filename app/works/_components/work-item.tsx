@@ -27,21 +27,27 @@ export const WorkItem = (props: WorkItemProps) => {
                     !isLastRow && "border-b",
                 )}
             >
-                <CardHeader className="gap-0">
-                    <CardTitle className="flex items-start justify-between text-xl font-normal">
+                <CardHeader className="gap-1">
+                    <CardTitle className="flex items-start justify-between text-base lg:text-lg font-normal text-white">
                         {work.title}
-                        <span className="text-sm text-neutral-400">{range}</span>
+                        <span className="hidden lg:flex text-sm text-neutral-400">{range}</span>
                     </CardTitle>
-                    <p className="text-sm text-neutral-400">
-                        {`${work.role} — ${work.client}`}
-                    </p>
+                    <div>
+                        <p className="text-xs lg:text-sm text-neutral-400">
+                            {`${work.role} — ${work.client}`}
+                        </p>
+                        <p className="flex lg:hidden text-xs text-neutral-400 mb-0">{range}</p>
+                    </div>
                 </CardHeader>
-                <CardContent className="text-base tracking-wide">{work.brief}</CardContent>
+                <CardContent className="text-sm lg:text-base tracking-wide text-neutral-200">{work.brief}</CardContent>
                 <CardFooter>
                     <ul className="flex flex-row flex-wrap gap-1 text-neutral-400">
                         {work.toolsShort.map((tool, i) =>
-                            <li key={i} className="flex flex-row items-center after:content-[','] last:after:hidden">
-                                <small className="text-sm font-normal tracking-wide ">
+                            <li
+                                key={i}
+                                className="flex flex-row items-center after:content-[','] after:text-xs after:lg:text-sm last:after:hidden"
+                            >
+                                <small className="text-xs lg:text-sm font-normal tracking-wide ">
                                     {tool}
                                 </small>
                             </li>
@@ -66,9 +72,9 @@ export const WorkItemSkeleton = (props: WorkItemSkeletonProps) => {
             <CardHeader className="gap-0">
                 <div className="flex items-start justify-between">
                     <Skeleton className="h-7 w-3/4"/>
-                    <Skeleton className="h-5 w-20"/>
+                    <Skeleton className="h-5 w-20 hidden lg:flex"/>
                 </div>
-                <Skeleton className="h-4 w-1/2 mt-2"/>
+                <Skeleton className="h-4 w-1/2 mt-2 flex lg:hidden"/>
             </CardHeader>
             <CardContent>
                 <div className="space-y-2">

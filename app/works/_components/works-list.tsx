@@ -6,7 +6,7 @@ import {WorkItem, WorkItemSkeleton} from "@/app/works/_components/work-item";
 
 export const WorksList = ({works}: { works: Work[] | WorkItemT[] }) => {
     return (
-        <ul className="grid grid-cols-2 border">
+        <ul className="grid grid-cols-1 md:grid-cols-2 border">
             {works.map((work: WorkItemT, index) => (
                 <WorkItem
                     key={work.sys.id}
