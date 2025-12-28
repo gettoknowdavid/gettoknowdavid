@@ -1,6 +1,6 @@
 import React from "react";
 import {WorksList} from "@/app/works/_components/works-list";
-import makeClient from "@/app/client";
+import makeClient from "@/lib/client";
 import {GET_WORKS} from "@/app/_graphql/get-works";
 
 export default async function WorksPage() {

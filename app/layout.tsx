@@ -7,7 +7,7 @@ import {LayoutWrapper} from "@/components/layout-wrapper";
 import {neue} from "@/config/fonts";
 import {siteConfig} from "@/config/site";
 import {Nav} from "@/components/nav";
-import {ApolloWrapper} from "@/app/apollo-wrapper";
+import {ApolloWrapper} from "@/components/apollo-wrapper";
 import {WarpBackground} from "@/components/warp-background";
 
 export const metadata: Metadata = {

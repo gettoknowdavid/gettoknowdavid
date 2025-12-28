@@ -2,7 +2,7 @@
 
 import React from "react";
 import {ApolloNextAppProvider} from "@apollo/client-integration-nextjs";
-import makeClient from "@/app/client";
+import makeClient from "@/lib/client";
 
 export function ApolloWrapper({children}: React.PropsWithChildren) {
     return (

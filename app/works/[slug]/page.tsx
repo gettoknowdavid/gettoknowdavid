@@ -1,7 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 
 import {GET_WORK} from "@/app/_graphql/get-work";
-import makeClient from "@/app/client";
+import makeClient from "@/lib/client";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import React, {ReactNode} from "react";
 import {BLOCKS} from "@contentful/rich-text-types";
