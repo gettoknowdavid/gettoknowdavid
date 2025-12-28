@@ -93,3 +93,18 @@ export interface HeroCollection {
     limit: number;
     items: Hero[];
 }
+
+export interface Reference {
+    sys: { id: string };
+    refereeName: string;
+    refereeRole: string;
+    refereeLink: string;
+    content: string;
+}
+
+export interface ReferenceCollection {
+    total: number;
+    skip: number;
+    limit: number;
+    items: Reference[];
+}
