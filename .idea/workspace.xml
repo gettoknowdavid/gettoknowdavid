@@ -19,9 +19,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/works/_components/work-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/works/_components/works-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/works-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/[slug]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +180,7 @@
       <workItem from="1766489802945" duration="14748000" />
       <workItem from="1766744650496" duration="27760000" />
       <workItem from="1766789561770" duration="9829000" />
-      <workItem from="1766876466419" duration="9138000" />
+      <workItem from="1766876466419" duration="9461000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -368,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766886614804</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="feat(ui): Enhance works section responsiveness and typography (17102025)&#10;&#10;Adjusted grid layout in WorksList to be single column on small screens&#10;and two columns on medium screens. Refined typography for WorkItem&#10;elements (title, role, client, brief, tools) to improve readability&#10;across devices. Updated work range placement for consistent visibility&#10;and optimized layout.">
+      <option name="closed" value="true" />
+      <created>1766887669210</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1766887669210</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,9 +382,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(homepage): Dynamic hero, personas, and work experience section (17102025)&#10;&#10;- Refactor `Intro` component to fetch dynamic content from Contentful,&#10;  enabling a persona-driven display with" />
-    <MESSAGE value="feat(homepage): Dynamic hero, personas, and work experience section (17102025)&#10;&#10;- Refactor `Intro` component to fetch dynamic content from Contentful,&#10;  enabling a persona-driven display with rich text rendering.&#10;- Introduce `GET_HERO` GraphQL query and TypeScript types (`Persona`,&#10;  `Hero`) for Contentful integration.&#10;- Add a new &quot;Work Experience&quot; section to the homepage, showcasing&#10;  " />
-    <MESSAGE value="feat(homepage): Dynamic hero, personas, and work experience section (17102025)&#10;&#10;- Refactor `Intro` component to fetch dynamic content from Contentful,&#10;  enabling a persona-driven display with rich text rendering.&#10;- Introduce `GET_HERO` GraphQL query and TypeScript types (`Persona`,&#10;  `Hero`) for Contentful integration.&#10;- Add a new &quot;Work Experience&quot; section to the homepage, showcasing&#10;  placeholder job roles and durations using UI cards.&#10;- Update global CSS with a new `ringed-card` utility, custom scrollbar&#10;  styles, and a refined dark theme background color." />
     <MESSAGE value="feat(works): Rename projects to works and enhance portfolio section (17102025)&#10;&#10;- Renamed all 'Projects' related routes, components, and GraphQL&#10;  queries to 'Works' for improved clarity and consistency" />
     <MESSAGE value="feat(works): Rename projects to works and enhance portfolio section (17102025)&#10;&#10;- Renamed all 'Projects' related routes, components, and GraphQL&#10;  queries to 'Works' for improved clarity and consistency.&#10;- Introduced `lib/date-formatter.ts` for consistent date formatting&#10;  across the application.&#10;- Added new UI components: `Spinner` and `Skeleton` for better&#10;  loading state feedback.&#10;- Im" />
     <MESSAGE value="feat(works): Rename projects to works and enhance portfolio section (17102025)&#10;&#10;- Renamed all 'Projects' related routes, components, and GraphQL&#10;  queries to 'Works' for improved clarity and consistency.&#10;- Introduced `lib/date-formatter.ts` for consistent date formatting&#10;  across the application.&#10;- Added new UI components: `Spinner` and `Skeleton` for better&#10;  loading state feedback.&#10;- Implemented dedicated loading states for both the works list and&#10;  individual work detail pages.&#10;- Refactored the homepage to integrate a new `RecentWorks` component,&#10;  dynamically showcasing recent projects and replacing the prior&#10;  static" />
@@ -401,6 +404,9 @@
     <MESSAGE value="```&#10;feat(ui): Improve responsiveness and typography (17102025)&#10;&#10;Adjusted typography in the intro component, enhancing line height and&#10;font sizing for better readability on medium screens.&#10;&#10;Updated mobile menu visibility to" />
     <MESSAGE value="```&#10;feat(ui): Improve responsiveness and typography (17102025)&#10;&#10;Adjusted typography in the intro component, enhancing line height and&#10;font sizing for better readability on medium screens.&#10;&#10;Updated mobile menu visibility to be hidden only on large screens,&#10;making it accessible on medium screens.&#10;```" />
     <MESSAGE value="feat(ui): Improve responsiveness and typography (17102025)&#10;&#10;Adjusted typography in the intro component, enhancing line height and&#10;font sizing for better readability on medium screens.&#10;&#10;Updated mobile menu visibility to be hidden only on large screens,&#10;making it accessible on medium screens." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ui): Improve responsiveness and typography (17102025)&#10;&#10;Adjusted typography in the intro component, enhancing line height and&#10;font sizing for better readability on medium screens.&#10;&#10;Updated mobile menu visibility to be hidden only on large screens,&#10;making it accessible on medium screens." />
+    <MESSAGE value="```&#10;feat(ui): Enhance works section responsiveness and typography (17102025)&#10;&#10;Adjusted grid layout in WorksList to be single column on small screens&#10;and two columns on medium screens. Refined typography for" />
+    <MESSAGE value="```&#10;feat(ui): Enhance works section responsiveness and typography (17102025)&#10;&#10;Adjusted grid layout in WorksList to be single column on small screens&#10;and two columns on medium screens. Refined typography for WorkItem&#10;elements (title, role, client, brief, tools) to improve readability&#10;across devices. Updated work range placement for consistent visibility&#10;and optimized layout.&#10;```" />
+    <MESSAGE value="feat(ui): Enhance works section responsiveness and typography (17102025)&#10;&#10;Adjusted grid layout in WorksList to be single column on small screens&#10;and two columns on medium screens. Refined typography for WorkItem&#10;elements (title, role, client, brief, tools) to improve readability&#10;across devices. Updated work range placement for consistent visibility&#10;and optimized layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ui): Enhance works section responsiveness and typography (17102025)&#10;&#10;Adjusted grid layout in WorksList to be single column on small screens&#10;and two columns on medium screens. Refined typography for WorkItem&#10;elements (title, role, client, brief, tools) to improve readability&#10;across devices. Updated work range placement for consistent visibility&#10;and optimized layout." />
   </component>
 </project>

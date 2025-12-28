@@ -59,7 +59,7 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
             ),
             [BLOCKS.PARAGRAPH]: (_node: any, children: any) => (
                 <CardContent>
-                    <p className="leading-relaxed text-base">{children}</p>
+                    <p className="leading-loose text-base">{children}</p>
                 </CardContent>
             ),
         },
@@ -121,7 +121,7 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
                     </div>
                 )}
                 <CardHeader className="relative">
-                    <h1 className="text-2xl md:text-6xl font-medium md:font-thin">{work.title}</h1>
+                    <h1 className="text-2xl md:text-3xl lg:text-6xl font-regular lg:font-thin">{work.title}</h1>
                     <h2 className="text-base mt-1 md:mt-3">{work.subtitle}</h2>
                     <p className="text-sm md:text-base text-neutral-300">{work.brief}</p>
                 </CardHeader>
