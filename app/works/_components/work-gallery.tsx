@@ -31,7 +31,7 @@ export const WorkGallery = ({items}: { items: AssetT[] }) => {
     };
 
     return (
-        <Card className="w-full bg-card/80 gap-4">
+        <Card className="w-full bg-background border-none gap-4">
             <CardHeader>
                 <CardTitle>Gallery</CardTitle>
             </CardHeader>

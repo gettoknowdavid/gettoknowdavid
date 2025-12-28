@@ -19,16 +19,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/reference-item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/references.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/graphql/get-references.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/github-contributions-graph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/github-contributions-graph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/intro.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/recent-works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/recent-works.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/footer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/_components/work-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/_components/work-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/_components/works-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/works-list.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +184,7 @@
       <workItem from="1766489802945" duration="14748000" />
       <workItem from="1766744650496" duration="27760000" />
       <workItem from="1766789561770" duration="9829000" />
-      <workItem from="1766876466419" duration="12833000" />
+      <workItem from="1766876466419" duration="15024000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -391,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766888004243</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;- Implemented `get-references.ts` GraphQL query for fetching data.&#10;- Defined `Reference` and `ReferenceCollection` types in `type.d.ts`.&#10;- Refactored component directory structure: `app/_components` to&#10;  `app/components` for `intro`, `recent-works`, and `github-contributions-graph`.&#10;- Removed the `components/footer.tsx` file.&#10;- Adjusted homepage layout for new section and overall spacing.">
+      <option name="closed" value="true" />
+      <created>1766892004377</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1766892004377</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,11 +402,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(works): Rename projects to works and enhance portfolio section (17102025)&#10;&#10;- Renamed all 'Projects' related routes, components, and GraphQL&#10;  queries to 'Works' for improved clarity and consistency.&#10;- Introduced `lib/date-formatter.ts` for consistent date formatting&#10;  across the application.&#10;- Added new UI components: `Spinner` and `Skeleton` for better&#10;  loading state feedback.&#10;- Implemented dedicated loading states for both the works list and&#10;  individual work detail pages.&#10;- Refactored the homepage to integrate a new `RecentWorks` component,&#10;  dynamically showcasing recent projects and replacing the prior&#10;  static 'Work Experience' section.&#10;- Updated `config/site.ts` to reflect the new 'Works' navigation link.&#10;- Enhanced `app/globals.css` with a new `hovered-ringed-card`" />
-    <MESSAGE value="feat(works): Rename projects to works and enhance portfolio section (17102025)&#10;&#10;- Renamed all 'Projects' related routes, components, and GraphQL&#10;  queries to 'Works' for improved clarity and consistency.&#10;- Introduced `lib/date-formatter.ts` for consistent date formatting&#10;  across the application.&#10;- Added new UI components: `Spinner` and `Skeleton` for better&#10;  loading state feedback.&#10;- Implemented dedicated loading states for both the works list and&#10;  individual work detail pages.&#10;- Refactored the homepage to integrate a new `RecentWorks` component,&#10;  dynamically showcasing recent projects and replacing the prior&#10;  static 'Work Experience' section.&#10;- Updated `config/site.ts` to reflect the new 'Works' navigation link.&#10;- Enhanced `app/globals.css` with a new `hovered-ringed-card` utility&#10;  for improved interactive styling.&#10;- Adjusted `type.d.ts` to align with the new `Work` data structure,&#10;  including `toolsShort`, `role`, `startDate`, and `endDate` fields." />
-    <MESSAGE value="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;" />
-    <MESSAGE value="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;- Updated `app/works/_components/works-list.tsx` to reflect the&#10;  component rename.&#10;- Added `client` field to the `Work` GraphQL query in&#10;  `app/graphql/get-works.ts`." />
-    <MESSAGE value="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;- Updated `app/works/_components/works-list.tsx` to reflect the&#10;  component rename.&#10;- Added `client` field to the `Work` GraphQL query in&#10;  `app/graphql/get-works.ts`.&#10;- Included `client` in the `WorkItemT` type definition in `type.d.ts`.&#10;- Displayed the `client` alongside the `role` in the `WorkItem`&#10;  component.&#10;-" />
     <MESSAGE value="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;- Updated `app/works/_components/works-list.tsx` to reflect the&#10;  component rename.&#10;- Added `client` field to the `Work` GraphQL query in&#10;  `app/graphql/get-works.ts`.&#10;- Included `client` in the `WorkItemT` type definition in `type.d.ts`.&#10;- Displayed the `client` alongside the `role` in the `WorkItem`&#10;  component.&#10;- Enhanced `lib/date-formatter.ts` to include short month names&#10;  in date ranges." />
     <MESSAGE value="```&#10;refactor(ui, works): refine layout and standardize styling (17102025)&#10;&#10;This commit introduces a comprehensive overhaul of styling and layout&#10;across the works section and core UI components to achieve a more&#10;" />
     <MESSAGE value="```&#10;refactor(ui, works): refine layout and standardize styling (17102025)&#10;&#10;This commit introduces a comprehensive overhaul of styling and layout&#10;across the works section and core UI components to achieve a more&#10;cohesive and modern design.&#10;&#10;Key changes include:&#10;- Standardized `Card` components to use `rounded-none` for a sharper look.&#10;- Replaced `gap` based grid layouts with `border` based layouts in" />
@@ -424,6 +422,11 @@
     <MESSAGE value="feat(ui): Enhance responsiveness and typography (17102025)&#10;&#10;Refine UI elements for improved readability and responsive behavior.&#10;&#10;- Adjusted paragraph line height from 'leading-relaxed' to 'leading-loose'" />
     <MESSAGE value="feat(ui): Enhance responsiveness and typography (17102025)&#10;&#10;Refine UI elements for improved readability and responsive behavior.&#10;&#10;- Adjusted paragraph line height from 'leading-relaxed' to 'leading-loose'&#10;  in work detail pages to improve text legibility.&#10;- Updated responsive font sizing and weight for work detail page titles,&#10;  ensuring optimal display across various screen sizes&#10;  (text-2xl, md:text-3xl" />
     <MESSAGE value="feat(ui): Enhance responsiveness and typography (17102025)&#10;&#10;Refine UI elements for improved readability and responsive behavior.&#10;&#10;- Adjusted paragraph line height from 'leading-relaxed' to 'leading-loose'&#10;  in work detail pages to improve text legibility.&#10;- Updated responsive font sizing and weight for work detail page titles,&#10;  ensuring optimal display across various screen sizes&#10;  (text-2xl, md:text-3xl, lg:text-6xl).&#10;- Modified header background to be transparent on large screens and solid&#10;  on smaller screens, improving visual integration." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ui): Enhance responsiveness and typography (17102025)&#10;&#10;Refine UI elements for improved readability and responsive behavior.&#10;&#10;- Adjusted paragraph line height from 'leading-relaxed' to 'leading-loose'&#10;  in work detail pages to improve text legibility.&#10;- Updated responsive font sizing and weight for work detail page titles,&#10;  ensuring optimal display across various screen sizes&#10;  (text-2xl, md:text-3xl, lg:text-6xl).&#10;- Modified header background to be transparent on large screens and solid&#10;  on smaller screens, improving visual integration." />
+    <MESSAGE value="```&#10;feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;" />
+    <MESSAGE value="```&#10;feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;- Implemented `get-references.ts` GraphQL query for fetching data.&#10;- Defined `Reference` and `ReferenceCollection` types in `type.d.ts`.&#10;- Refactored component directory structure: `app/_" />
+    <MESSAGE value="```&#10;feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;- Implemented `get-references.ts` GraphQL query for fetching data.&#10;- Defined `Reference` and `ReferenceCollection` types in `type.d.ts`.&#10;- Refactored component directory structure: `app/_components` to&#10;  `app/components` for `intro`, `recent-works`, and `github-contributions-graph`.&#10;- Removed the `components/footer.tsx` file.&#10;- Adjusted homepage layout for new" />
+    <MESSAGE value="```&#10;feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;- Implemented `get-references.ts` GraphQL query for fetching data.&#10;- Defined `Reference` and `ReferenceCollection` types in `type.d.ts`.&#10;- Refactored component directory structure: `app/_components` to&#10;  `app/components` for `intro`, `recent-works`, and `github-contributions-graph`.&#10;- Removed the `components/footer.tsx` file.&#10;- Adjusted homepage layout for new section and overall spacing.&#10;```" />
+    <MESSAGE value="feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;- Implemented `get-references.ts` GraphQL query for fetching data.&#10;- Defined `Reference` and `ReferenceCollection` types in `type.d.ts`.&#10;- Refactored component directory structure: `app/_components` to&#10;  `app/components` for `intro`, `recent-works`, and `github-contributions-graph`.&#10;- Removed the `components/footer.tsx` file.&#10;- Adjusted homepage layout for new section and overall spacing." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;- Implemented `get-references.ts` GraphQL query for fetching data.&#10;- Defined `Reference` and `ReferenceCollection` types in `type.d.ts`.&#10;- Refactored component directory structure: `app/_components` to&#10;  `app/components` for `intro`, `recent-works`, and `github-contributions-graph`.&#10;- Removed the `components/footer.tsx` file.&#10;- Adjusted homepage layout for new section and overall spacing." />
   </component>
 </project>

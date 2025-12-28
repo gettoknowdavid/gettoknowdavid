@@ -103,11 +103,12 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
 
 
     return (
-        <div className='flex flex-col gap-4 py-16'>
-            <div className="flex">
+        <div className='grid py-16'>
+            <div className="flex mb-6">
                 <BackButton/>
             </div>
-            <Card className="relative overflow-hidden bg-card/80 min-h-[320px] flex flex-col justify-end">
+            <Card
+                className="relative overflow-hidden bg-background border-none min-h-[320px] flex flex-col justify-end">
                 {work.image && (
                     <div className="absolute inset-0 z-0">
                         <Image
@@ -126,16 +127,16 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
                     <p className="text-sm md:text-base text-neutral-300">{work.brief}</p>
                 </CardHeader>
             </Card>
-            <div className='grid md:grid-cols-12 gap-4 items-start'>
+            <div className='grid md:grid-cols-12 items-start h-full'>
                 <div className="grid col-span-7 md:col-span-8">
-                    <Card className="w-full bg-card/80 gap-2">
+                    <Card className="w-full bg-background border-none gap-2">
                         {documentToReactComponents(work.description.json, options)}
                         <span className="h-5"/>
                         {documentToReactComponents(work.keyFeatures.json, keyFeatureOptions)}
                     </Card>
                 </div>
-                <div className="grid gap-4 col-span-5 md:col-span-4">
-                    <Card className="w-full bg-card/80 gap-2">
+                <div className="grid col-span-5 md:col-span-4">
+                    <Card className="w-full bg-background border-none gap-2">
                         <CardHeader className="py-0 my-0 mb-0">
                             <CardTitle className="py-0 my-0 mb-0">Project Details</CardTitle>
                         </CardHeader>
@@ -154,7 +155,7 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="w-full bg-card/80 gap-2">
+                    <Card className="w-full bg-background border-none gap-2">
                         <CardHeader>
                             <CardTitle>Technologies & Tools</CardTitle>
                         </CardHeader>
@@ -169,7 +170,7 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
                             </ul>
                         </CardContent>
                     </Card>
-                    <Card className="w-full bg-card/80 gap-2">
+                    <Card className="w-full bg-background border-none gap-2">
                         <CardHeader>
                             <CardTitle>Links</CardTitle>
                         </CardHeader>

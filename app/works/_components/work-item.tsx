@@ -19,43 +19,37 @@ export const WorkItem = (props: WorkItemProps) => {
     const {work, isLastRow, isLeftColumn} = props;
     const range = getYearRange({start: work.startDate, end: work.endDate});
     return (
-        <Link href={`/works/${work.slug}`}>
-            <Card
-                className={cn(
-                    "grid cols-span-1 border-0 hover:bg-neutral-900 transition-all duration-700",
-                    isLeftColumn && "border-r",
-                    !isLastRow && "border-b",
-                )}
-            >
-                <CardHeader className="gap-1">
-                    <CardTitle className="flex items-start justify-between text-base lg:text-lg font-normal text-white">
+
+        <Card className="grid cols-span-1 border-none bg-transparent m-0 p-0 gap-0">
+            <CardHeader className="gap-1 p-0 mb-6">
+                <CardTitle className="flex items-start justify-between text-xl md:text-2xl lg:text-3xl font-normal">
+                    <Link href={`/works/${work.slug}`} className="hover:underline transition-all duration-700">
                         {work.title}
-                        <span className="hidden lg:flex text-sm text-neutral-400">{range}</span>
-                    </CardTitle>
-                    <div>
-                        <p className="text-xs lg:text-sm text-neutral-400">
-                            {`${work.role} — ${work.client}`}
-                        </p>
-                        <p className="flex lg:hidden text-xs text-neutral-400 mb-0">{range}</p>
-                    </div>
-                </CardHeader>
-                <CardContent className="text-sm lg:text-base tracking-wide text-neutral-200">{work.brief}</CardContent>
-                <CardFooter>
-                    <ul className="flex flex-row flex-wrap gap-1 text-neutral-400">
-                        {work.toolsShort.map((tool, i) =>
-                            <li
-                                key={i}
-                                className="flex flex-row items-center after:content-[','] after:text-xs after:lg:text-sm last:after:hidden"
-                            >
-                                <small className="text-xs lg:text-sm font-normal tracking-wide ">
-                                    {tool}
-                                </small>
-                            </li>
-                        )}
-                    </ul>
-                </CardFooter>
-            </Card>
-        </Link>
+                    </Link>
+                </CardTitle>
+                <div>
+                    <p className="text-xs md:text-sm text-neutral-300">
+                        {`${work.role} — ${work.client}`}
+                    </p>
+                    <p className="text-xs md:text-sm text-neutral-300 mb-0">{range}</p>
+                </div>
+            </CardHeader>
+            <CardContent className="max-md:text-sm tracking-wide p-0 mb-2">{work.brief}</CardContent>
+            <CardFooter className="p-0 mb-0">
+                <ul className="flex flex-row flex-wrap gap-1 text-neutral-400">
+                    {work.toolsShort.map((tool, i) =>
+                        <li
+                            key={i}
+                            className="flex flex-row items-center after:content-[','] after:text-xs after:md:text-sm last:after:hidden"
+                        >
+                            <small className="text-xs md:text-sm font-normal tracking-wide ">
+                                {tool}
+                            </small>
+                        </li>
+                    )}
+                </ul>
+            </CardFooter>
+        </Card>
     );
 }
 
