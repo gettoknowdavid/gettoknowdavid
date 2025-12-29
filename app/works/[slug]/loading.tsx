@@ -3,12 +3,15 @@ import {Card, CardContent, CardHeader} from "@/components/ui/card";
 
 export default function WorkDetailsLoading() {
     return (
-        <div className='flex flex-col gap-8 py-16'>
+        <div className='grid py-16 lg:py-24 relative'>
             {/* Back Button Skeleton */}
-            <Skeleton className="h-10 w-24"/>
+            <div className="flex mb-4 relative lg:absolute lg:-left-14 lg:top-24">
+                <Skeleton className="h-8 w-8"/>
+            </div>
 
             {/* Hero Card Skeleton */}
-            <Card className="relative overflow-hidden bg-card/80 min-h-[320px] flex flex-col justify-end">
+            <Card
+                className="relative overflow-hidden bg-background border-none rounded-none min-h-[320px] flex flex-col justify-end">
                 <Skeleton className="absolute inset-0"/>
                 <CardHeader className="relative z-10">
                     <Skeleton className="h-12 md:h-16 w-3/4 mb-3"/>
@@ -19,10 +22,10 @@ export default function WorkDetailsLoading() {
             </Card>
 
             {/* Content Grid */}
-            <div className='grid md:grid-cols-12 gap-4 items-start'>
+            <div className='grid md:grid-cols-12 items-start h-full'>
                 {/* Main Content Skeleton */}
-                <div className="grid col-span-7 md:col-span-8">
-                    <Card className="w-full bg-card/80 gap-2">
+                <div className="grid md:col-span-8">
+                    <Card className="w-full bg-background border-none rounded-none gap-2">
                         <CardHeader>
                             <Skeleton className="h-6 w-1/3"/>
                         </CardHeader>
@@ -49,9 +52,9 @@ export default function WorkDetailsLoading() {
                 </div>
 
                 {/* Sidebar Skeleton */}
-                <div className="grid col-span-5 md:col-span-4 gap-5">
+                <div className="grid md:col-span-4">
                     {/* Project Details Card */}
-                    <Card className="w-full bg-card/80 gap-2">
+                    <Card className="w-full bg-background border-none rounded-none gap-2">
                         <CardHeader className="py-0 my-0 mb-0">
                             <Skeleton className="h-6 w-1/2"/>
                         </CardHeader>
@@ -72,7 +75,7 @@ export default function WorkDetailsLoading() {
                     </Card>
 
                     {/* Technologies Card */}
-                    <Card className="w-full bg-card/80 gap-2">
+                    <Card className="w-full bg-background border-none rounded-none gap-2">
                         <CardHeader>
                             <Skeleton className="h-6 w-3/4"/>
                         </CardHeader>
@@ -89,7 +92,7 @@ export default function WorkDetailsLoading() {
                     </Card>
 
                     {/* Links Card */}
-                    <Card className="w-full bg-card/80 gap-2">
+                    <Card className="w-full bg-background border-none rounded-none gap-2">
                         <CardHeader>
                             <Skeleton className="h-6 w-1/3"/>
                         </CardHeader>
@@ -104,11 +107,18 @@ export default function WorkDetailsLoading() {
             </div>
 
             {/* Gallery Skeleton */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-                {Array.from({length: 6}).map((_, index) => (
-                    <Skeleton key={index} className="aspect-video w-full"/>
-                ))}
-            </div>
+            <Card className="w-full border-none rounded-none pb-0 gap-4">
+                <CardHeader>
+                    <Skeleton className="h-6 w-1/3"/>
+                </CardHeader>
+                <CardContent className="p-0 m-0">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px]">
+                        {Array.from({length: 6}).map((_, index) => (
+                            <Skeleton key={index} className="aspect-video w-full"/>
+                        ))}
+                    </div>
+                </CardContent>
+            </Card>
         </div>
     );
 }

@@ -19,12 +19,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/shots/loading.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/queries/get-shots.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/queries/get-work.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shots/_components/shots-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/shots/_components/shots-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shots/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/shots/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/[slug]/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/[slug]/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/_components/works-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/works-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/loading.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +188,7 @@
       <workItem from="1766876466419" duration="15361000" />
       <workItem from="1766913912858" duration="2594000" />
       <workItem from="1766917195734" duration="2584000" />
-      <workItem from="1766963036107" duration="12489000" />
+      <workItem from="1766963036107" duration="13774000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -478,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766974380537</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="refactor(shots): Implement RSC data fetching and client-side pagination (17102025)&#10;&#10;Migrated the Shots page data fetching from client-side Apollo Client&#10;to React Server Components (RSC) for initial data retrieval.&#10;A new 'getShots' utility was introduced in 'lib/queries/get-shots.ts'&#10;to handle server-side Contentful queries.&#10;&#10;The 'ShotsList' component was refactored to accept initial data and&#10;manage client-side &quot;Load More&quot; functionality via a new API route.&#10;A dedicated 'loading.tsx' was added to provide a skeleton UI, and the&#10;'Shot' type definition was updated to align with Contentful's 'sys.id'.">
+      <option name="closed" value="true" />
+      <created>1766975772078</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1766975772078</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,11 +494,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="```&#10;refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx`&#10;to `components/apollo-wrapper.tsx`. All affected import paths were&#10;updated to reflect these changes.&#10;&#10;This refactoring improves the project's directory structure by&#10;placing shared utility functions and UI wrappers in more&#10;appropriate, reusable locations (`lib/` and `components/`).&#10;This enhances modularity and clarity, making the codebase&#10;easier to navigate and maintain.&#10;```" />
-    <MESSAGE value="refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx`&#10;to `components/apollo-wrapper.tsx`. All affected import paths were&#10;updated to reflect these changes.&#10;&#10;This refactoring improves the project's directory structure by&#10;placing shared utility functions and UI wrappers in more&#10;appropriate, reusable locations (`lib/` and `components/`).&#10;This enhances modularity and clarity, making the codebase&#10;easier to navigate and maintain." />
-    <MESSAGE value="```&#10;feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key" />
-    <MESSAGE value="```&#10;feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key updates include:&#10;- Added `app/shots` route with dedicated layout and page.&#10;- Developed `ShotsList` and `ShotItem` components for gallery display.&#10;- Integrated `GET_SHOTS` GraphQL query for" />
-    <MESSAGE value="```&#10;feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key updates include:&#10;- Added `app/shots` route with dedicated layout and page.&#10;- Developed `ShotsList` and `ShotItem` components for gallery display.&#10;- Integrated `GET_SHOTS` GraphQL query for data fetching.&#10;- Implemented a carousel for full-screen image viewing and navigation.&#10;- Added &quot;Load More&quot; pagination for the gallery.&#10;- Refined `ShotT` type definition with explicit image properties.&#10;- Adjusted" />
     <MESSAGE value="```&#10;feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key updates include:&#10;- Added `app/shots` route with dedicated layout and page.&#10;- Developed `ShotsList` and `ShotItem` components for gallery display.&#10;- Integrated `GET_SHOTS` GraphQL query for data fetching.&#10;- Implemented a carousel for full-screen image viewing and navigation.&#10;- Added &quot;Load More&quot; pagination for the gallery.&#10;- Refined `ShotT` type definition with explicit image properties.&#10;- Adjusted responsive heights in `RecentWorks` and `References` for&#10;  better layout on larger screens.&#10;- Updated dialog overlay opacity and close button styling.&#10;```" />
     <MESSAGE value="feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key updates include:&#10;- Added `app/shots` route with dedicated layout and page.&#10;- Developed `ShotsList` and `ShotItem` components for gallery display.&#10;- Integrated `GET_SHOTS` GraphQL query for data fetching.&#10;- Implemented a carousel for full-screen image viewing and navigation.&#10;- Added &quot;Load More&quot; pagination for the gallery.&#10;- Refined `ShotT` type definition with explicit image properties.&#10;- Adjusted responsive heights in `RecentWorks` and `References` for&#10;  better layout on larger screens.&#10;- Updated dialog overlay opacity and close button styling." />
     <MESSAGE value="feat(ui): Refine layout and spacing across pages (17102025)&#10;&#10;Adjusted vertical padding on `/works` and `/shots` pages for improved&#10;visual balance. Refined header and navigation bar heights and" />
@@ -511,6 +514,11 @@
     <MESSAGE value="refactor(references): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated References data fetching from client-side Apollo Client to&#10;server-side using a new `getReferences` utility. This" />
     <MESSAGE value="refactor(references): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated References data fetching from client-side Apollo Client to&#10;server-side using a new `getReferences` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped References with Suspense in `app/page.tsx` and introduced&#10;`ReferencesSkeleton` to provide a smooth loading experience. The&#10;`References` component" />
     <MESSAGE value="refactor(references): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated References data fetching from client-side Apollo Client to&#10;server-side using a new `getReferences` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped References with Suspense in `app/page.tsx` and introduced&#10;`ReferencesSkeleton` to provide a smooth loading experience. The&#10;`References` component now consumes a `Promise&lt;Reference[]&gt;` directly." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(references): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated References data fetching from client-side Apollo Client to&#10;server-side using a new `getReferences` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped References with Suspense in `app/page.tsx` and introduced&#10;`ReferencesSkeleton` to provide a smooth loading experience. The&#10;`References` component now consumes a `Promise&lt;Reference[]&gt;` directly." />
+    <MESSAGE value="```&#10;refactor(shots): Implement RSC data fetching and client-side pagination (17102025)&#10;&#10;Migrated the Shots page data fetching from client-side Apollo Client&#10;to React Server Components (RSC)" />
+    <MESSAGE value="```&#10;refactor(shots): Implement RSC data fetching and client-side pagination (17102025)&#10;&#10;Migrated the Shots page data fetching from client-side Apollo Client&#10;to React Server Components (RSC) for initial data retrieval.&#10;A new 'getShots' utility was introduced in 'lib/queries/get-shots.ts'&#10;to handle server-side Contentful queries.&#10;&#10;The 'ShotsList' component was refactored to" />
+    <MESSAGE value="```&#10;refactor(shots): Implement RSC data fetching and client-side pagination (17102025)&#10;&#10;Migrated the Shots page data fetching from client-side Apollo Client&#10;to React Server Components (RSC) for initial data retrieval.&#10;A new 'getShots' utility was introduced in 'lib/queries/get-shots.ts'&#10;to handle server-side Contentful queries.&#10;&#10;The 'ShotsList' component was refactored to accept initial data and&#10;manage client-side &quot;Load More&quot; functionality via a new API route.&#10;A dedicated 'loading.tsx' was added to provide a skeleton UI, and the&#10;'Shot' type definition was updated to align" />
+    <MESSAGE value="```&#10;refactor(shots): Implement RSC data fetching and client-side pagination (17102025)&#10;&#10;Migrated the Shots page data fetching from client-side Apollo Client&#10;to React Server Components (RSC) for initial data retrieval.&#10;A new 'getShots' utility was introduced in 'lib/queries/get-shots.ts'&#10;to handle server-side Contentful queries.&#10;&#10;The 'ShotsList' component was refactored to accept initial data and&#10;manage client-side &quot;Load More&quot; functionality via a new API route.&#10;A dedicated 'loading.tsx' was added to provide a skeleton UI, and the&#10;'Shot' type definition was updated to align with Contentful's 'sys.id'.&#10;```" />
+    <MESSAGE value="refactor(shots): Implement RSC data fetching and client-side pagination (17102025)&#10;&#10;Migrated the Shots page data fetching from client-side Apollo Client&#10;to React Server Components (RSC) for initial data retrieval.&#10;A new 'getShots' utility was introduced in 'lib/queries/get-shots.ts'&#10;to handle server-side Contentful queries.&#10;&#10;The 'ShotsList' component was refactored to accept initial data and&#10;manage client-side &quot;Load More&quot; functionality via a new API route.&#10;A dedicated 'loading.tsx' was added to provide a skeleton UI, and the&#10;'Shot' type definition was updated to align with Contentful's 'sys.id'." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(shots): Implement RSC data fetching and client-side pagination (17102025)&#10;&#10;Migrated the Shots page data fetching from client-side Apollo Client&#10;to React Server Components (RSC) for initial data retrieval.&#10;A new 'getShots' utility was introduced in 'lib/queries/get-shots.ts'&#10;to handle server-side Contentful queries.&#10;&#10;The 'ShotsList' component was refactored to accept initial data and&#10;manage client-side &quot;Load More&quot; functionality via a new API route.&#10;A dedicated 'loading.tsx' was added to provide a skeleton UI, and the&#10;'Shot' type definition was updated to align with Contentful's 'sys.id'." />
   </component>
 </project>

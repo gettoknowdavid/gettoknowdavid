@@ -1,13 +1,10 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {GET_WORK} from "@/app/_graphql/get-work";
-import makeClient from "@/lib/client";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import React, {ReactNode} from "react";
 import {BLOCKS} from "@contentful/rich-text-types";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import type {Metadata} from "next";
-import {siteConfig} from "@/config/site";
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,29 +12,42 @@ import {BackButton} from "@/components/back-button";
 import {WorkGallery} from "@/app/works/_components/work-gallery";
 import {longDatesFormatter} from "@/lib/date-formatter";
 import {WorkLinkIcon} from "@/app/works/_components/work-link-icon";
+import {getWorks} from "@/lib/queries/get-works";
+import {getWork} from "@/lib/queries/get-work";
 
-export const metadata: Metadata = {
-    title: {
-        default: `My Works • ${siteConfig.name}`,
-        template: `%s - ${siteConfig.name}`,
-    },
-    description: siteConfig.description,
-    icons: {
-        icon: "/icon.png",
-    },
-};
+
+export async function generateStaticParams() {
+    const works = await getWorks();
+    return works.map((work) => ({slug: work.slug}));
+}
+
+export async function generateMetadata({params}: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const {slug} = await params;
+    const work = await getWork(slug);
+
+    if (!work) {
+        return {
+            title: 'Work Not Found',
+        };
+    }
+
+    return {
+        title: work.title,
+        description: work.brief,
+        openGraph: {
+            title: work.title,
+            description: work.brief,
+            images: work.image ? [{url: work.image.url}] : [],
+        },
+    };
+}
+
 
 export default async function WorkDetails({params}: { params: Promise<{ slug: string }> }) {
     const {slug} = await params;
-    const client = makeClient();
-    const {data} = await client.query({
-        query: GET_WORK,
-        variables: {slug},
-        context: {fetchOptions: {next: {revalidate: 3600}}},
-    });
+    const work = await getWork(slug);
 
-
-    if (!data) {
+    if (!work) {
         return (
             <section className='grid app-margin w-full gap-4 items-center grid--app-columns'>
                 <div className='flex flex-col content mt-24'>
@@ -46,8 +56,6 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
             </section>
         );
     }
-
-    const work = data.workCollection.items[0];
 
     const options = {
         preserveWhitespace: true,
@@ -98,7 +106,6 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
 
     const formattedStartDate = longDatesFormatter(work.startDate);
     const formattedEndDate = longDatesFormatter(work.endDate);
-
     const hasGallery = work.galleryCollection && work.galleryCollection.items.length > 0;
 
 
