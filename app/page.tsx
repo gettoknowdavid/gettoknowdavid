@@ -1,35 +1,31 @@
-import React from "react";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { INLINES } from "@contentful/rich-text-types";
-import Link from "next/link";
+import {Intro, IntroSkeleton} from "@/app/_components/intro";
+import React, {Suspense} from "react";
+import {RecentWorks, RecentWorksSkeleton} from "@/app/_components/recent-works";
+import {References, ReferencesSkeleton} from "@/app/_components/references";
+import {getHero} from "@/lib/queries/get-hero";
+import {getWorks} from "@/lib/queries/get-works";
+import {getReferences} from "@/lib/queries/get-references";
 
-import AnimatedText from "@/components/animated-text";
-import getBiography from "@/lib/get-biography";
+export default function HomePage() {
+    const hero = getHero();
+    const recentWorks = getWorks(5);
+    const references = getReferences(6);
 
-export default async function HomePage() {
-  const biography = await getBiography();
-  const bio = biography.content.json;
+    return (
+        <section className='grid app-margin w-full items-center grid--app-columns'>
+            <div className='content'>
+                <Suspense fallback={<IntroSkeleton/>}>
+                    <Intro data={hero}/>
+                </Suspense>
 
-  const options = {
-    renderNode: {
-      [INLINES.HYPERLINK]: ({ data }: { data: any }, children: any) => (
-        <Link href={data.uri}>{children}</Link>
-      ),
-    },
-  };
+                <Suspense fallback={<RecentWorksSkeleton/>}>
+                    <RecentWorks data={recentWorks}/>
+                </Suspense>
 
-  return (
-    <section className="px-pad py-pad-2x h-screen w-screen">
-      <div className="h-full w-full flex items-end md:items-center justify-center">
-        <div className="flex flex-col gap-3 max-w-sm">
-          <div className="text-3xxl md:text-5xl uppercase tracking-tighter text-left h-9 md:h-12">
-            <AnimatedText text="Hello," />
-          </div>
-          <div className="text-xl leading-relaxed uppercase pl-1">
-            {documentToReactComponents(bio, options)}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+                <Suspense fallback={<ReferencesSkeleton/>}>
+                    <References data={references}/>
+                </Suspense>
+            </div>
+        </section>
+    );
 }

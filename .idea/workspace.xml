@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AIAssistantCustomInstructionsStorage">
+    <option name="instructions">
+      <map>
+        <entry key="AIAssistant.VCS.GenerateCommitMessage">
+          <value>
+            <AIAssistantStoredInstruction>
+              <option name="actionId" value="AIAssistant.VCS.GenerateCommitMessage" />
+              <option name="content" value="Generate a Git commit message in the Conventional Commits format based on the following staged changes:&#10;&#10;Subject line should be in imperative mood, max 50 characters, and not end with a period.&#10;Separate subject from body with a blank line.&#10;Body should explain &quot;what&quot; and &quot;why&quot;, wrapped at 72 characters.&#10;&#10;[Provide the output of `git diff --staged` here]&#10;&#10;Context/Motivation: [Briefly explain the purpose of these changes, e.g., &quot;Implementing a new feature for user profile management,&quot; or &quot;Fixing a bug in the login flow.&quot;]" />
+            </AIAssistantStoredInstruction>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sitemap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/sitemap.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gettoknowdavid&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gettoknowdavid/gettoknowdavid.git&quot;,
+    &quot;accountId&quot;: &quot;8c5df795-9df8-4a8d-ae69-24be7a4ca5ff&quot;
+  }
+}</component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="34CKazCf3cCruIxBUSLV58ffwC8" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.Next.js: debug client-side.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "#2 on 17102025",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/works",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Run",
+    "npm.build.executor": "Run",
+    "settings.editor.selected.configurable": "com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/works" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/lib/queries" />
+      <recent name="$PROJECT_DIR$/app/shots" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/_components" />
+      <recent name="$PROJECT_DIR$/app/_components/intro" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/app/works/_components" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" engineId="37cae5b9-e8b2-4949-9172-aafa37fbc09c" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v22.20.0/bin/node" />
+      <envs />
+      <EXTENSION ID="com.intellij.javascript.debugger.execution.StartBrowserRunConfigurationExtension">
+        <browser with-js-debugger="true" />
+      </EXTENSION>
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v22.20.0/bin/node" />
+      <package-manager value="pnpm" />
+      <envs />
+      <EXTENSION ID="com.intellij.javascript.debugger.execution.StartBrowserRunConfigurationExtension">
+        <browser with-js-debugger="true" />
+      </EXTENSION>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Next.js: debug client-side" />
+      <item itemvalue="npm.Next.js: server-side" />
+      <item itemvalue="npm.build" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.29346.143" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="" />
+      <created>1760712182012</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760712182012</updated>
+      <workItem from="1760712183804" duration="5327000" />
+      <workItem from="1760723971143" duration="14696000" />
+      <workItem from="1760791819001" duration="7698000" />
+      <workItem from="1760861149533" duration="308000" />
+      <workItem from="1760861892564" duration="9887000" />
+      <workItem from="1760880701782" duration="410000" />
+      <workItem from="1760913327307" duration="280000" />
+      <workItem from="1760921209886" duration="5618000" />
+      <workItem from="1760955020361" duration="2090000" />
+      <workItem from="1760963407998" duration="22536000" />
+      <workItem from="1761000367859" duration="5181000" />
+      <workItem from="1761067977551" duration="614000" />
+      <workItem from="1761074288795" duration="300000" />
+      <workItem from="1761074878280" duration="1746000" />
+      <workItem from="1761146365644" duration="318000" />
+      <workItem from="1761147450967" duration="16361000" />
+      <workItem from="1761253363136" duration="1583000" />
+      <workItem from="1761255133393" duration="12686000" />
+      <workItem from="1761420005632" duration="693000" />
+      <workItem from="1761423668923" duration="10904000" />
+      <workItem from="1761466828060" duration="6619000" />
+      <workItem from="1762766476083" duration="2000" />
+      <workItem from="1762766600057" duration="24000" />
+      <workItem from="1766104850384" duration="3187000" />
+      <workItem from="1766153617436" duration="2252000" />
+      <workItem from="1766158657084" duration="2108000" />
+      <workItem from="1766182053995" duration="65000" />
+      <workItem from="1766255323344" duration="8367000" />
+      <workItem from="1766353753138" duration="3892000" />
+      <workItem from="1766357656603" duration="3992000" />
+      <workItem from="1766394238937" duration="4599000" />
+      <workItem from="1766399087821" duration="4000" />
+      <workItem from="1766407635203" duration="20509000" />
+      <workItem from="1766489802945" duration="14748000" />
+      <workItem from="1766744650496" duration="27760000" />
+      <workItem from="1766789561770" duration="9829000" />
+      <workItem from="1766876466419" duration="15361000" />
+      <workItem from="1766913912858" duration="2594000" />
+      <workItem from="1766917195734" duration="2584000" />
+      <workItem from="1766963036107" duration="16048000" />
+      <workItem from="1767001362589" duration="5923000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
+      <option name="closed" value="true" />
+      <created>1760926815190</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760926815190</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: update the navigation list &#10;&#10;- update the hover color to the accent color&#10;- increase the gap between each navigation link item">
+      <option name="closed" value="true" />
+      <created>1760961875217</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760961875217</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: restructure homepage and navigation&#10;&#10;- Split homepage into modular sections for better readability and scalability (Intro, Work, Blog, Shots, Contact).&#10;- Replaced the old navigation list with a new dedicated Nav component.&#10;- Implemented smooth scrolling for hash links.&#10;- Added Framer Motion animations for enhanced scrolling experience.&#10;- Updated layout context to support dynamic section registrations.">
+      <option name="closed" value="true" />
+      <created>1760987732921</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760987732921</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Add call-to-action to home page intro section">
+      <option name="closed" value="true" />
+      <created>1761000893336</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761000893336</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Redesign homepage layout with new grid and components (17102025)&#10;&#10;Introduces a comprehensive redesign of the homepage, implementing a new&#10;CSS grid system and refactored components for a more structured and&#10;visually appealing layout.&#10;&#10;- Implemented a CSS grid-based layout system with new utility classes&#10;  (`section`, `content`, `app-margin`, `dashboard-card`) in globals.css.&#10;- Consolidated and removed deprecated section components (BlogSection,&#10;  ContactSection, ShotsSection).&#10;- Refactored IntroSection to Intro and ProjectsSection to RecentProjects,&#10;  integrating them with the new grid for a dashboard-like overview.&#10;- Migrated icon library from `lucide-react` to `@phosphor-icons/react`,&#10;  updating relevant files and Next.js configuration for optimization.&#10;- Aligned header and navigation components with the new margin variables&#10;  and grid structure for consistent spacing.">
+      <option name="closed" value="true" />
+      <created>1761257076816</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761257076816</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat(ui): Implement responsive layout and enhance header (17102025)&#10;&#10;Refactor and enhance the application's user interface and layout.&#10;&#10;- Introduce a new responsive grid system and layout utilities in&#10;  `app/globals.css`. This includes responsive `app-margin`,&#10;  `grid--app-columns`, and `content` utilities, which are now applied&#10;  to the `.section` component for consistent layout.&#10;- Extract `Hamburger` and `Logo` components into dedicated `ui`&#10;  modules, simplifying the `Header` component and removing the&#10;  `hamburger-react` dependency.&#10;- Enhance the `RecentProjects` section with a new tech stack display&#10;  featuring SVG icons (Flutter, Dart, React, Kotlin, Firebase, Next.js)&#10;  and an updated responsive grid layout for dashboard cards.&#10;- Adjust `Intro` component text for improved clarity.&#10;- Update `next.config.ts` to allow SVG image imports.&#10;- Minor styling adjustments to `.button-primary` padding.">
+      <option name="closed" value="true" />
+      <created>1761467058544</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761467058544</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(layout): Implement new grid system and dynamic background (17102025)&#10;&#10;Refactor core UI layout, introduce a dynamic background, and begin&#10;Contentful integration.&#10;&#10;- Implemented a new 36-column CSS grid system in `app/globals.css`&#10;  applied to `intro.tsx`, `app/projects/page.tsx`, and&#10;  `recent-projects.tsx` for consistent layout.&#10;- Added a `WarpBackground` component for a dynamic visual effect,&#10;  integrated into `app/layout.tsx`.&#10;- Initiated Contentful integration: added necessary packages, GraphQL&#10;  query (`app/graphql/get-projects.ts`), custom types (`type.d.ts`),&#10;  and updated `next.config.ts` for image domains.&#10;- Extracted GitHub contributions graph into a dedicated component,&#10;  `app/components/github-contributions-graph.tsx`, improving modularity.&#10;- Applied minor styling adjustments to `nav.tsx` and `logo.tsx`.&#10;- Updated `intro.tsx` text sizes for improved responsiveness.">
+      <option name="closed" value="true" />
+      <created>1766263191904</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1766263191904</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat(intro): Implement loading sequence and phased content reveal (17102025)&#10;&#10;- Introduce an `introDone` state in `LayoutContext` to manage the&#10;  completion of the initial loading animation.&#10;- Refactor `WarpBackground` to include a phased intro animation:&#10;  displaying an initial text, then animating a wave-like reveal&#10;  of the background dots. This component sets `introDone` to true&#10;  upon completion.&#10;- Conditionally render `Nav` and `Header` components, and animate their&#10;  entry using Framer Motion, ensuring they appear only after the intro.&#10;- Update `LayoutWrapper` to control the main content's fade-in&#10;  based on the `introDone` state, with an extended transition duration.&#10;- This enhances the initial user experience with a smoother, animated&#10;  loading sequence.">
+      <option name="closed" value="true" />
+      <created>1766354461018</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1766354461018</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat(scroll): Implement smooth scrolling and active section tracking (17102025)&#10;&#10;Refactor `LayoutContext` to manage active sections and provide a smooth&#10;scroll function using `IntersectionObserver` and Framer Motion.&#10;&#10;- Update `config/site.ts` to use hash links for navigation items.&#10;- Introduce `activeSection` state and `IntersectionObserver` in&#10;  `LayoutContext` to accurately track the currently visible section.&#10;- Refine `scrollToSection` to smoothly animate scrolling to target&#10;  sections, accounting for header offset and preventing observer&#10;  interference during programmatic scrolls.&#10;- Register `Intro` and new `Projects` components as scrollable sections,&#10;  including cleanup on unmount.&#10;- Integrate the `Projects` component into `app/page.tsx`.&#10;- Update `Nav` and `MobileMenu` to highlight the `activeSection` and&#10;  utilize the new `scrollToSection` functionality for navigation.">
+      <option name="closed" value="true" />
+      <created>1766357599441</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1766357599441</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: Enhance typography and redesign projects section (17102025)&#10;&#10;Introduce Neue Montreal and Inter fonts, updating global font variables&#10;and applying new typography settings for the body. The Intro component&#10;was refactored to use updated font classes for improved consistency.&#10;The main layout now uses Satoshi's className instead of its variable.&#10;&#10;The Projects component was redesigned to feature a dynamic list of&#10;projects, including titles, briefs, and tools, utilizing the new&#10;Neue Montreal font for headings.&#10;&#10;Additionally, the base opacity of the warp background was adjusted&#10;for a subtle visual refinement.">
+      <option name="closed" value="true" />
+      <created>1766361643119</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1766361643119</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat(intro): change font weight of main intro header text and `h1` tag of the summary to `p`">
+      <option name="closed" value="true" />
+      <created>1766394504324</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1766394504324</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat(projects, ui): Implement dynamic project pages and enhance fonts (17102025)&#10;&#10;Introduces dynamic project detail pages and refines typography across&#10;the application.&#10;&#10;- Added dynamic routing for project details at `app/projects/[slug]/`.&#10;- Moved project data to `lib/fake-projects.ts` for better structure.&#10;- Updated `app/components/projects.tsx` to link to detail pages and&#10;  applied new styling.&#10;- Removed the deprecated `app/projects/page.tsx` file.&#10;- Enhanced `config/fonts.ts` to support multiple weights for Neue Montreal&#10;  font and set it as the primary app font.&#10;- Adjusted font weights and sizes in `app/components/intro.tsx` to&#10;  align with the new typography system.&#10;- Improved navigation in `components/nav.tsx` to highlight active&#10;  project routes.">
+      <option name="closed" value="true" />
+      <created>1766398832321</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1766398832321</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat(contentful, projects): Integrate Contentful for project data (17102025)&#10;&#10;Configured Apollo Client to connect to Contentful GraphQL API, enabling&#10;dynamic fetching of project data.&#10;&#10;- Updated `app/graphql/get-projects.ts` to fetch project summaries&#10;  optimized for list display.&#10;- Implemented dynamic project fetching in `app/components/projects.tsx`&#10;  using `useSuspenseQuery`, replacing static `fakeProjects` data.&#10;- Introduced `Project` and `ProjectItemT` types in `type.d.ts` to&#10;  align with Contentful data structure.&#10;- Added a loading skeleton for the project list for improved user&#10;  experience.&#10;- Refined project item display, including a structured list for tools.">
+      <option name="closed" value="true" />
+      <created>1766424578927</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1766424578927</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat(projects, contentful, ui): Implement dynamic project detail pages (17102025)&#10;&#10;This commit replaces static project data with dynamic content fetched from&#10;Contentful, significantly enhancing the project detail pages.&#10;&#10;- Integrated Contentful GraphQL API to fetch individual project details&#10;  using a new `GET_PROJECT` query.&#10;- Refactored `app/projects/[slug]/page.tsx` to display dynamic content,&#10;  including rich text descriptions, key features, images, and links.&#10;- Introduced `@radix-ui/react-slot` dependency for UI components.&#10;- Added `BackButton` and `ProjectLinkIcon` components for improved UX.&#10;- Updated `type.d.ts` to reflect Contentful's `linksCollection` and&#10;  `galleryCollection` structure.&#10;- Applied minor styling adjustments in `app/globals.css`, including&#10;  card background and grid layout refinements.&#10;- Implemented dynamic metadata generation for project detail pages.">
+      <option name="closed" value="true" />
+      <created>1766533823607</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1766533823607</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat(projects, routing): Implement dedicated projects page (17102025)&#10;&#10;Migrate project listings from the homepage to a new dedicated '/projects'&#10;route, enhancing navigation and content organization.&#10;&#10;- Introduce a new `/projects` page with its own layout and dynamic project&#10;  listing, replacing the previous homepage section.&#10;- Refactor the existing `Projects` component into `ProjectsList` and&#10;  `ProjectItem` components for better modularity and reusability.&#10;- Update navigation links in `config/site.ts` to reflect the new routing&#10;  structure.&#10;- Improve the layout and responsiveness of individual project detail&#10;  pages (`/projects/[slug]`), including a refined grid system and&#10;  component styling.&#10;- Adjust global CSS and navigation component for consistency with the&#10;  new project structure.">
+      <option name="closed" value="true" />
+      <created>1766748385940</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1766748385941</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat(projects): Implement interactive project gallery (17102025)&#10;&#10;Refactor project image gallery into a new dedicated component to&#10;improve modularity and user experience.&#10;&#10;- Create `ProjectGallery` component at `app/projects/_components/`.&#10;- Migrate gallery rendering logic from `app/projects/[slug]/page.tsx`&#10;  to the new `ProjectGallery` component.&#10;- Integrate Radix UI `Dialog` and Embla Carousel for full-screen&#10;  interactive image viewing.&#10;- Add new dependencies: `@radix-ui/react-dialog`,&#10;  `@radix-ui/react-visually-hidden`, `embla-carousel-react`, and&#10;  `lucide-react`.&#10;- Adjust `h1` text size on project detail pages.">
+      <option name="closed" value="true" />
+      <created>1766757397888</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1766757397888</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor(components): Streamline component structure and navigation (17102025)&#10;&#10;Refactor core components to improve modularity, simplify navigation, and&#10;standardize component organization.&#10;&#10;- Move `Intro`, `RecentProjects`, and `GithubContributionGraph` components&#10;  from `app/components/` to `app/_components/` to establish a convention&#10;  for internal or private components.&#10;- Extract layout registration and section wrapping logic from `Intro`&#10;  component to `app/page.tsx`, simplifying `Intro`'s responsibilities.&#10;- Update `Intro`'s main heading size from `xl:text-8xl` to `xl:text-9xl`.&#10;- Rename `Home` page component to `HomePage` in `app/page.tsx`.&#10;- Remove scroll-based active section tracking and smooth scrolling&#10;  functionality from `Nav` component, simplifying its logic and relying&#10;  on Next.js pathname for active link highlighting.">
+      <option name="closed" value="true" />
+      <created>1766759017315</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1766759017315</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat(homepage): Dynamic hero, personas, and work experience section (17102025)&#10;&#10;- Refactor `Intro` component to fetch dynamic content from Contentful,&#10;  enabling a persona-driven display with rich text rendering.&#10;- Introduce `GET_HERO` GraphQL query and TypeScript types (`Persona`,&#10;  `Hero`) for Contentful integration.&#10;- Add a new &quot;Work Experience&quot; section to the homepage, showcasing&#10;  placeholder job roles and durations using UI cards.&#10;- Update global CSS with a new `ringed-card` utility, custom scrollbar&#10;  styles, and a refined dark theme background color.">
+      <option name="closed" value="true" />
+      <created>1766791359024</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1766791359024</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat(works): Rename projects to works and enhance portfolio section (17102025)&#10;&#10;- Renamed all 'Projects' related routes, components, and GraphQL&#10;  queries to 'Works' for improved clarity and consistency.&#10;- Introduced `lib/date-formatter.ts` for consistent date formatting&#10;  across the application.&#10;- Added new UI components: `Spinner` and `Skeleton` for better&#10;  loading state feedback.&#10;- Implemented dedicated loading states for both the works list and&#10;  individual work detail pages.&#10;- Refactored the homepage to integrate a new `RecentWorks` component,&#10;  dynamically showcasing recent projects and replacing the prior&#10;  static 'Work Experience' section.&#10;- Updated `config/site.ts` to reflect the new 'Works' navigation link.&#10;- Enhanced `app/globals.css` with a new `hovered-ringed-card` utility&#10;  for improved interactive styling.&#10;- Adjusted `type.d.ts` to align with the new `Work` data structure,&#10;  including `toolsShort`, `role`, `startDate`, and `endDate` fields.">
+      <option name="closed" value="true" />
+      <created>1766797777482</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1766797777482</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat(works): Display client info and refine work item details (17102025)&#10;&#10;- Renamed `app/works/_components/works-item.tsx` to `work-item.tsx`.&#10;- Updated `app/works/_components/works-list.tsx` to reflect the&#10;  component rename.&#10;- Added `client` field to the `Work` GraphQL query in&#10;  `app/graphql/get-works.ts`.&#10;- Included `client` in the `WorkItemT` type definition in `type.d.ts`.&#10;- Displayed the `client` alongside the `role` in the `WorkItem`&#10;  component.&#10;- Enhanced `lib/date-formatter.ts` to include short month names&#10;  in date ranges.">
+      <option name="closed" value="true" />
+      <created>1766800092795</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1766800092795</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactor(ui, works): refine layout and standardize styling (17102025)&#10;&#10;This commit introduces a comprehensive overhaul of styling and layout&#10;across the works section and core UI components to achieve a more&#10;cohesive and modern design.&#10;&#10;Key changes include:&#10;- Standardized `Card` components to use `rounded-none` for a sharper look.&#10;- Replaced `gap` based grid layouts with `border` based layouts in&#10;  `WorksList` and `WorkGallery` for a cleaner separation.&#10;- Removed redundant horizontal separator `span` elements from&#10;  `Works` and `RecentWorks` pages.&#10;- Enhanced `WorkItem` component with conditional borders based on&#10;  position within the grid, and refined text sizing.&#10;- Adjusted spacing and removed unnecessary vertical separators on&#10;  individual work detail pages.&#10;- Updated `BackButton` styling to match the new `rounded-none` aesthetic.">
+      <option name="closed" value="true" />
+      <created>1766884282059</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1766884282059</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat(ui): Implement scroll fade for persona list (17102025)&#10;&#10;This commit introduces a horizontal scroll fade effect for the persona&#10;selection list, enhancing usability and visual cues when the list&#10;overflows its container.&#10;&#10;Key updates include:&#10;- Added interactive left and right fade gradients to the persona list.&#10;- Implemented scroll and resize event listeners to dynamically manage&#10;  fade visibility based on scroll position.&#10;- Refined persona list styling to ensure horizontal scrolling and proper&#10;  display of fade effects.&#10;- Adjusted typography for persona descriptions, increasing base font&#10;  size for better readability on smaller screens.&#10;- Updated card heights and padding for both engineer and non-engineer&#10;  persona views, improving overall layout responsiveness.&#10;- Modified unselected persona link color for improved contrast.">
+      <option name="closed" value="true" />
+      <created>1766886103562</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1766886103562</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat(ui): Improve responsiveness and typography (17102025)&#10;&#10;Adjusted typography in the intro component, enhancing line height and&#10;font sizing for better readability on medium screens.&#10;&#10;Updated mobile menu visibility to be hidden only on large screens,&#10;making it accessible on medium screens.">
+      <option name="closed" value="true" />
+      <created>1766886614804</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1766886614804</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat(ui): Enhance works section responsiveness and typography (17102025)&#10;&#10;Adjusted grid layout in WorksList to be single column on small screens&#10;and two columns on medium screens. Refined typography for WorkItem&#10;elements (title, role, client, brief, tools) to improve readability&#10;across devices. Updated work range placement for consistent visibility&#10;and optimized layout.">
+      <option name="closed" value="true" />
+      <created>1766887669210</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1766887669210</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat(ui): Enhance responsiveness and typography (17102025)&#10;&#10;Refine UI elements for improved readability and responsive behavior.&#10;&#10;- Adjusted paragraph line height from 'leading-relaxed' to 'leading-loose'&#10;  in work detail pages to improve text legibility.&#10;- Updated responsive font sizing and weight for work detail page titles,&#10;  ensuring optimal display across various screen sizes&#10;  (text-2xl, md:text-3xl, lg:text-6xl).&#10;- Modified header background to be transparent on large screens and solid&#10;  on smaller screens, improving visual integration.">
+      <option name="closed" value="true" />
+      <created>1766888004243</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1766888004243</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;- Implemented `get-references.ts` GraphQL query for fetching data.&#10;- Defined `Reference` and `ReferenceCollection` types in `type.d.ts`.&#10;- Refactored component directory structure: `app/_components` to&#10;  `app/components` for `intro`, `recent-works`, and `github-contributions-graph`.&#10;- Removed the `components/footer.tsx` file.&#10;- Adjusted homepage layout for new section and overall spacing.">
+      <option name="closed" value="true" />
+      <created>1766892004377</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1766892004377</updated>
+    </task>
+    <task id="LOCAL-00027" summary="refactor(works, ui): refine works section layout and styling (17102025)&#10;&#10;Standardized `Card` components to use `bg-background` and `border-none`&#10;across work details, gallery, and list items. Replaced `border` based&#10;layouts with `gap` based layouts in `WorksList` for improved spacing&#10;and responsiveness. Enhanced `WorkItem` component by removing&#10;conditional borders, making its background transparent, and adjusting&#10;typography for better readability. Streamlined the grid layout in&#10;`WorkDetail` page, removing redundant `gap` declarations and&#10;standardizing `Card` styling.">
+      <option name="closed" value="true" />
+      <created>1766894196807</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1766894196807</updated>
+    </task>
+    <task id="LOCAL-00028" summary="refactor(homepage): Adjust section heights and recent works count (17102025)&#10;&#10;Increased the limit for recent works displayed from 4 to 5.&#10;Updated the `RecentWorks` and `References` sections to use `h-screen`&#10;for full viewport height. Added `justify-center` to `References` for&#10;vertical alignment.">
+      <option name="closed" value="true" />
+      <created>1766914772184</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1766914772184</updated>
+    </task>
+    <task id="LOCAL-00029" summary="refactor(dir-structure): Move internal modules to private directories (17102025)&#10;&#10;Relocated component files from `app/components` to `app/_components`&#10;and GraphQL query files from `app/graphql` to `app/_graphql`.&#10;&#10;This change aligns with Next.js conventions for organizing internal&#10;modules into private directories, enhancing project structure and&#10;clarity. All affected import paths have been updated accordingly.">
+      <option name="closed" value="true" />
+      <created>1766915070187</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1766915070187</updated>
+    </task>
+    <task id="LOCAL-00030" summary="refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx`&#10;to `components/apollo-wrapper.tsx`. All affected import paths were&#10;updated to reflect these changes.&#10;&#10;This refactoring improves the project's directory structure by&#10;placing shared utility functions and UI wrappers in more&#10;appropriate, reusable locations (`lib/` and `components/`).&#10;This enhances modularity and clarity, making the codebase&#10;easier to navigate and maintain.">
+      <option name="closed" value="true" />
+      <created>1766915561366</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1766915561366</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key updates include:&#10;- Added `app/shots` route with dedicated layout and page.&#10;- Developed `ShotsList` and `ShotItem` components for gallery display.&#10;- Integrated `GET_SHOTS` GraphQL query for data fetching.&#10;- Implemented a carousel for full-screen image viewing and navigation.&#10;- Added &quot;Load More&quot; pagination for the gallery.&#10;- Refined `ShotT` type definition with explicit image properties.&#10;- Adjusted responsive heights in `RecentWorks` and `References` for&#10;  better layout on larger screens.&#10;- Updated dialog overlay opacity and close button styling.">
+      <option name="closed" value="true" />
+      <created>1766966011463</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1766966011463</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat(ui): Refine layout and spacing across pages (17102025)&#10;&#10;Adjusted vertical padding on `/works` and `/shots` pages for improved&#10;visual balance. Refined header and navigation bar heights and&#10;paddings for better alignment and responsiveness.&#10;&#10;Improved back button positioning on work detail pages, especially&#10;for larger screens. Removed a redundant background style from the&#10;`WorkGallery` card. Renamed `WorkLayout` to `WorksLayout` for&#10;consistency.">
+      <option name="closed" value="true" />
+      <created>1766969212100</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1766969212100</updated>
+    </task>
+    <task id="LOCAL-00033" summary="refactor(works): Streamline data fetching and UI components (17102025)&#10;&#10;Moved from direct Apollo Client usage to a custom `fetchContentful`&#10;utility and dedicated `getWorks` query. This improves data fetching&#10;consistency and caching strategy.&#10;&#10;Simplified `WorkItem` props by removing `isLeftColumn` and `isLastRow`,&#10;reducing component complexity. Updated `WorkItemSkeleton` styling for&#10;a cleaner, more consistent loading state.&#10;&#10;Refined the &quot;Nothing Found&quot; display on the works page for better&#10;visual presentation. Added new Contentful-related type definitions.">
+      <option name="closed" value="true" />
+      <created>1766972193181</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1766972193181</updated>
+    </task>
+    <task id="LOCAL-00034" summary="refactor(intro): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated Intro component data fetching from client-side Apollo Client&#10;to server-side data fetching using a new `getHero` utility.&#10;This leverages React Server Components (RSC) capabilities for&#10;efficient data retrieval.&#10;&#10;Wrapped the Intro component with Suspense and introduced&#10;IntroSkeleton to provide a smooth loading experience.&#10;Renamed `app/_components/intro.tsx` to&#10;`app/_components/intro/intro.tsx` for better modularity.">
+      <option name="closed" value="true" />
+      <created>1766973220086</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1766973220086</updated>
+    </task>
+    <task id="LOCAL-00035" summary="refactor(recent-works): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated RecentWorks data fetching from client-side Apollo Client to&#10;server-side using a new `getWorks` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped RecentWorks with Suspense in `app/page.tsx` and introduced&#10;RecentWorksSkeleton to provide a smooth loading experience.&#10;The RecentWorks component now consumes a `Promise&lt;Work[]&gt;` directly.">
+      <option name="closed" value="true" />
+      <created>1766973757962</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1766973757962</updated>
+    </task>
+    <task id="LOCAL-00036" summary="refactor(references): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated References data fetching from client-side Apollo Client to&#10;server-side using a new `getReferences` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped References with Suspense in `app/page.tsx` and introduced&#10;`ReferencesSkeleton` to provide a smooth loading experience. The&#10;`References` component now consumes a `Promise&lt;Reference[]&gt;` directly.">
+      <option name="closed" value="true" />
+      <created>1766974380537</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1766974380537</updated>
+    </task>
+    <task id="LOCAL-00037" summary="refactor(shots): Implement RSC data fetching and client-side pagination (17102025)&#10;&#10;Migrated the Shots page data fetching from client-side Apollo Client&#10;to React Server Components (RSC) for initial data retrieval.&#10;A new 'getShots' utility was introduced in 'lib/queries/get-shots.ts'&#10;to handle server-side Contentful queries.&#10;&#10;The 'ShotsList' component was refactored to accept initial data and&#10;manage client-side &quot;Load More&quot; functionality via a new API route.&#10;A dedicated 'loading.tsx' was added to provide a skeleton UI, and the&#10;'Shot' type definition was updated to align with Contentful's 'sys.id'.">
+      <option name="closed" value="true" />
+      <created>1766975772078</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1766975772078</updated>
+    </task>
+    <task id="LOCAL-00038" summary="feat(works): Migrate work details to RSC, implement SSG and dynamic metadata (17102025)&#10;&#10;This commit refactors the work detail pages to leverage React Server&#10;Components (RSC) for data fetching, replacing the previous Apollo&#10;Client implementation. A new 'getWork' utility in 'lib/queries/'&#10;now handles server-side Contentful queries.&#10;&#10;Key updates include:&#10;- Implemented 'generateStaticParams' for Static Site Generation (SSG),&#10;  improving build-time performance and SEO.&#10;- Added 'generateMetadata' to dynamically create unique metadata&#10;  (title, description, Open Graph images) for each work.&#10;- Simplified 'WorksList' and 'WorksListSkeleton' components by&#10;  removing unnecessary layout props.&#10;- Enhanced loading UI for work detail pages ('app/works/[slug]/loading.tsx').">
+      <option name="closed" value="true" />
+      <created>1766976974119</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1766976974119</updated>
+    </task>
+    <task id="LOCAL-00039" summary="refactor(apollo): Remove Apollo Client infrastructure (17102025)&#10;&#10;This commit completes the migration away from Apollo Client,&#10;streamlining the data fetching architecture site-wide.&#10;&#10;Key changes include:&#10;- Deleted `ApolloWrapper` component and `lib/client.ts` config.&#10;- Removed all GraphQL queries and client-side components:&#10;  - `get-hero`, `get-references`, `get-shots`, `get-work`, `get-works`&#10;  - `github-contribution` and `github-contributions-graph`&#10;- Updated `app/page.tsx` and `app/layout.tsx` to reflect removal.&#10;- Consolidated `IntroSkeleton` into `app/_components/intro.tsx`.&#10;- Cleaned up `config/site.ts` (navigation/socials) and `type.d.ts`&#10;  (Contentful interfaces).&#10;- Simplified `ShotItem` component and updated `ShotT` type.&#10;&#10;This transition enables a more consistent server-side data fetching&#10;strategy, likely leveraging React Server Components (RSC).">
+      <option name="closed" value="true" />
+      <created>1766977659359</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1766977659359</updated>
+    </task>
+    <task id="LOCAL-00040" summary="refactor(deps, ui): Migrate to Lucide React and remove old dependencies (17102025)&#10;&#10;This commit performs a comprehensive refactor, switching the icon&#10;library from Phosphor Icons to Lucide React and cleaning up unused&#10;dependencies, primarily related to Apollo Client.&#10;&#10;Key changes include:&#10;- **Icon Library Migration:**&#10;  - Replaced `@phosphor-icons/react` with `lucide-react` across&#10;    `mobile-menu.tsx`, `nav.tsx`, `back-button.tsx`, and&#10;    `work-link-icon.tsx`.&#10;  - Updated `components.json` and `next.config.ts` to reflect&#10;    the new icon library and remove old optimizations.&#10;- **Dependency Cleanup:**&#10;  - Removed `@apollo/client`, `@apollo/client-integration-nextjs`,&#10;    `@phosphor-icons/react`, and `graphql` from `package.json`&#10;    and `pnpm-lock.yaml`. This completes the migration away from&#10;    Apollo Client infrastructure.&#10;- **Metadata Enhancement:**&#10;  - Improved dynamic metadata generation for work detail pages in&#10;    `app/works/[slug]/page.tsx` by structuring the title with&#10;    `siteConfig.name` for better SEO.&#10;&#10;This refactor streamlines the dependency tree, reduces bundle size,&#10;and enhances consistency in the UI and SEO strategy.">
+      <option name="closed" value="true" />
+      <created>1766978357088</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1766978357088</updated>
+    </task>
+    <task id="LOCAL-00041" summary="build(deps): Upgrade Next.js to 16.1.1 (17102025)&#10;&#10;Updated Next.js from version 15.5.6 to 16.1.1. This upgrade&#10;includes necessary adjustments to `tsconfig.json` for the new&#10;`jsx: &quot;react-jsx&quot;` compiler option and updates the `pnpm-lock.yaml`&#10;file to reflect the updated dependency tree.">
+      <option name="closed" value="true" />
+      <created>1767001628430</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1767001628430</updated>
+    </task>
+    <task id="LOCAL-00042" summary="chore(assets): Remove unused SVG icons and images (17102025)&#10;&#10;Removed various unused SVG icons (e.g., Dart, Firebase, React, Next.js),&#10;PNG images, and the favicon from the `public/` and `app/` directories.&#10;These assets were no longer needed after the migration to Lucide React&#10;and other general project cleanups.&#10;&#10;Additionally, a minor adjustment was made in `shots-list.tsx` to correct&#10;the `useEffect` dependency array, changing `open` to `carouselOpen` for&#10;accurate state tracking.">
+      <option name="closed" value="true" />
+      <created>1767002553445</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1767002553445</updated>
+    </task>
+    <task id="LOCAL-00043" summary="build(package): Specify pnpm as package manager (17102025)&#10;&#10;Added &quot;packageManager&quot; field to package.json to explicitly&#10;define pnpm version 10.26.2 as the project's package manager.">
+      <option name="closed" value="true" />
+      <created>1767002901858</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1767002901858</updated>
+    </task>
+    <task id="LOCAL-00044" summary="style(ui): Refine typography and visual elements (17102025)&#10;&#10;Adjusted main heading ('David Michael II') styling on the homepage.&#10;Introduced responsive text sizing (`md:text-6xl`) and removed `uppercase`&#10;from the name. Added a subtle accent dot next to the name for visual&#10;emphasis.&#10;&#10;Removed `text-sm` and `uppercase` classes from the main header for a&#10;cleaner look.&#10;&#10;Updated logo text (`David Michael II`) to `text-white` and `uppercase`.&#10;Changed font weight from `font-medium` to `font-normal` for consistency.">
+      <option name="closed" value="true" />
+      <created>1767003864251</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1767003864251</updated>
+    </task>
+    <task id="LOCAL-00045" summary="feat(perf): Add Vercel Speed Insights (17102025)&#10;&#10;Integrates Vercel Speed Insights to enable performance monitoring&#10;and analytics. This involves installing the `@vercel/speed-insights`&#10;package and embedding the `&lt;SpeedInsights/&gt;` component in the&#10;main application layout.">
+      <option name="closed" value="true" />
+      <created>1767004252735</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1767004252735</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned, rendering nothing instead&#10;of potentially crashing or showing an empty state.">
+      <option name="closed" value="true" />
+      <created>1767004675096</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1767004675097</updated>
+    </task>
+    <task id="LOCAL-00047" summary="feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New `opengraph-image.alt.txt` and `twitter-image.alt.txt` files&#10;  provide descriptive alt text for social sharing images on main and&#10;  works pages.&#10;&#10;These changes aim to boost SEO performance and provide a better&#10;experience for users on mobile devices.">
+      <option name="closed" value="true" />
+      <created>1767006688781</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1767006688781</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="```&#10;build(deps): Upgrade Next.js to 16.1.1 (17102025)&#10;&#10;Updated Next.js from version 15.5.6 to 16.1.1" />
+    <MESSAGE value="```&#10;build(deps): Upgrade Next.js to 16.1.1 (17102025)&#10;&#10;Updated Next.js from version 15.5.6 to 16.1.1. This upgrade&#10;includes necessary adjustments to `tsconfig.json` for the new&#10;`jsx: &quot;react-jsx&quot;` compiler option and updates the `pnpm-lock.yaml`&#10;file to reflect the updated dependency tree.&#10;" />
+    <MESSAGE value="```&#10;build(deps): Upgrade Next.js to 16.1.1 (17102025)&#10;&#10;Updated Next.js from version 15.5.6 to 16.1.1. This upgrade&#10;includes necessary adjustments to `tsconfig.json` for the new&#10;`jsx: &quot;react-jsx&quot;` compiler option and updates the `pnpm-lock.yaml`&#10;file to reflect the updated dependency tree.&#10;```" />
+    <MESSAGE value="build(deps): Upgrade Next.js to 16.1.1 (17102025)&#10;&#10;Updated Next.js from version 15.5.6 to 16.1.1. This upgrade&#10;includes necessary adjustments to `tsconfig.json` for the new&#10;`jsx: &quot;react-jsx&quot;` compiler option and updates the `pnpm-lock.yaml`&#10;file to reflect the updated dependency tree." />
+    <MESSAGE value="chore(assets): Remove unused SVG icons and images (17102025)&#10;&#10;Removed various unused SVG icons (e.g., Dart, Firebase, React, Next.js),&#10;PNG images, and the favicon from" />
+    <MESSAGE value="chore(assets): Remove unused SVG icons and images (17102025)&#10;&#10;Removed various unused SVG icons (e.g., Dart, Firebase, React, Next.js),&#10;PNG images, and the favicon from the `public/` and `app/` directories.&#10;These assets were no longer needed after the migration to Lucide React&#10;and other general project cleanups.&#10;&#10;Additionally, a minor adjustment was made in `shots-list." />
+    <MESSAGE value="chore(assets): Remove unused SVG icons and images (17102025)&#10;&#10;Removed various unused SVG icons (e.g., Dart, Firebase, React, Next.js),&#10;PNG images, and the favicon from the `public/` and `app/` directories.&#10;These assets were no longer needed after the migration to Lucide React&#10;and other general project cleanups.&#10;&#10;Additionally, a minor adjustment was made in `shots-list.tsx` to correct&#10;the `useEffect` dependency array, changing `open` to `carouselOpen` for&#10;accurate state tracking." />
+    <MESSAGE value="build(package): Specify pnpm as package manager (17102025)&#10;&#10;Added &quot;packageManager&quot; field to package.json to explicitly&#10;define pnpm version 10.26.2 as the project" />
+    <MESSAGE value="build(package): Specify pnpm as package manager (17102025)&#10;&#10;Added &quot;packageManager&quot; field to package.json to explicitly&#10;define pnpm version 10.26.2 as the project's package manager." />
+    <MESSAGE value="```&#10;style(ui): Refine typography and visual elements (17102025)&#10;&#10;Adjusted main heading ('David Michael II') styling on the homepage.&#10;Introduced responsive text sizing (`md:text-6xl" />
+    <MESSAGE value="```&#10;style(ui): Refine typography and visual elements (17102025)&#10;&#10;Adjusted main heading ('David Michael II') styling on the homepage.&#10;Introduced responsive text sizing (`md:text-6xl`) and removed `uppercase`&#10;from the name. Added a subtle accent dot next to the name for visual&#10;emphasis.&#10;&#10;Removed `text-sm` and `uppercase` classes from the main header for a&#10;cleaner look." />
+    <MESSAGE value="```&#10;style(ui): Refine typography and visual elements (17102025)&#10;&#10;Adjusted main heading ('David Michael II') styling on the homepage.&#10;Introduced responsive text sizing (`md:text-6xl`) and removed `uppercase`&#10;from the name. Added a subtle accent dot next to the name for visual&#10;emphasis.&#10;&#10;Removed `text-sm` and `uppercase` classes from the main header for a&#10;cleaner look.&#10;&#10;Updated logo text (`David Michael II`) to `text-white` and `uppercase`.&#10;Changed font weight from `font-medium` to `font-normal` for consistency.&#10;```" />
+    <MESSAGE value="style(ui): Refine typography and visual elements (17102025)&#10;&#10;Adjusted main heading ('David Michael II') styling on the homepage.&#10;Introduced responsive text sizing (`md:text-6xl`) and removed `uppercase`&#10;from the name. Added a subtle accent dot next to the name for visual&#10;emphasis.&#10;&#10;Removed `text-sm` and `uppercase` classes from the main header for a&#10;cleaner look.&#10;&#10;Updated logo text (`David Michael II`) to `text-white` and `uppercase`.&#10;Changed font weight from `font-medium` to `font-normal` for consistency." />
+    <MESSAGE value="feat(perf): Add Vercel Speed Insights (17102025)&#10;&#10;Integrates Vercel Speed Insights to enable performance monitoring&#10;and analytics. This involves installing the `@vercel/speed-insights`&#10;package and" />
+    <MESSAGE value="feat(perf): Add Vercel Speed Insights (17102025)&#10;&#10;Integrates Vercel Speed Insights to enable performance monitoring&#10;and analytics. This involves installing the `@vercel/speed-insights`&#10;package and embedding the `&lt;SpeedInsights/&gt;` component in the&#10;main application layout." />
+    <MESSAGE value="```&#10;fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents" />
+    <MESSAGE value="```&#10;fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned," />
+    <MESSAGE value="```&#10;fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned, rendering nothing instead&#10;of potentially crashing or showing an empty state.&#10;```" />
+    <MESSAGE value="fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned, rendering nothing instead&#10;of potentially crashing or showing an empty state." />
+    <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:" />
+    <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors" />
+    <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New" />
+    <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New `opengraph-image.alt.txt` and `twitter-image.alt.txt` files&#10;  provide descriptive alt text for social sharing images on main and&#10;  works pages.&#10;&#10;These changes aim to boost SEO performance and" />
+    <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New `opengraph-image.alt.txt` and `twitter-image.alt.txt` files&#10;  provide descriptive alt text for social sharing images on main and&#10;  works pages.&#10;&#10;These changes aim to boost SEO performance and provide a better&#10;experience for users on mobile devices.&#10;```" />
+    <MESSAGE value="feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New `opengraph-image.alt.txt` and `twitter-image.alt.txt` files&#10;  provide descriptive alt text for social sharing images on main and&#10;  works pages.&#10;&#10;These changes aim to boost SEO performance and provide a better&#10;experience for users on mobile devices." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New `opengraph-image.alt.txt` and `twitter-image.alt.txt` files&#10;  provide descriptive alt text for social sharing images on main and&#10;  works pages.&#10;&#10;These changes aim to boost SEO performance and provide a better&#10;experience for users on mobile devices." />
+  </component>
+</project>

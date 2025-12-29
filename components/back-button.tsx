@@ -1,14 +1,15 @@
-import React from "react";
-import Link from "next/link";
+'use client';
 
-export const BackButton: React.FC<{ styles?: string | undefined }> = ({
-  styles,
-}) => {
-  return (
-    <Link className={`${styles} z-50 fixed flex gap-1`} href={"/works"}>
-      <span>[</span>
-      <span>←</span>
-      <span>]</span>
-    </Link>
-  );
-};
+import {Button} from "@/components/ui/button";
+import React from "react";
+import {useRouter} from "next/navigation";
+import {ChevronLeft} from "lucide-react";
+
+export const BackButton = () => {
+    const router = useRouter();
+    return (
+        <Button className="rounded-none" variant="outline" size="icon" onClick={router.back}>
+            <ChevronLeft/>
+        </Button>
+    );
+}

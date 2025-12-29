@@ -1,0 +1,408 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@property --border-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@theme inline {
+    --font-sans: var(--font-satoshi);
+    --font-inter: var(--font-inter);
+    --font-neue: var(--font-neue);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--color-red-500);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+
+    --animate-rotate-border: border-rotate 3.5s linear infinite;
+    --app-margin: var(--grid--app-margin);
+
+    @keyframes border-rotate {
+        to {
+            --border-angle: 360deg;
+        }
+    }
+}
+
+:root {
+    --grid--app-margin: 40px;
+    /*--grid--app-columns: var(--grid--app-columns-12);*/
+    --grid--app-columns-12: repeat(12, [col-start] 1fr);
+    --grid--app-columns-8: repeat(8, [col-start] 1fr);
+    --grid--app-columns-6: repeat(6, [col-start] 1fr);
+    --grid--app-columns-4: repeat(4, [col-start] 1fr);
+    --grid--app-columns-3: repeat(3, [col-start] 1fr);
+    --grid--app-columns-2: repeat(2, [col-start] 1fr);
+    --grid--app-columns-1: repeat(1, [col-start] 1fr);
+    --grid--app-gutter: 20px;
+    --grid--app-xheight: 220px;
+
+    --radius: 0.625rem;
+    --background: #ffffff;
+    /*--background: #ffffe3;*/
+    --foreground: #000000;
+    /*--foreground: #ffffe3;*/
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.628 0.258 29.234);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: #606055;
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+    /*--background: oklch(0.145 0 0);*/
+    --background: #000000;
+    --foreground: oklch(0.985 0 0);
+    /*--foreground: #ffffe3;*/
+    /*--card: oklch(0.205 0 0);*/
+    --card: #000000;
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.628 0.258 29.234 / 0.45);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.769 0.188 70.08);
+    --chart-4: oklch(0.627 0.265 303.9);
+    --chart-5: oklch(0.645 0.246 16.439);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+}
+
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-size: 18px;
+        font-feature-settings: "palt";
+        font-synthesis: none;
+        -webkit-text-size-adjust: none;
+        /*background-size: 25px 25px;*/
+        /*background-image: radial-gradient(rgba(255, 0, 0, 0.35) 1px, var(--background) 0);*/
+    }
+
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+@utility app-margin {
+    padding: 0 var(--grid--app-margin);
+
+    @media (max-width: 1020px) {
+        padding: 0 20px;
+    }
+}
+
+@utility border-dashed {
+    --tw-border-style: dashed;
+    border-style: dashed;
+}
+
+@utility grid--app-columns {
+    grid-template-columns: repeat(2, [col-start] 1fr);
+    gap: 16px;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(6, [col-start] 1fr);
+        gap: 20px;
+    }
+
+    @media (min-width: 1020px) {
+        grid-template-columns: repeat(16, [col-start] 1fr);
+        gap: 20px;
+    }
+}
+
+@utility content {
+    grid-column: 1 /-1;
+
+    @media (min-width: 768px) {
+        grid-column: 1 /-1;
+    }
+
+    @media (min-width: 1020px) {
+        grid-column: 5/-2;
+    }
+
+    /*@media (min-width: 1280px) {*/
+    /*    grid-column: 5 / -1;*/
+    /*}*/
+}
+
+
+@utility ringed-card {
+    @apply ring-1 ring-offset-8 ring-neutral-500/40 ring-offset-neutral-950;
+}
+
+@utility hovered-ringed-card {
+    @apply ring-1 ring-offset-8 ring-accent/40 ring-offset-neutral-950 border-accent/20;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+@utility section {
+    @apply app-margin;
+    display: grid;
+    width: 100%;
+    gap: 1rem;
+    grid-auto-rows: minmax(0, 1fr);
+    grid-template-columns: repeat(36, minmax(0, 1fr));
+
+    /*@media (max-width: 767px) {*/
+    /*    display: flex;*/
+    /*    gap: 1rem;*/
+    /*    flex-direction: column;*/
+    /*}*/
+    /*@media (min-width: 768px) {*/
+    /*    display: grid;*/
+    /*}*/
+    /*@media (max-width: 1023px) {*/
+    /*    grid-template-columns: repeat(6, minmax(0, 1fr));*/
+    /*}*/
+    @media (max-width: 1023px) {
+        /*grid-template-columns: repeat(6, minmax(0, 1fr));*/
+    }
+
+}
+
+@layer components {
+    /*.section {*/
+    /*    @apply app-margin;*/
+    /*    !*@apply grid--app-columns;*!*/
+    /*    display: grid;*/
+    /*    width: 100%;*/
+    /*    grid-template-columns: repeat(3, minmax(0, 1fr));*/
+    /*}*/
+    .grid-four {
+        display: grid;
+        grid-template-columns: var(--grid--app-columns-4);
+        gap: var(--grid--app-gutter);
+    }
+
+    .grid-eight {
+        display: grid;
+        grid-template-columns: var(--grid--app-columns-8);
+        gap: var(--grid--app-gutter);
+    }
+
+
+    .gradient-border-card {
+        @apply relative;
+        @apply rounded-xl border border-neutral-800 bg-zinc-700;
+
+        isolation: isolate;
+    }
+
+
+    /* Styles for the pseudo-element that creates the gradient "border" */
+    .gradient-border-card::before {
+        @apply absolute inset-0 z-[-1];
+        @apply rounded-xl;
+
+        content: '';
+        mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+        padding: 4px;
+        mix-blend-mode: soft-light;
+        background-image: linear-gradient(to bottom, theme('colors.neutral.200') 0%, transparent 100%);
+    }
+
+    .dashboard-card {
+        background-color: var(--card);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: 1.5rem;
+    }
+
+    .dashboard-card-content {
+        border: 1px solid var(--color-red-950);
+        background-color: hsla(0, 26%, 7%, 0.3);
+        border-radius: inherit;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        inset: 1px;
+        z-index: 2;
+    }
+
+    .card-tag {
+        z-index: 10;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        border-radius: calc(infinity * 1px);
+        border: 1px solid var(--color-red-950);
+        background-color: var(--background);
+        flex-shrink: 1;
+        padding-block: 0.5rem;
+        padding-left: 0.75rem;
+        padding-right: 1rem;
+        /*position: absolute;*/
+        /*left: 1rem;*/
+        /*top: 1rem;*/
+        font-size: 0.875rem;
+        color: var(--foreground);
+    }
+
+    .scrollbar::-webkit-scrollbar {
+        height: 4px;
+        background: transparent;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        height: 2px;
+        background-color: rgba(3, 7, 18, 0.4);
+        border-radius: 9999px;
+    }
+
+    .scrollbar:hover::-webkit-scrollbar-thumb {
+        background-color: var(--color-border);
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:active {
+        background-color: var(--color-border);
+    }
+
+    .tech-stack-component {
+        @apply motion-reduce:animate-none;
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        gap: var(--grid--app-columns);
+        height: 3rem;
+        width: 3rem;
+    }
+
+    /* Add to your globals.css or tailwind.css */
+    /* Custom Scrollbar - Default */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* For Firefox */
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    }
+
+    /* Enhanced scrollbar for code blocks - VS Code/Android Studio style */
+    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-track {
+        background: #1e1e1e;
+        border-radius: 4px;
+    }
+
+    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-thumb {
+        background: #424242;
+        border-radius: 4px;
+        border: 2px solid #1e1e1e;
+    }
+
+    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-thumb:hover {
+        background: #4e4e4e;
+    }
+
+    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-corner {
+        background: #1e1e1e;
+    }
+}

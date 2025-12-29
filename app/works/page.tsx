@@ -1,32 +1,28 @@
 import React from "react";
-import { Metadata } from "next";
-
-import { siteConfig } from "@/config/site";
-import getWorks from "@/lib/get-works";
-import { WorksList } from "@/app/works/_components/works-list";
-
-export const metadata: Metadata = {
-  title: {
-    default: "Works",
-    template: `%s • ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: "/icon.png",
-  },
-};
+import {WorksList} from "@/app/works/_components/works-list";
+import {getWorks} from "@/lib/queries/get-works";
 
 export default async function WorksPage() {
-  const works = await getWorks();
+    const works = await getWorks();
 
-  return (
-    <section className="flex flex-col w-full relative py-pad-3x md:py-pad-2x bg-transparent">
-      <div className="flex flex-row justify-center py-pad-2x">
-        <h1 className="text-xl tracking-widest uppercase font-light">
-          All Works
-        </h1>
-      </div>
-      <WorksList works={works} />
-    </section>
-  );
+    if (!works || works.length === 0) {
+        return (
+            <div className='flex flex-col gap-8 py-24'>
+                <div className='flex items-center gap-4'>
+                    <h1 className="text-nowrap uppercase tracking-widest text-base">My Works</h1>
+                </div>
+                <h1>Nothing Found</h1>
+            </div>
+        );
+    }
+
+
+    return (
+        <div className='flex flex-col gap-8 py-24'>
+            <div className='flex items-center gap-4'>
+                <h1 className="text-nowrap uppercase tracking-widest text-base">My Works</h1>
+            </div>
+            <WorksList works={works}/>
+        </div>
+    );
 }

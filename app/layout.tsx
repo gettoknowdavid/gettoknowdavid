@@ -1,55 +1,40 @@
-import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
-import clsx from "clsx";
-import React from "react";
-import { LoaderWrapper } from "@/components/loader-wrapper";
-
-import { Providers } from "./providers";
-
-import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
-import { NavBar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import type {Metadata} from "next";
+import "./globals.css";
+import type React from "react";
+import {Header} from "@/components/header";
+import {LayoutProvider} from "@/components/layout-context";
+import {LayoutWrapper} from "@/components/layout-wrapper";
+import {neue} from "@/config/fonts";
+import {siteConfig} from "@/config/site";
+import {Nav} from "@/components/nav";
+import {WarpBackground} from "@/components/warp-background";
+import {SpeedInsights} from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: "/icon.png"
-  }
+    title: {
+        default: `${siteConfig.name} • ${siteConfig.role}`,
+        template: `%s - ${siteConfig.name}`,
+    },
+    description: siteConfig.description,
+    icons: {icon: "/icon.png"},
+    authors: siteConfig.authors,
+    keywords: siteConfig.keywords,
+    other: siteConfig.other,
 };
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" }
-  ]
-};
-
-export default function RootLayout({
-                                     children
-                                   }: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html suppressHydrationWarning lang="en">
-    <body
-      className={clsx(
-        "min-h-screen font-sans antialiased bg-background relative",
-        fontSans.className
-      )}
-    >
-    <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-      <LoaderWrapper>
-        <NavBar />
-        <main>{children}</main>
-        <Footer />
-      </LoaderWrapper>
-    </Providers>
-    </body>
-    </html>
-  );
+export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
+    return (
+        <html lang='en'>
+        <body className={`${neue.className} dark text-foreground font-sans antialiased p-0 m-0`}>
+        <LayoutProvider>
+            <WarpBackground/>
+            <Header/>
+            <Nav/>
+            <LayoutWrapper>
+                {children}
+                <SpeedInsights/>
+            </LayoutWrapper>
+        </LayoutProvider>
+        </body>
+        </html>
+    );
 }
