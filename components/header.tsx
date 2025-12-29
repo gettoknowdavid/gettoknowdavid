@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
                 initial={{opacity: 0, y: -20}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.3}}
-                className='bg-background lg:bg-transparent text-sm uppercase fixed w-full h-14 lg:h-24 app-margin z-[100]'
+                className='bg-background lg:bg-transparent fixed w-full h-14 lg:h-24 app-margin z-[100]'
             >
                 <div className='h-full w-full flex justify-between items-center relative'>
                     <div className='h-full w-full relative flex justify-between'>

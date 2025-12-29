@@ -197,9 +197,10 @@ export const WarpBackground = () => {
                             animate={{opacity: 1, y: 0}}
                             exit={{opacity: 0, y: 30}}
                             transition={{duration: 2.5, ease: [0.22, 1, 0.36, 1]}}
-                            className="text-4xl uppercase font-light tracking-tight text-foreground"
+                            className="text-4xl md:text-6xl font-light text-foreground flex items-baseline gap-[2px]"
                         >
                             David Michael II
+                            <span className="h-2 w-2 bg-accent block"/>
                         </motion.h1>
                     )}
                 </AnimatePresence>

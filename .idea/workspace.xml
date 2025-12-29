@@ -19,7 +19,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/warp-background.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/warp-background.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +115,7 @@
       <recent name="$PROJECT_DIR$/app/works/_components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.Next.js: server-side">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" engineId="37cae5b9-e8b2-4949-9172-aafa37fbc09c" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -206,7 +206,7 @@
       <workItem from="1766913912858" duration="2594000" />
       <workItem from="1766917195734" duration="2584000" />
       <workItem from="1766963036107" duration="16048000" />
-      <workItem from="1767001362589" duration="1443000" />
+      <workItem from="1767001362589" duration="2231000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -544,7 +544,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767002553445</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="build(package): Specify pnpm as package manager (17102025)&#10;&#10;Added &quot;packageManager&quot; field to package.json to explicitly&#10;define pnpm version 10.26.2 as the project's package manager.">
+      <option name="closed" value="true" />
+      <created>1767002901858</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1767002901858</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,8 +560,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="```&#10;feat(works): Migrate work details to RSC, implement SSG and dynamic metadata (17102025)&#10;&#10;This commit refactors the work detail pages to leverage React Server&#10;Components (RSC) for" />
-    <MESSAGE value="```&#10;feat(works): Migrate work details to RSC, implement SSG and dynamic metadata (17102025)&#10;&#10;This commit refactors the work detail pages to leverage React Server&#10;Components (RSC) for data fetching, replacing the previous Apollo&#10;Client implementation. A new 'getWork' utility in 'lib/queries/'&#10;now handles server-side Contentful queries.&#10;&#10;Key updates include:&#10;- Implemented 'generateStaticParams'" />
     <MESSAGE value="```&#10;feat(works): Migrate work details to RSC, implement SSG and dynamic metadata (17102025)&#10;&#10;This commit refactors the work detail pages to leverage React Server&#10;Components (RSC) for data fetching, replacing the previous Apollo&#10;Client implementation. A new 'getWork' utility in 'lib/queries/'&#10;now handles server-side Contentful queries.&#10;&#10;Key updates include:&#10;- Implemented 'generateStaticParams' for Static Site Generation (SSG),&#10;  improving build-time performance and SEO.&#10;- Added 'generateMetadata' to dynamically create unique metadata&#10;  (title, description, Open Graph images) for each work.&#10;-" />
     <MESSAGE value="```&#10;feat(works): Migrate work details to RSC, implement SSG and dynamic metadata (17102025)&#10;&#10;This commit refactors the work detail pages to leverage React Server&#10;Components (RSC) for data fetching, replacing the previous Apollo&#10;Client implementation. A new 'getWork' utility in 'lib/queries/'&#10;now handles server-side Contentful queries.&#10;&#10;Key updates include:&#10;- Implemented 'generateStaticParams' for Static Site Generation (SSG),&#10;  improving build-time performance and SEO.&#10;- Added 'generateMetadata' to dynamically create unique metadata&#10;  (title, description, Open Graph images) for each work.&#10;- Simplified 'WorksList' and 'WorksListSkeleton' components by&#10;  removing unnecessary layout props.&#10;- Enhanced loading UI for work detail pages ('app/works/[slug]/loading.tsx').&#10;```" />
     <MESSAGE value="feat(works): Migrate work details to RSC, implement SSG and dynamic metadata (17102025)&#10;&#10;This commit refactors the work detail pages to leverage React Server&#10;Components (RSC) for data fetching, replacing the previous Apollo&#10;Client implementation. A new 'getWork' utility in 'lib/queries/'&#10;now handles server-side Contentful queries.&#10;&#10;Key updates include:&#10;- Implemented 'generateStaticParams' for Static Site Generation (SSG),&#10;  improving build-time performance and SEO.&#10;- Added 'generateMetadata' to dynamically create unique metadata&#10;  (title, description, Open Graph images) for each work.&#10;- Simplified 'WorksList' and 'WorksListSkeleton' components by&#10;  removing unnecessary layout props.&#10;- Enhanced loading UI for work detail pages ('app/works/[slug]/loading.tsx')." />
@@ -577,6 +583,8 @@
     <MESSAGE value="chore(assets): Remove unused SVG icons and images (17102025)&#10;&#10;Removed various unused SVG icons (e.g., Dart, Firebase, React, Next.js),&#10;PNG images, and the favicon from" />
     <MESSAGE value="chore(assets): Remove unused SVG icons and images (17102025)&#10;&#10;Removed various unused SVG icons (e.g., Dart, Firebase, React, Next.js),&#10;PNG images, and the favicon from the `public/` and `app/` directories.&#10;These assets were no longer needed after the migration to Lucide React&#10;and other general project cleanups.&#10;&#10;Additionally, a minor adjustment was made in `shots-list." />
     <MESSAGE value="chore(assets): Remove unused SVG icons and images (17102025)&#10;&#10;Removed various unused SVG icons (e.g., Dart, Firebase, React, Next.js),&#10;PNG images, and the favicon from the `public/` and `app/` directories.&#10;These assets were no longer needed after the migration to Lucide React&#10;and other general project cleanups.&#10;&#10;Additionally, a minor adjustment was made in `shots-list.tsx` to correct&#10;the `useEffect` dependency array, changing `open` to `carouselOpen` for&#10;accurate state tracking." />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(assets): Remove unused SVG icons and images (17102025)&#10;&#10;Removed various unused SVG icons (e.g., Dart, Firebase, React, Next.js),&#10;PNG images, and the favicon from the `public/` and `app/` directories.&#10;These assets were no longer needed after the migration to Lucide React&#10;and other general project cleanups.&#10;&#10;Additionally, a minor adjustment was made in `shots-list.tsx` to correct&#10;the `useEffect` dependency array, changing `open` to `carouselOpen` for&#10;accurate state tracking." />
+    <MESSAGE value="build(package): Specify pnpm as package manager (17102025)&#10;&#10;Added &quot;packageManager&quot; field to package.json to explicitly&#10;define pnpm version 10.26.2 as the project" />
+    <MESSAGE value="build(package): Specify pnpm as package manager (17102025)&#10;&#10;Added &quot;packageManager&quot; field to package.json to explicitly&#10;define pnpm version 10.26.2 as the project's package manager." />
+    <option name="LAST_COMMIT_MESSAGE" value="build(package): Specify pnpm as package manager (17102025)&#10;&#10;Added &quot;packageManager&quot; field to package.json to explicitly&#10;define pnpm version 10.26.2 as the project's package manager." />
   </component>
 </project>
