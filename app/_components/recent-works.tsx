@@ -11,7 +11,7 @@ export const RecentWorks = ({data}: { data: Promise<Work[]> }) => {
     const works = use(data);
 
     return (
-        <div className='flex flex-col gap-8 lg:h-screen pb-24'>
+        <div className='flex flex-col gap-8 lg:h-screen pb-24 justify-center'>
             <div className='flex items-center justify-between gap-4'>
                 <h1 className="text-nowrap uppercase tracking-widest text-base">Work Experience</h1>
                 <Button variant="link" className="underline p-0 hover:opacity-40" asChild>
