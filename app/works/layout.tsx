@@ -8,9 +8,9 @@ export const metadata: Metadata = {
         template: `%s - ${siteConfig.name}`,
     },
     description: siteConfig.description,
-    icons: {
-        icon: "/icon.png",
-    },
+    icons: {icon: "/icon.png"},
+    authors: siteConfig.authors,
+    keywords: siteConfig.keywords,
 };
 
 export default function WorksLayout({children}: Readonly<{ children: React.ReactNode }>) {

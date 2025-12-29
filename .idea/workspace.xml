@@ -19,9 +19,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/manifest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/opengraph-image.alt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/opengraph-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/robots.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sitemap.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/twitter-image.alt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/twitter-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/works/opengraph-image.alt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/works/opengraph-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/works/twitter-image.alt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/works/twitter-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/references.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/references.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/queries/get-references.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/queries/get-references.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/shots/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/shots/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/site.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/site.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +102,7 @@
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app",
+    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/works",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,11 +118,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/works" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/lib/queries" />
       <recent name="$PROJECT_DIR$/app/shots" />
-      <recent name="$PROJECT_DIR$/app/works/[slug]" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/_components" />
@@ -208,7 +223,7 @@
       <workItem from="1766913912858" duration="2594000" />
       <workItem from="1766917195734" duration="2584000" />
       <workItem from="1766963036107" duration="16048000" />
-      <workItem from="1767001362589" duration="3225000" />
+      <workItem from="1767001362589" duration="4995000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -570,7 +585,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767004252735</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned, rendering nothing instead&#10;of potentially crashing or showing an empty state.">
+      <option name="closed" value="true" />
+      <created>1767004675096</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1767004675097</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,10 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactor(apollo): Remove Apollo Client infrastructure (17102025)&#10;&#10;This commit completes the migration away from Apollo Client,&#10;streamlining the data fetching architecture site-wide.&#10;&#10;Key changes include:&#10;- Deleted `ApolloWrapper` component and `lib/client.ts` config.&#10;- Removed all GraphQL queries and client-side components:&#10;  - `get-hero`, `get-references`, `get-shots`, `get-work`, `get-works`&#10;  - `github-contribution` and `github-contributions-graph`&#10;- Updated `app/page.tsx` and `app/layout.tsx` to reflect removal.&#10;- Consolidated `IntroSkeleton` into `app/_components/intro.tsx`.&#10;- Cleaned up `config/site.ts` (navigation/socials) and `type.d.ts`&#10;  (Contentful interfaces).&#10;" />
-    <MESSAGE value="refactor(apollo): Remove Apollo Client infrastructure (17102025)&#10;&#10;This commit completes the migration away from Apollo Client,&#10;streamlining the data fetching architecture site-wide.&#10;&#10;Key changes include:&#10;- Deleted `ApolloWrapper` component and `lib/client.ts` config.&#10;- Removed all GraphQL queries and client-side components:&#10;  - `get-hero`, `get-references`, `get-shots`, `get-work`, `get-works`&#10;  - `github-contribution` and `github-contributions-graph`&#10;- Updated `app/page.tsx` and `app/layout.tsx` to reflect removal.&#10;- Consolidated `IntroSkeleton` into `app/_components/intro.tsx`.&#10;- Cleaned up `config/site.ts` (navigation/socials) and `type.d.ts`&#10;  (Contentful interfaces).&#10;- Simplified `ShotItem` component and updated `ShotT` type.&#10;&#10;This transition enables a more consistent server-side data fetching&#10;strategy, likely leveraging React Server Components (RSC)." />
-    <MESSAGE value="```&#10;refactor(deps, ui): Migrate to Lucide React and remove old dependencies (17102025)&#10;&#10;This commit performs a comprehensive refactor, switching the icon&#10;library from Phosphor Icons to Lucide" />
-    <MESSAGE value="```&#10;refactor(deps, ui): Migrate to Lucide React and remove old dependencies (17102025)&#10;&#10;This commit performs a comprehensive refactor, switching the icon&#10;library from Phosphor Icons to Lucide React and cleaning up unused&#10;dependencies, primarily related to Apollo Client.&#10;&#10;Key changes include:&#10;- **Icon Library Migration:**&#10;  - Replaced `@phosphor-icons/react` with `lucide-react` across&#10;" />
     <MESSAGE value="```&#10;refactor(deps, ui): Migrate to Lucide React and remove old dependencies (17102025)&#10;&#10;This commit performs a comprehensive refactor, switching the icon&#10;library from Phosphor Icons to Lucide React and cleaning up unused&#10;dependencies, primarily related to Apollo Client.&#10;&#10;Key changes include:&#10;- **Icon Library Migration:**&#10;  - Replaced `@phosphor-icons/react` with `lucide-react` across&#10;    `mobile-menu.tsx`, `nav.tsx`, `back-button.tsx`, and&#10;    `work-link-icon.tsx`.&#10;  - Updated `components.json` and `next.config.ts" />
     <MESSAGE value="```&#10;refactor(deps, ui): Migrate to Lucide React and remove old dependencies (17102025)&#10;&#10;This commit performs a comprehensive refactor, switching the icon&#10;library from Phosphor Icons to Lucide React and cleaning up unused&#10;dependencies, primarily related to Apollo Client.&#10;&#10;Key changes include:&#10;- **Icon Library Migration:**&#10;  - Replaced `@phosphor-icons/react` with `lucide-react` across&#10;    `mobile-menu.tsx`, `nav.tsx`, `back-button.tsx`, and&#10;    `work-link-icon.tsx`.&#10;  - Updated `components.json` and `next.config.ts` to reflect&#10;    the new icon library and remove old optimizations.&#10;- **Dependency Cleanup:**&#10;  - Removed `@apollo/client`, `@apollo/client-integration-nextjs`,&#10;    `@phosphor-icons/" />
     <MESSAGE value="```&#10;refactor(deps, ui): Migrate to Lucide React and remove old dependencies (17102025)&#10;&#10;This commit performs a comprehensive refactor, switching the icon&#10;library from Phosphor Icons to Lucide React and cleaning up unused&#10;dependencies, primarily related to Apollo Client.&#10;&#10;Key changes include:&#10;- **Icon Library Migration:**&#10;  - Replaced `@phosphor-icons/react` with `lucide-react` across&#10;    `mobile-menu.tsx`, `nav.tsx`, `back-button.tsx`, and&#10;    `work-link-icon.tsx`.&#10;  - Updated `components.json` and `next.config.ts` to reflect&#10;    the new icon library and remove old optimizations.&#10;- **Dependency Cleanup:**&#10;  - Removed `@apollo/client`, `@apollo/client-integration-nextjs`,&#10;    `@phosphor-icons/react`, and `graphql` from `package.json`&#10;    and `pnpm-lock.yaml`. This completes the migration away from&#10;    Apollo Client infrastructure.&#10;- **Metadata Enhancement:**&#10;  - Improved dynamic metadata generation for work" />
@@ -603,6 +622,10 @@
     <MESSAGE value="style(ui): Refine typography and visual elements (17102025)&#10;&#10;Adjusted main heading ('David Michael II') styling on the homepage.&#10;Introduced responsive text sizing (`md:text-6xl`) and removed `uppercase`&#10;from the name. Added a subtle accent dot next to the name for visual&#10;emphasis.&#10;&#10;Removed `text-sm` and `uppercase` classes from the main header for a&#10;cleaner look.&#10;&#10;Updated logo text (`David Michael II`) to `text-white` and `uppercase`.&#10;Changed font weight from `font-medium` to `font-normal` for consistency." />
     <MESSAGE value="feat(perf): Add Vercel Speed Insights (17102025)&#10;&#10;Integrates Vercel Speed Insights to enable performance monitoring&#10;and analytics. This involves installing the `@vercel/speed-insights`&#10;package and" />
     <MESSAGE value="feat(perf): Add Vercel Speed Insights (17102025)&#10;&#10;Integrates Vercel Speed Insights to enable performance monitoring&#10;and analytics. This involves installing the `@vercel/speed-insights`&#10;package and embedding the `&lt;SpeedInsights/&gt;` component in the&#10;main application layout." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(perf): Add Vercel Speed Insights (17102025)&#10;&#10;Integrates Vercel Speed Insights to enable performance monitoring&#10;and analytics. This involves installing the `@vercel/speed-insights`&#10;package and embedding the `&lt;SpeedInsights/&gt;` component in the&#10;main application layout." />
+    <MESSAGE value="```&#10;fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents" />
+    <MESSAGE value="```&#10;fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned," />
+    <MESSAGE value="```&#10;fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned, rendering nothing instead&#10;of potentially crashing or showing an empty state.&#10;```" />
+    <MESSAGE value="fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned, rendering nothing instead&#10;of potentially crashing or showing an empty state." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned, rendering nothing instead&#10;of potentially crashing or showing an empty state." />
   </component>
 </project>

@@ -43,6 +43,9 @@ export async function generateMetadata({params}: { params: Promise<{ slug: strin
             description: work.brief,
             images: work.image ? [{url: work.image.url}] : [],
         },
+        icons: {icon: "/icon.png"},
+        authors: siteConfig.authors,
+        keywords: [...siteConfig.keywords, slug],
     };
 }
 
