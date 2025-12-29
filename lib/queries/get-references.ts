@@ -18,14 +18,14 @@ const GET_REFERENCES_QUERY = `
 `;
 
 interface ReferencesResponse {
-    referenceCollection: {
+    referenceCollection?: {
         items: Reference[]
     }
 }
 
-export const getReferences = async (limit = 5): Promise<Reference[]> => {
+export const getReferences = async (limit = 5): Promise<Reference[] | undefined | null> => {
     const variables = {limit: limit};
     const options = {revalidate: 3600, tags: ['references']};
     const data = await fetchContentful<ReferencesResponse>(GET_REFERENCES_QUERY, variables, options);
-    return data.referenceCollection.items;
+    return data.referenceCollection?.items;
 }

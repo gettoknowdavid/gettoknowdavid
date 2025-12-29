@@ -5,8 +5,10 @@ import {Reference} from "@/type";
 import {ReferenceItem, ReferenceItemSkeleton} from "@/app/_components/reference-item";
 import {Skeleton} from "@/components/ui/skeleton";
 
-export const References = ({data}: { data: Promise<Reference[]> }) => {
+export const References = ({data}: { data: Promise<Reference[] | undefined | null> }) => {
     const references = use(data);
+
+    if (!references || !references.length) return null;
 
     return (
         <div className='flex flex-col gap-8 lg:h-screen justify-center pb-24'>
