@@ -5,7 +5,7 @@ import type React from "react";
 import {useLayoutProvider} from "@/components/layout-context";
 import {siteConfig} from "@/config/site";
 import {cn} from "@/lib/utils";
-import {HouseSimpleIcon} from "@phosphor-icons/react/dist/icons/HouseSimple";
+import {House} from "lucide-react";
 
 export const MobileMenu: React.FC = () => {
     const {isOpen} = useLayoutProvider();
@@ -80,7 +80,7 @@ const NavigationList: React.FC = () => {
                                     )}
                                     onClick={(e) => handleNavClick(e, item.href)}
                                 >
-                                    {sectionId === 'intro' ? <HouseSimpleIcon size={20}/> : item.label}
+                                    {sectionId === 'intro' ? <House size={20}/> : item.label}
                                 </Link>
                             </li>
                         );

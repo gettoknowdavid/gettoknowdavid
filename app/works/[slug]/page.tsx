@@ -14,6 +14,7 @@ import {longDatesFormatter} from "@/lib/date-formatter";
 import {WorkLinkIcon} from "@/app/works/_components/work-link-icon";
 import {getWorks} from "@/lib/queries/get-works";
 import {getWork} from "@/lib/queries/get-work";
+import {siteConfig} from "@/config/site";
 
 
 export async function generateStaticParams() {
@@ -32,7 +33,10 @@ export async function generateMetadata({params}: { params: Promise<{ slug: strin
     }
 
     return {
-        title: work.title,
+        title: {
+            default: `${work.title} • ${siteConfig.name}`,
+            template: `%s - ${siteConfig.name}`,
+        },
         description: work.brief,
         openGraph: {
             title: work.title,

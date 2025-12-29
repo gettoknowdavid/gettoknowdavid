@@ -4,10 +4,10 @@ import Link from "next/link";
 import React from "react";
 import {siteConfig} from "@/config/site";
 import {cn} from "@/lib/utils";
-import {HouseSimpleIcon} from "@phosphor-icons/react/dist/icons/HouseSimple";
 import {motion} from "framer-motion";
 import {usePathname} from "next/navigation";
 import {useLayoutProvider} from "@/components/layout-context";
+import {House} from "lucide-react";
 
 export const Nav: React.FC = () => {
     const {navItems, socials} = siteConfig;
@@ -47,7 +47,7 @@ export const Nav: React.FC = () => {
                                         'transition duration-300'
                                     )}
                                 >
-                                    {item.href === '/' ? (<HouseSimpleIcon size={20}/>) : item.label}
+                                    {item.href === '/' ? (<House size={20}/>) : item.label}
                                 </Link>
                             </motion.li>
                         );

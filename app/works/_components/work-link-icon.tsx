@@ -1,23 +1,18 @@
 'use client';
 
-import {IconWeight} from "@phosphor-icons/react";
-import {GitBranchIcon, PackageIcon, RssSimpleIcon} from "@phosphor-icons/react/dist/ssr";
 import React from "react";
 import {WorkLinkT} from "@/type";
+import {GitBranch, Package, Rss} from "lucide-react";
 
 
-export const WorkLinkIcon = ({link, size = 14, weight = "regular"}: {
-    link: WorkLinkT;
-    size?: number;
-    weight?: IconWeight | undefined;
-}) => {
+export const WorkLinkIcon = ({link, size = 14}: { link: WorkLinkT; size?: number }) => {
     switch (link.type) {
         case "Live":
-            return <RssSimpleIcon size={size} weight={weight}/>;
+            return <Rss size={size}/>;
         case "Package":
-            return <PackageIcon size={size} weight={weight}/>;
+            return <Package size={size}/>;
         case "Code":
-            return <GitBranchIcon size={size} weight={weight}/>;
+            return <GitBranch size={size}/>;
         default:
             return <div>Nothing</div>;
     }
