@@ -113,3 +113,43 @@ export interface ReferenceCollection {
     limit: number;
     items: Reference[];
 }
+
+export interface FetchOptions {
+    revalidate?: number | false;
+    tags?: string[];
+}
+
+
+interface ContentfulResponse<T> {
+    data: T;
+    errors?: Array<{ message: string }>;
+}
+
+export interface ContentfulSys {
+    id: string;
+    publishedAt?: string;
+    firstPublishedAt?: string;
+}
+
+export interface ContentfulImage {
+    url: string;
+    alt?: string;
+    width: number;
+    height: number;
+    title?: string;
+}
+
+export interface ContentfulRichText {
+    json: any;
+    links?: {
+        assets?: {
+            block?: Array<{
+                sys: ContentfulSys;
+                url: string;
+                title?: string;
+                width?: number;
+                height?: number;
+            }>;
+        };
+    };
+}

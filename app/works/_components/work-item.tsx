@@ -6,17 +6,9 @@ import {WorkItemT} from "@/type";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {getYearRange} from "@/lib/date-formatter";
 import {Skeleton} from "@/components/ui/skeleton";
-import {cn} from "@/lib/utils";
 
-export type WorkItemProps = {
-    work: WorkItemT;
-    isLeftColumn?: boolean;
-    isLastRow?: boolean;
-}
-export  type WorkItemSkeletonProps = Pick<WorkItemProps, 'isLastRow' | 'isLeftColumn'>;
 
-export const WorkItem = (props: WorkItemProps) => {
-    const {work, isLastRow, isLeftColumn} = props;
+export const WorkItem = ({work}: { work: WorkItemT }) => {
     const range = getYearRange({start: work.startDate, end: work.endDate});
     return (
 
@@ -54,34 +46,28 @@ export const WorkItem = (props: WorkItemProps) => {
 }
 
 
-export const WorkItemSkeleton = (props: WorkItemSkeletonProps) => {
+export const WorkItemSkeleton = () => {
     return (
-        <Card
-            className={cn(
-                "grid cols-span-1 border-0 hover:bg-neutral-900 transition-all duration-700",
-                props.isLeftColumn && "border-r",
-                !props.isLastRow && "border-b",
-            )}
-        >
-            <CardHeader className="gap-0">
-                <div className="flex items-start justify-between">
-                    <Skeleton className="h-7 w-3/4"/>
-                    <Skeleton className="h-5 w-20 hidden lg:flex"/>
+        <Card className="grid cols-span-1 border-none bg-transparent m-0 p-0 gap-0">
+            <CardHeader className="gap-1 p-0 mb-6">
+                <Skeleton className="h-9 w-3/4"/>
+                <div className="space-y-1">
+                    <Skeleton className="h-4 w-64"/>
+                    <Skeleton className="h-4 w-20"/>
                 </div>
-                <Skeleton className="h-4 w-1/2 mt-2 flex lg:hidden"/>
             </CardHeader>
-            <CardContent>
-                <div className="space-y-2">
-                    <Skeleton className="h-4 w-full"/>
-                    <Skeleton className="h-4 w-5/6"/>
+            <CardContent className="p-0 mb-3">
+                <div className="space-y-1">
+                    <Skeleton className="h-5 w-full"/>
+                    <Skeleton className="h-5 w-5/6"/>
                 </div>
             </CardContent>
-            <CardFooter>
-                <div className="flex flex-row flex-wrap gap-2">
+            <CardFooter className="p-0 mb-0">
+                <div className="flex flex-row flex-wrap gap-1">
                     <Skeleton className="h-4 w-16"/>
                     <Skeleton className="h-4 w-20"/>
                     <Skeleton className="h-4 w-24"/>
-                    <Skeleton className="h-4 w-16"/>
+                    <Skeleton className="h-4 w-12"/>
                 </div>
             </CardFooter>
         </Card>
