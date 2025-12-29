@@ -5,13 +5,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: 'https://gettoknowdavid.vercel.app',
             lastModified: new Date(),
-            changeFrequency: 'yearly',
+            changeFrequency: 'weekly',
             priority: 1,
         },
         {
             url: 'https://gettoknowdavid.vercel.app/works',
             lastModified: new Date(),
-            changeFrequency: 'monthly',
+            changeFrequency: 'weekly',
             priority: 0.9,
         },
         {

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     icons: {icon: "/icon.png"},
     authors: siteConfig.authors,
     keywords: siteConfig.keywords,
+    other: siteConfig.other,
 };
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
     return (

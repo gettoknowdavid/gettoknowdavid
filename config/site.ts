@@ -43,4 +43,7 @@ export const siteConfig = {
         "Frontend Developer", "David Michael Frontend Developer", "Flutter", "David Michael Flutter",
         "Flutter Developer", "David Michael Flutter Developer", "Next.js", "Web Development", "React"
     ],
+    other: {
+        "google-site-verification": "TSlgwqJGkHwi38BuXozePLwYQnO4Qs1TJetGfDoDmaM",
+    }
 };
