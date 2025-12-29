@@ -3,13 +3,12 @@
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import {WorksList, WorksListSkeleton} from "@/app/works/_components/works-list";
-import {useSuspenseQuery} from "@apollo/client/react";
-import {GET_WORKS} from "@/app/_graphql/get-works";
-import React from "react";
+import React, {use} from "react";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Work} from "@/type";
 
-export const RecentWorks = () => {
-    const {data} = useSuspenseQuery(GET_WORKS, {variables: {limit: 5}});
-    const works = data?.workCollection.works || [];
+export const RecentWorks = ({data}: { data: Promise<Work[]> }) => {
+    const works = use(data);
 
     return (
         <div className='flex flex-col gap-8 lg:h-screen pb-24'>
@@ -21,9 +20,19 @@ export const RecentWorks = () => {
                     </Link>
                 </Button>
             </div>
-            <React.Suspense fallback={<WorksListSkeleton/>}>
-                <WorksList works={works}/>
-            </React.Suspense>
+            <WorksList works={works}/>
+        </div>
+    );
+}
+
+export const RecentWorksSkeleton = () => {
+    return (
+        <div className='flex flex-col gap-8 lg:h-screen pb-24'>
+            <div className='flex items-center justify-between gap-4'>
+                <Skeleton className="h-6 w-40"/>
+                <Skeleton className="h-3.5 w-14"/>
+            </div>
+            <WorksListSkeleton/>
         </div>
     );
 }

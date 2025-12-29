@@ -1,12 +1,14 @@
 import {Intro} from "@/app/_components/intro/intro";
 import React, {Suspense} from "react";
-import {RecentWorks} from "@/app/_components/recent-works";
+import {RecentWorks, RecentWorksSkeleton} from "@/app/_components/recent-works";
 import {References} from "@/app/_components/references";
 import {getHero} from "@/lib/queries/get-hero";
 import {IntroSkeleton} from "@/app/_components/intro/intro-skeleton";
+import {getWorks} from "@/lib/queries/get-works";
 
 export default function HomePage() {
     const hero = getHero();
+    const recentWorks = getWorks(5);
 
     return (
         <section className='grid app-margin w-full items-center grid--app-columns'>
@@ -15,7 +17,10 @@ export default function HomePage() {
                     <Intro data={hero}/>
                 </Suspense>
 
-                <RecentWorks/>
+                <Suspense fallback={<RecentWorksSkeleton/>}>
+                    <RecentWorks data={recentWorks}/>
+                </Suspense>
+
                 <References/>
             </div>
         </section>
