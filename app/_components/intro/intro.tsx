@@ -1,20 +1,15 @@
 "use client";
-
-import React, {ReactNode} from "react";
-import {useSuspenseQuery} from "@apollo/client/react";
-import {GET_HERO} from "@/app/_graphql/get-hero";
+import React, {ReactNode, use} from 'react'
 import {BLOCKS, MARKS} from "@contentful/rich-text-types";
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
-import {Persona} from "@/type";
+import {Hero, Persona} from "@/type";
 import Link from "next/link";
 import {cn} from "@/lib/utils";
 import {Card} from "@/components/ui/card";
 
 
-export const Intro = () => {
-    const {data} = useSuspenseQuery(GET_HERO, {variables: {name: 'Intro'}});
-
-    const hero = data.heroCollection.items[0];
+export const Intro = ({data}: { data: Promise<Hero> }) => {
+    const hero = use(data);
     const personas = hero.personasCollection.items;
 
     const [selectedPersonaIndex, setSelectedPersonaIndex] = React.useState<number>(0);
