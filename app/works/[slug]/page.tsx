@@ -103,8 +103,8 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
 
 
     return (
-        <div className='grid py-16'>
-            <div className="flex mb-6">
+        <div className='grid py-16 lg:py-24 relative'>
+            <div className="flex mb-4 relative lg:absolute lg:-left-14 lg:top-24">
                 <BackButton/>
             </div>
             <Card
@@ -128,14 +128,14 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
                 </CardHeader>
             </Card>
             <div className='grid md:grid-cols-12 items-start h-full'>
-                <div className="grid col-span-7 md:col-span-8">
+                <div className="grid md:col-span-8">
                     <Card className="w-full bg-background border-none gap-2">
                         {documentToReactComponents(work.description.json, options)}
                         <span className="h-5"/>
                         {documentToReactComponents(work.keyFeatures.json, keyFeatureOptions)}
                     </Card>
                 </div>
-                <div className="grid col-span-5 md:col-span-4">
+                <div className="grid md:col-span-4">
                     <Card className="w-full bg-background border-none gap-2">
                         <CardHeader className="py-0 my-0 mb-0">
                             <CardTitle className="py-0 my-0 mb-0">Project Details</CardTitle>

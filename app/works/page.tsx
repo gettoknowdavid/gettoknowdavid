@@ -19,7 +19,7 @@ export default async function WorksPage() {
 
 
     return (
-        <div className='flex flex-col gap-8 py-16'>
+        <div className='flex flex-col gap-8 py-24'>
             <div className='flex items-center gap-4'>
                 <h1 className="text-nowrap uppercase tracking-widest text-base">My Works</h1>
             </div>

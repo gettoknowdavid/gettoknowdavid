@@ -31,15 +31,12 @@ export const WorkGallery = ({items}: { items: AssetT[] }) => {
     };
 
     return (
-        <Card className="w-full bg-background border-none gap-4">
+        <Card className="w-full border-none pb-0 gap-4">
             <CardHeader>
                 <CardTitle>Gallery</CardTitle>
             </CardHeader>
-            <CardContent>
-                <ul
-                    className="grid grid-cols-1 md:grid-cols-2 gap-[1.5px]"
-                    style={{background: 'var(--border)'}}
-                >
+            <CardContent className="p-0 m-0">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-[1px]">
                     {items.map((item: AssetT, index: number) => (
                         <li
                             key={index}

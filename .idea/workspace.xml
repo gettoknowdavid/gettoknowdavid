@@ -19,17 +19,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/_graphql/get-shots.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/shots/_components/shot-item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/shots/_components/shots-list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/shots/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/recent-works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/recent-works.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/references.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/references.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/shots/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/shots/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/_components/work-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/works/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/works/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/nav.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,39 +76,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.Next.js: debug client-side.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;17102025&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/shots&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.Next.js: debug client-side.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "17102025",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/works/[slug]",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Next.js: server-side.executor": "Run",
+    "settings.editor.selected.configurable": "com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/works/[slug]" />
       <recent name="$PROJECT_DIR$/app/shots" />
       <recent name="$PROJECT_DIR$/app/inspiration" />
       <recent name="$PROJECT_DIR$/app/graphql" />
       <recent name="$PROJECT_DIR$/app/_components" />
-      <recent name="$PROJECT_DIR$/app/works" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib" />
@@ -193,7 +190,7 @@
       <workItem from="1766876466419" duration="15361000" />
       <workItem from="1766913912858" duration="2594000" />
       <workItem from="1766917195734" duration="2584000" />
-      <workItem from="1766963036107" duration="2684000" />
+      <workItem from="1766963036107" duration="6131000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -435,7 +432,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766915561366</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key updates include:&#10;- Added `app/shots` route with dedicated layout and page.&#10;- Developed `ShotsList` and `ShotItem` components for gallery display.&#10;- Integrated `GET_SHOTS` GraphQL query for data fetching.&#10;- Implemented a carousel for full-screen image viewing and navigation.&#10;- Added &quot;Load More&quot; pagination for the gallery.&#10;- Refined `ShotT` type definition with explicit image properties.&#10;- Adjusted responsive heights in `RecentWorks` and `References` for&#10;  better layout on larger screens.&#10;- Updated dialog overlay opacity and close button styling.">
+      <option name="closed" value="true" />
+      <created>1766966011463</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1766966011463</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,14 +448,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="feat(ui): Improve responsiveness and typography (17102025)&#10;&#10;Adjusted typography in the intro component, enhancing line height and&#10;font sizing for better readability on medium screens.&#10;&#10;Updated mobile menu visibility to be hidden only on large screens,&#10;making it accessible on medium screens." />
-    <MESSAGE value="```&#10;feat(ui): Enhance works section responsiveness and typography (17102025)&#10;&#10;Adjusted grid layout in WorksList to be single column on small screens&#10;and two columns on medium screens. Refined typography for" />
-    <MESSAGE value="```&#10;feat(ui): Enhance works section responsiveness and typography (17102025)&#10;&#10;Adjusted grid layout in WorksList to be single column on small screens&#10;and two columns on medium screens. Refined typography for WorkItem&#10;elements (title, role, client, brief, tools) to improve readability&#10;across devices. Updated work range placement for consistent visibility&#10;and optimized layout.&#10;```" />
-    <MESSAGE value="feat(ui): Enhance works section responsiveness and typography (17102025)&#10;&#10;Adjusted grid layout in WorksList to be single column on small screens&#10;and two columns on medium screens. Refined typography for WorkItem&#10;elements (title, role, client, brief, tools) to improve readability&#10;across devices. Updated work range placement for consistent visibility&#10;and optimized layout." />
-    <MESSAGE value="feat(ui): Enhance responsiveness and typography (17102025)&#10;&#10;Refine UI elements for improved readability and responsive behavior.&#10;&#10;- Adjusted paragraph line height from 'leading-relaxed' to 'leading-loose'" />
-    <MESSAGE value="feat(ui): Enhance responsiveness and typography (17102025)&#10;&#10;Refine UI elements for improved readability and responsive behavior.&#10;&#10;- Adjusted paragraph line height from 'leading-relaxed' to 'leading-loose'&#10;  in work detail pages to improve text legibility.&#10;- Updated responsive font sizing and weight for work detail page titles,&#10;  ensuring optimal display across various screen sizes&#10;  (text-2xl, md:text-3xl" />
-    <MESSAGE value="feat(ui): Enhance responsiveness and typography (17102025)&#10;&#10;Refine UI elements for improved readability and responsive behavior.&#10;&#10;- Adjusted paragraph line height from 'leading-relaxed' to 'leading-loose'&#10;  in work detail pages to improve text legibility.&#10;- Updated responsive font sizing and weight for work detail page titles,&#10;  ensuring optimal display across various screen sizes&#10;  (text-2xl, md:text-3xl, lg:text-6xl).&#10;- Modified header background to be transparent on large screens and solid&#10;  on smaller screens, improving visual integration." />
-    <MESSAGE value="```&#10;feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;" />
     <MESSAGE value="```&#10;feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;- Implemented `get-references.ts` GraphQL query for fetching data.&#10;- Defined `Reference` and `ReferenceCollection` types in `type.d.ts`.&#10;- Refactored component directory structure: `app/_" />
     <MESSAGE value="```&#10;feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;- Implemented `get-references.ts` GraphQL query for fetching data.&#10;- Defined `Reference` and `ReferenceCollection` types in `type.d.ts`.&#10;- Refactored component directory structure: `app/_components` to&#10;  `app/components` for `intro`, `recent-works`, and `github-contributions-graph`.&#10;- Removed the `components/footer.tsx` file.&#10;- Adjusted homepage layout for new" />
     <MESSAGE value="```&#10;feat(homepage): Introduce references section and restructure components (17102025)&#10;&#10;- Added a new &quot;References&quot; section to the homepage.&#10;- Introduced `References` and `ReferenceItem` components for display.&#10;- Implemented `get-references.ts` GraphQL query for fetching data.&#10;- Defined `Reference` and `ReferenceCollection` types in `type.d.ts`.&#10;- Refactored component directory structure: `app/_components` to&#10;  `app/components` for `intro`, `recent-works`, and `github-contributions-graph`.&#10;- Removed the `components/footer.tsx` file.&#10;- Adjusted homepage layout for new section and overall spacing.&#10;```" />
@@ -468,6 +465,14 @@
     <MESSAGE value="```&#10;refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx`&#10;to `components/apollo-wrapper.tsx`. All affected import paths were&#10;updated to reflect these changes.&#10;&#10;This refactoring improves the project's directory structure by&#10;placing shared utility functions and UI wrappers in more&#10;" />
     <MESSAGE value="```&#10;refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx`&#10;to `components/apollo-wrapper.tsx`. All affected import paths were&#10;updated to reflect these changes.&#10;&#10;This refactoring improves the project's directory structure by&#10;placing shared utility functions and UI wrappers in more&#10;appropriate, reusable locations (`lib/` and `components/`).&#10;This enhances modularity and clarity, making the codebase&#10;easier to navigate and maintain.&#10;```" />
     <MESSAGE value="refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx`&#10;to `components/apollo-wrapper.tsx`. All affected import paths were&#10;updated to reflect these changes.&#10;&#10;This refactoring improves the project's directory structure by&#10;placing shared utility functions and UI wrappers in more&#10;appropriate, reusable locations (`lib/` and `components/`).&#10;This enhances modularity and clarity, making the codebase&#10;easier to navigate and maintain." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx`&#10;to `components/apollo-wrapper.tsx`. All affected import paths were&#10;updated to reflect these changes.&#10;&#10;This refactoring improves the project's directory structure by&#10;placing shared utility functions and UI wrappers in more&#10;appropriate, reusable locations (`lib/` and `components/`).&#10;This enhances modularity and clarity, making the codebase&#10;easier to navigate and maintain." />
+    <MESSAGE value="```&#10;feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key" />
+    <MESSAGE value="```&#10;feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key updates include:&#10;- Added `app/shots` route with dedicated layout and page.&#10;- Developed `ShotsList` and `ShotItem` components for gallery display.&#10;- Integrated `GET_SHOTS` GraphQL query for" />
+    <MESSAGE value="```&#10;feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key updates include:&#10;- Added `app/shots` route with dedicated layout and page.&#10;- Developed `ShotsList` and `ShotItem` components for gallery display.&#10;- Integrated `GET_SHOTS` GraphQL query for data fetching.&#10;- Implemented a carousel for full-screen image viewing and navigation.&#10;- Added &quot;Load More&quot; pagination for the gallery.&#10;- Refined `ShotT` type definition with explicit image properties.&#10;- Adjusted" />
+    <MESSAGE value="```&#10;feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key updates include:&#10;- Added `app/shots` route with dedicated layout and page.&#10;- Developed `ShotsList` and `ShotItem` components for gallery display.&#10;- Integrated `GET_SHOTS` GraphQL query for data fetching.&#10;- Implemented a carousel for full-screen image viewing and navigation.&#10;- Added &quot;Load More&quot; pagination for the gallery.&#10;- Refined `ShotT` type definition with explicit image properties.&#10;- Adjusted responsive heights in `RecentWorks` and `References` for&#10;  better layout on larger screens.&#10;- Updated dialog overlay opacity and close button styling.&#10;```" />
+    <MESSAGE value="feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key updates include:&#10;- Added `app/shots` route with dedicated layout and page.&#10;- Developed `ShotsList` and `ShotItem` components for gallery display.&#10;- Integrated `GET_SHOTS` GraphQL query for data fetching.&#10;- Implemented a carousel for full-screen image viewing and navigation.&#10;- Added &quot;Load More&quot; pagination for the gallery.&#10;- Refined `ShotT` type definition with explicit image properties.&#10;- Adjusted responsive heights in `RecentWorks` and `References` for&#10;  better layout on larger screens.&#10;- Updated dialog overlay opacity and close button styling." />
+    <MESSAGE value="feat(ui): Refine layout and spacing across pages (17102025)&#10;&#10;Adjusted vertical padding on `/works` and `/shots` pages for improved&#10;visual balance. Refined header and navigation bar heights and" />
+    <MESSAGE value="feat(ui): Refine layout and spacing across pages (17102025)&#10;&#10;Adjusted vertical padding on `/works` and `/shots` pages for improved&#10;visual balance. Refined header and navigation bar heights and&#10;paddings for better alignment and responsiveness.&#10;&#10;Improved back button positioning on work detail pages, especially&#10;for larger screens. Removed a redundant background style from the&#10;`WorkGallery` card. Renamed `WorkLayout` to `WorksLayout`" />
+    <MESSAGE value="feat(ui): Refine layout and spacing across pages (17102025)&#10;&#10;Adjusted vertical padding on `/works` and `/shots` pages for improved&#10;visual balance. Refined header and navigation bar heights and&#10;paddings for better alignment and responsiveness.&#10;&#10;Improved back button positioning on work detail pages, especially&#10;for larger screens. Removed a redundant background style from the&#10;`WorkGallery` card. Renamed `WorkLayout` to `WorksLayout` for&#10;consistency." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ui): Refine layout and spacing across pages (17102025)&#10;&#10;Adjusted vertical padding on `/works` and `/shots` pages for improved&#10;visual balance. Refined header and navigation bar heights and&#10;paddings for better alignment and responsiveness.&#10;&#10;Improved back button positioning on work detail pages, especially&#10;for larger screens. Removed a redundant background style from the&#10;`WorkGallery` card. Renamed `WorkLayout` to `WorksLayout` for&#10;consistency." />
   </component>
 </project>

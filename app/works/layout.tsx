@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function WorkLayout({children}: Readonly<{ children: React.ReactNode }>) {
+export default function WorksLayout({children}: Readonly<{ children: React.ReactNode }>) {
     return (
         <section className='grid app-margin w-full gap-4 grid--app-columns'>
             <div className='content'>
