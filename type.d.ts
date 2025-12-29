@@ -11,8 +11,8 @@ export type ImagesCollection = {
 };
 
 
-export type ShotT = {
-    id: string;
+export interface Shot {
+    sys: { id: string };
     title: string;
     description: undefined;
     image: {

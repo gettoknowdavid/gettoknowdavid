@@ -19,9 +19,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/queries/get-references.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/references.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/references.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/shots/loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/queries/get-shots.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/shots/_components/shots-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/shots/_components/shots-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/shots/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/shots/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +87,7 @@
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/works/[slug]",
+    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/shots",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -99,8 +102,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/works/[slug]" />
       <recent name="$PROJECT_DIR$/app/shots" />
+      <recent name="$PROJECT_DIR$/app/works/[slug]" />
       <recent name="$PROJECT_DIR$/app/inspiration" />
       <recent name="$PROJECT_DIR$/app/graphql" />
       <recent name="$PROJECT_DIR$/app/_components" />
@@ -185,7 +188,7 @@
       <workItem from="1766876466419" duration="15361000" />
       <workItem from="1766913912858" duration="2594000" />
       <workItem from="1766917195734" duration="2584000" />
-      <workItem from="1766963036107" duration="11218000" />
+      <workItem from="1766963036107" duration="12489000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -467,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766973757962</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="refactor(references): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated References data fetching from client-side Apollo Client to&#10;server-side using a new `getReferences` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped References with Suspense in `app/page.tsx` and introduced&#10;`ReferencesSkeleton` to provide a smooth loading experience. The&#10;`References` component now consumes a `Promise&lt;Reference[]&gt;` directly.">
+      <option name="closed" value="true" />
+      <created>1766974380537</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1766974380537</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,9 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactor(dir-structure): Move internal modules to private directories (17102025)&#10;&#10;Relocated component files from `app/components` to `app/_components`&#10;and GraphQL query files from `app/graphql` to `app/_graphql`.&#10;&#10;This change aligns with Next.js conventions for organizing internal&#10;modules into private directories, enhancing project structure and&#10;clarity. All affected import paths have been updated accordingly." />
-    <MESSAGE value="```&#10;refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx" />
-    <MESSAGE value="```&#10;refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx`&#10;to `components/apollo-wrapper.tsx`. All affected import paths were&#10;updated to reflect these changes.&#10;&#10;This refactoring improves the project's directory structure by&#10;placing shared utility functions and UI wrappers in more&#10;" />
     <MESSAGE value="```&#10;refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx`&#10;to `components/apollo-wrapper.tsx`. All affected import paths were&#10;updated to reflect these changes.&#10;&#10;This refactoring improves the project's directory structure by&#10;placing shared utility functions and UI wrappers in more&#10;appropriate, reusable locations (`lib/` and `components/`).&#10;This enhances modularity and clarity, making the codebase&#10;easier to navigate and maintain.&#10;```" />
     <MESSAGE value="refactor(dir-structure): Relocate shared modules (17102025)&#10;&#10;Moved `app/client.ts` to `lib/client.ts` and `app/apollo-wrapper.tsx`&#10;to `components/apollo-wrapper.tsx`. All affected import paths were&#10;updated to reflect these changes.&#10;&#10;This refactoring improves the project's directory structure by&#10;placing shared utility functions and UI wrappers in more&#10;appropriate, reusable locations (`lib/` and `components/`).&#10;This enhances modularity and clarity, making the codebase&#10;easier to navigate and maintain." />
     <MESSAGE value="```&#10;feat(shots): Implement gallery and detail view (17102025)&#10;&#10;Introduced a new 'Shots' section, providing a visual gallery&#10;with a full-screen carousel for image details.&#10;&#10;Key" />
@@ -500,6 +508,9 @@
     <MESSAGE value="```&#10;refactor(recent-works): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated RecentWorks data fetching from client-side Apollo Client to&#10;server-side using a new `getWorks` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped RecentWorks with Suspense in `app/page.tsx` and introduced&#10;RecentWorksSkeleton to provide a smooth loading experience" />
     <MESSAGE value="```&#10;refactor(recent-works): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated RecentWorks data fetching from client-side Apollo Client to&#10;server-side using a new `getWorks` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped RecentWorks with Suspense in `app/page.tsx` and introduced&#10;RecentWorksSkeleton to provide a smooth loading experience.&#10;The RecentWorks component now consumes a `Promise&lt;Work[]&gt;` directly.&#10;```" />
     <MESSAGE value="refactor(recent-works): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated RecentWorks data fetching from client-side Apollo Client to&#10;server-side using a new `getWorks` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped RecentWorks with Suspense in `app/page.tsx` and introduced&#10;RecentWorksSkeleton to provide a smooth loading experience.&#10;The RecentWorks component now consumes a `Promise&lt;Work[]&gt;` directly." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(recent-works): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated RecentWorks data fetching from client-side Apollo Client to&#10;server-side using a new `getWorks` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped RecentWorks with Suspense in `app/page.tsx` and introduced&#10;RecentWorksSkeleton to provide a smooth loading experience.&#10;The RecentWorks component now consumes a `Promise&lt;Work[]&gt;` directly." />
+    <MESSAGE value="refactor(references): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated References data fetching from client-side Apollo Client to&#10;server-side using a new `getReferences` utility. This" />
+    <MESSAGE value="refactor(references): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated References data fetching from client-side Apollo Client to&#10;server-side using a new `getReferences` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped References with Suspense in `app/page.tsx` and introduced&#10;`ReferencesSkeleton` to provide a smooth loading experience. The&#10;`References` component" />
+    <MESSAGE value="refactor(references): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated References data fetching from client-side Apollo Client to&#10;server-side using a new `getReferences` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped References with Suspense in `app/page.tsx` and introduced&#10;`ReferencesSkeleton` to provide a smooth loading experience. The&#10;`References` component now consumes a `Promise&lt;Reference[]&gt;` directly." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(references): Migrate data fetching to RSC, add loading state (17102025)&#10;&#10;Migrated References data fetching from client-side Apollo Client to&#10;server-side using a new `getReferences` utility. This leverages React&#10;Server Components (RSC) for efficient data retrieval.&#10;&#10;Wrapped References with Suspense in `app/page.tsx` and introduced&#10;`ReferencesSkeleton` to provide a smooth loading experience. The&#10;`References` component now consumes a `Promise&lt;Reference[]&gt;` directly." />
   </component>
 </project>
