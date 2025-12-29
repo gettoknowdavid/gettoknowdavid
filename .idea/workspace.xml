@@ -18,10 +18,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sitemap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/sitemap.ts" afterDir="false" />
-    </list>
+    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +83,7 @@
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app/works",
+    "last_opened_file_path": "/home/gettoknowdavid/dev/projects/personal/gettoknowdavid/app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,8 +99,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/works" />
       <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/works" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/lib/queries" />
       <recent name="$PROJECT_DIR$/app/shots" />
@@ -207,7 +204,7 @@
       <workItem from="1766913912858" duration="2594000" />
       <workItem from="1766917195734" duration="2584000" />
       <workItem from="1766963036107" duration="16048000" />
-      <workItem from="1767001362589" duration="5923000" />
+      <workItem from="1767001362589" duration="6710000" />
     </task>
     <task id="LOCAL-00001" summary="feat: enhance homepage layout and styles&#10;&#10;Added a new responsive container component to optimize layout management. Updated homepage with improved structure, typography, and quick links for easier navigation. Updated color variables for better theme consistency. These changes enhance the user experience and align with the project's design goals.">
       <option name="closed" value="true" />
@@ -585,7 +582,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767006688781</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="feat(seo): Add Google Site Verification and update sitemap (17102025)&#10;&#10;Implemented Google site verification by adding the meta tag to&#10;site configuration and the main layout. A dedicated HTML file was&#10;also created for verification. Sitemap change frequencies were&#10;updated from yearly/monthly to weekly for improved indexing.">
+      <option name="closed" value="true" />
+      <created>1767007499058</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1767007499058</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,9 +598,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="```&#10;build(deps): Upgrade Next.js to 16.1.1 (17102025)&#10;&#10;Updated Next.js from version 15.5.6 to 16.1.1" />
-    <MESSAGE value="```&#10;build(deps): Upgrade Next.js to 16.1.1 (17102025)&#10;&#10;Updated Next.js from version 15.5.6 to 16.1.1. This upgrade&#10;includes necessary adjustments to `tsconfig.json` for the new&#10;`jsx: &quot;react-jsx&quot;` compiler option and updates the `pnpm-lock.yaml`&#10;file to reflect the updated dependency tree.&#10;" />
-    <MESSAGE value="```&#10;build(deps): Upgrade Next.js to 16.1.1 (17102025)&#10;&#10;Updated Next.js from version 15.5.6 to 16.1.1. This upgrade&#10;includes necessary adjustments to `tsconfig.json` for the new&#10;`jsx: &quot;react-jsx&quot;` compiler option and updates the `pnpm-lock.yaml`&#10;file to reflect the updated dependency tree.&#10;```" />
     <MESSAGE value="build(deps): Upgrade Next.js to 16.1.1 (17102025)&#10;&#10;Updated Next.js from version 15.5.6 to 16.1.1. This upgrade&#10;includes necessary adjustments to `tsconfig.json` for the new&#10;`jsx: &quot;react-jsx&quot;` compiler option and updates the `pnpm-lock.yaml`&#10;file to reflect the updated dependency tree." />
     <MESSAGE value="chore(assets): Remove unused SVG icons and images (17102025)&#10;&#10;Removed various unused SVG icons (e.g., Dart, Firebase, React, Next.js),&#10;PNG images, and the favicon from" />
     <MESSAGE value="chore(assets): Remove unused SVG icons and images (17102025)&#10;&#10;Removed various unused SVG icons (e.g., Dart, Firebase, React, Next.js),&#10;PNG images, and the favicon from the `public/` and `app/` directories.&#10;These assets were no longer needed after the migration to Lucide React&#10;and other general project cleanups.&#10;&#10;Additionally, a minor adjustment was made in `shots-list." />
@@ -618,6 +620,9 @@
     <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New `opengraph-image.alt.txt` and `twitter-image.alt.txt` files&#10;  provide descriptive alt text for social sharing images on main and&#10;  works pages.&#10;&#10;These changes aim to boost SEO performance and" />
     <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New `opengraph-image.alt.txt` and `twitter-image.alt.txt` files&#10;  provide descriptive alt text for social sharing images on main and&#10;  works pages.&#10;&#10;These changes aim to boost SEO performance and provide a better&#10;experience for users on mobile devices.&#10;```" />
     <MESSAGE value="feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New `opengraph-image.alt.txt` and `twitter-image.alt.txt` files&#10;  provide descriptive alt text for social sharing images on main and&#10;  works pages.&#10;&#10;These changes aim to boost SEO performance and provide a better&#10;experience for users on mobile devices." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New `opengraph-image.alt.txt` and `twitter-image.alt.txt` files&#10;  provide descriptive alt text for social sharing images on main and&#10;  works pages.&#10;&#10;These changes aim to boost SEO performance and provide a better&#10;experience for users on mobile devices." />
+    <MESSAGE value="```&#10;feat(seo): Add Google Site Verification and update sitemap (17102025)&#10;&#10;Implemented Google site verification by adding the meta tag to&#10;site configuration and the main layout. A dedicated HTML file was&#10;" />
+    <MESSAGE value="```&#10;feat(seo): Add Google Site Verification and update sitemap (17102025)&#10;&#10;Implemented Google site verification by adding the meta tag to&#10;site configuration and the main layout. A dedicated HTML file was&#10;also created for verification. Sitemap change frequencies were&#10;updated from yearly/monthly to weekly for improved indexing.&#10;```" />
+    <MESSAGE value="feat(seo): Add Google Site Verification and update sitemap (17102025)&#10;&#10;Implemented Google site verification by adding the meta tag to&#10;site configuration and the main layout. A dedicated HTML file was&#10;also created for verification. Sitemap change frequencies were&#10;updated from yearly/monthly to weekly for improved indexing." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(seo): Add Google Site Verification and update sitemap (17102025)&#10;&#10;Implemented Google site verification by adding the meta tag to&#10;site configuration and the main layout. A dedicated HTML file was&#10;also created for verification. Sitemap change frequencies were&#10;updated from yearly/monthly to weekly for improved indexing." />
   </component>
 </project>
