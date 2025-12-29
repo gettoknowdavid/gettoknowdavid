@@ -1,9 +1,8 @@
-import {Intro} from "@/app/_components/intro/intro";
+import {Intro, IntroSkeleton} from "@/app/_components/intro";
 import React, {Suspense} from "react";
 import {RecentWorks, RecentWorksSkeleton} from "@/app/_components/recent-works";
 import {References, ReferencesSkeleton} from "@/app/_components/references";
 import {getHero} from "@/lib/queries/get-hero";
-import {IntroSkeleton} from "@/app/_components/intro/intro-skeleton";
 import {getWorks} from "@/lib/queries/get-works";
 import {getReferences} from "@/lib/queries/get-references";
 

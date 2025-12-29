@@ -2,19 +2,12 @@
 
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
-import {ShotT} from "@/type";
+import {Shot} from "@/type";
 import Image from "next/image";
-import {cn} from "@/lib/utils";
 
-export const ShotItem = ({shot}: { shot: ShotT }) => {
+export const ShotItem = ({shot}: { shot: Shot }) => {
     return (
-        <Card
-            className={cn(
-                "rounded-none bg-transparent shadow-none border-0 p-0 m-0 relative group overflow-hidden",
-                "transition duration-700 ease-in-out",
-                // isSelected ? "scale-150 z-50" : "scale-100",
-            )}
-        >
+        <Card className="rounded-none bg-transparent shadow-none border-0 p-0 m-0 relative group overflow-hidden">
             <CardContent className="p-0 m-0 relative">
                 <Image
                     src={shot.image.url}

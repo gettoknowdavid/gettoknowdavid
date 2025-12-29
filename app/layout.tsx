@@ -7,7 +7,6 @@ import {LayoutWrapper} from "@/components/layout-wrapper";
 import {neue} from "@/config/fonts";
 import {siteConfig} from "@/config/site";
 import {Nav} from "@/components/nav";
-import {ApolloWrapper} from "@/components/apollo-wrapper";
 import {WarpBackground} from "@/components/warp-background";
 
 export const metadata: Metadata = {
@@ -24,16 +23,14 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
     return (
         <html lang='en'>
         <body className={`${neue.className} dark text-foreground font-sans antialiased p-0 m-0`}>
-        <ApolloWrapper>
-            <LayoutProvider>
-                <WarpBackground/>
-                <Header/>
-                <Nav/>
-                <LayoutWrapper>
-                    {children}
-                </LayoutWrapper>
-            </LayoutProvider>
-        </ApolloWrapper>
+        <LayoutProvider>
+            <WarpBackground/>
+            <Header/>
+            <Nav/>
+            <LayoutWrapper>
+                {children}
+            </LayoutWrapper>
+        </LayoutProvider>
         </body>
         </html>
     );

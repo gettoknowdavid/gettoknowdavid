@@ -73,7 +73,7 @@ export const Nav: React.FC = () => {
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className={cn(
-                                        "text-xs uppercase tracking-wider hover:opacity-50",
+                                        "text-[13px] uppercase tracking-wider hover:opacity-50 font-normal",
                                         "transition duration-300",
                                     )}
                                 >
