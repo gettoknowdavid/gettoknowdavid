@@ -8,6 +8,7 @@ import {neue} from "@/config/fonts";
 import {siteConfig} from "@/config/site";
 import {Nav} from "@/components/nav";
 import {WarpBackground} from "@/components/warp-background";
+import {SpeedInsights} from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
     title: {
@@ -29,6 +30,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
             <Nav/>
             <LayoutWrapper>
                 {children}
+                <SpeedInsights/>
             </LayoutWrapper>
         </LayoutProvider>
         </body>
