@@ -1,5 +1,4 @@
 // noinspection JSUnusedGlobalSymbols
-
 "use client";
 
 import React, {useEffect, useState} from "react";
@@ -55,7 +54,7 @@ export const ShotsList = ({initialShots}: ShotsClientProps) => {
     useEffect(() => {
         if (!api) return;
         api.scrollTo(selectedIndex);
-    }, [api, selectedIndex, open]);
+    }, [api, selectedIndex, carouselOpen]);
 
     const handleImageClick = (index: number) => {
         setSelectedIndex(index);
