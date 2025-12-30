@@ -3,7 +3,7 @@
 import type * as React from "react";
 import type {ReactNode} from "react";
 import {useLayoutProvider} from "@/components/layout-context";
-import {cn} from "@/lib/utils";
+import {cn} from "@/utils/utils";
 
 interface LayoutWrapper {
     children: ReactNode;

@@ -1,28 +1,15 @@
-export function formatDateVerbose(dateString: string): string {
-    const date = new Date(dateString);
+export const longDatesFormatter = (value: string): string => {
+    const dateFormatter = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: "short"});
+    return dateFormatter.format(Date.parse(value));
+}
 
-    const formatter = new Intl.DateTimeFormat("en-US", {
-        weekday: "long",
-        month: "long",
-        day: "numeric",
-        year: "numeric",
-    });
-
-    // Format like "Wednesday, October 22, 2025"
-    const formatted = formatter.format(date);
-
-    // Extract the day number for the ordinal suffix
-    const day = date.getDate();
-
-    const getOrdinal = (n: number): string => {
-        const s = ["th", "st", "nd", "rd"];
-        const v = n % 100;
-        return s[(v - 20) % 10] || s[v] || s[0];
-    };
-
-    // Replace the numeric day with its ordinal form
-    return formatted.replace(
-        new RegExp(`\\b${day}\\b`),
-        `${day}${getOrdinal(day)}`
-    );
+export const getYearRange = ({start, end}: { start: string, end: string }) => {
+    const dateFormatter = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: "short"});
+    const startYear = dateFormatter.format(Date.parse(start));
+    const endYear = dateFormatter.format(Date.parse(end));
+    if (startYear === endYear) {
+        return endYear;
+    } else {
+        return `${startYear} — ${endYear}`
+    }
 }
