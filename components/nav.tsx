@@ -1,18 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, {use} from "react";
 import {siteConfig} from "@/config/site";
-import {cn} from "@/lib/utils";
+import {cn} from "@/utils/utils";
 import {motion} from "framer-motion";
 import {usePathname} from "next/navigation";
 import {useLayoutProvider} from "@/components/layout-context";
 import {House} from "lucide-react";
+import {Contact} from "@/type";
+import Image from "next/image";
 
-export const Nav: React.FC = () => {
-    const {navItems, socials} = siteConfig;
+export const Nav = ({contactLinks}: { contactLinks: Promise<Contact[]> }) => {
+    const {navItems} = siteConfig;
     const pathname = usePathname();
     const {introDone} = useLayoutProvider();
+
+    const contacts = use(contactLinks);
 
     if (!introDone) return null;
 
@@ -55,11 +59,12 @@ export const Nav: React.FC = () => {
                 </ul>
             </div>
             <div>
-                <ul className='h-full w-full flex flex-col flex-wrap gap-1'>
-                    {socials.map((social, index) => {
+                <ul className='h-full w-full flex flex-col flex-wrap gap-7'>
+                    {contacts.map((contact, index) => {
                         return (
                             <motion.li
-                                key={social.name}
+                                title={contact.label}
+                                key={contact.sys.id}
                                 initial={{opacity: 0, x: -10}}
                                 animate={{opacity: 1, x: 0}}
                                 transition={{
@@ -67,18 +72,16 @@ export const Nav: React.FC = () => {
                                     ease: [0.22, 1, 0.36, 1],
                                     delay: 1.0 + (index * 0.1)
                                 }}
+                                className="relative h-6 w-6"
                             >
-                                <a
-                                    href={social.url}
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    className={cn(
-                                        "text-[13px] uppercase tracking-wider hover:opacity-50 font-normal",
-                                        "transition duration-300",
-                                    )}
-                                >
-                                    {social.name}
-                                </a>
+                                <Link href={contact.link} target='_blank' rel='noopener noreferrer'>
+                                    <Image
+                                        src={contact.icon.url}
+                                        alt={contact.icon.title}
+                                        fill
+                                        className="object-contain invert hover:scale-150 transition-all duration-300"
+                                    />
+                                </Link>
                             </motion.li>
                         );
                     })}

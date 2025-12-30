@@ -1,15 +1,7 @@
 export type AssetT = {
     url: string;
-    alt: string;
+    title: string;
 };
-
-export type ImagesCollection = {
-    total: number;
-    skip: number;
-    limit: number;
-    items: AssetT[];
-};
-
 
 export interface Shot {
     sys: { id: string };
@@ -22,13 +14,6 @@ export interface Shot {
         width: number;
     };
 }
-
-export type ShotsCollection = {
-    total: number;
-    skip: number;
-    limit: number;
-    shots: ShotT[];
-};
 
 export interface WorkLinkT {
     sys: { id: string };
@@ -92,26 +77,12 @@ export interface Hero {
     }
 }
 
-export interface HeroCollection {
-    total: number;
-    skip: number;
-    limit: number;
-    items: Hero[];
-}
-
 export interface Reference {
     sys: { id: string };
     refereeName: string;
     refereeRole: string;
     refereeLink: string;
     content: string;
-}
-
-export interface ReferenceCollection {
-    total: number;
-    skip: number;
-    limit: number;
-    items: Reference[];
 }
 
 export interface FetchOptions {
@@ -123,4 +94,11 @@ export interface FetchOptions {
 interface ContentfulResponse<T> {
     data: T;
     errors?: Array<{ message: string }>;
+}
+
+export interface Contact {
+    sys: { id: string };
+    label: string;
+    link: string;
+    icon: AssetT,
 }

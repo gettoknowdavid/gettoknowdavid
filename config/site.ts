@@ -1,4 +1,5 @@
 // export type SiteConfig = typeof siteConfig;
+// noinspection SpellCheckingInspection
 
 export const siteConfig = {
     name: "David Michael II",
@@ -18,19 +19,6 @@ export const siteConfig = {
             label: "Shots",
             href: "/shots",
         },
-    ],
-    socials: [
-        {name: "Email", url: "mailto:knowdavidmichael@gmail.com"},
-        {
-            name: "Resume",
-            url: "https://docs.google.com/document/d/1-Th-fpxwfs3BNSMYCPbhHQs9928ZaSZq/edit?usp=sharing&ouid=117559779269054315517&rtpof=true&sd=true",
-        },
-        {name: "GitHub", url: "https://github.com/gettoknowdavid"},
-        {name: "X", url: "https://x.com/gettoknowdavid"},
-        {name: "WhatsApp", url: "https://wa.link/ei1r9w"},
-        {name: "Instagram", url: "https://instagram.com/gettoknowdavid"},
-        // {name: "LinkedIn", url: "https://linkedin.com/in/gettoknowdave"},
-        // {name: "Discord", url: "https://discord.gg/gettoknowdavid"},
     ],
     quickLinks: [
         {name: "Fun facts about me", href: "/about"},

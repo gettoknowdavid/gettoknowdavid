@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import {WorkItemT} from "@/type";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {getYearRange} from "@/lib/date-formatter";
+import {getYearRange} from "@/utils/date-formatter";
 import {Skeleton} from "@/components/ui/skeleton";
 
 
@@ -13,17 +13,18 @@ export const WorkItem = ({work}: { work: WorkItemT }) => {
     return (
 
         <Card className="grid cols-span-1 border-none bg-transparent m-0 p-0 gap-0">
-            <CardHeader className="gap-1 p-0 mb-6">
-                <CardTitle className="flex items-start justify-between text-xl md:text-2xl lg:text-3xl font-normal">
+            <CardHeader className="gap-0 p-0 mb-4">
+                <CardTitle
+                    className="flex items-start justify-between text-xl md:text-2xl lg:text-3xl font-normal max-md:underline">
                     <Link href={`/works/${work.slug}`} className="hover:underline transition-all duration-700">
                         {work.title}
                     </Link>
                 </CardTitle>
                 <div>
-                    <p className="text-xs md:text-sm text-neutral-300">
+                    <p className="text-xs md:text-sm text-neutral-400">
                         {`${work.role} — ${work.client}`}
                     </p>
-                    <p className="text-xs md:text-sm text-neutral-300 mb-0">{range}</p>
+                    <p className="text-xs md:text-sm text-neutral-400 mb-0">{range}</p>
                 </div>
             </CardHeader>
             <CardContent className="max-md:text-sm tracking-wide p-0 mb-2">{work.brief}</CardContent>
@@ -49,7 +50,7 @@ export const WorkItem = ({work}: { work: WorkItemT }) => {
 export const WorkItemSkeleton = () => {
     return (
         <Card className="grid cols-span-1 border-none bg-transparent m-0 p-0 gap-0">
-            <CardHeader className="gap-1 p-0 mb-6">
+            <CardHeader className="gap-0 p-0 mb-4">
                 <Skeleton className="h-9 w-3/4"/>
                 <div className="space-y-1">
                     <Skeleton className="h-4 w-64"/>

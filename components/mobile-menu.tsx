@@ -4,10 +4,12 @@ import Link from "next/link";
 import type React from "react";
 import {useLayoutProvider} from "@/components/layout-context";
 import {siteConfig} from "@/config/site";
-import {cn} from "@/lib/utils";
+import {cn} from "@/utils/utils";
 import {House} from "lucide-react";
+import {Contact} from "@/type";
+import {usePathname} from "next/navigation";
 
-export const MobileMenu: React.FC = () => {
+export const MobileMenu = ({contacts}: { contacts: Contact[] }) => {
     const {isOpen} = useLayoutProvider();
 
     return (
@@ -19,43 +21,23 @@ export const MobileMenu: React.FC = () => {
         >
             <div className='flex flex-col h-full w-full p-4'>
                 <NavigationList/>
-                <SocialLinksList/>
+                <ContactsLinkList contacts={contacts}/>
             </div>
         </div>
     );
 };
 
 const NavigationList: React.FC = () => {
-
-    const {closeMenu, isOpen, scrollToSection, activeSection} = useLayoutProvider();
+    const pathname = usePathname();
+    const {closeMenu, isOpen} = useLayoutProvider();
     const navItems = siteConfig.navItems;
-
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        // Only prevent default for hash links
-        if (href.startsWith('#')) {
-            e.preventDefault();
-            const sectionId = href.substring(1);
-
-            closeMenu(); // Close menu first
-
-            // Small delay for menu close animation
-            setTimeout(() => {
-                scrollToSection(sectionId);
-            }, 300);
-        } else {
-            // For regular routes, just close menu and let Next.js handle navigation
-            closeMenu();
-        }
-    };
 
     return (
         <div className='flex h-full w-full justify-end lg:absolute'>
             <nav className='flex-grow flex justify-end items-start'>
-                <ul className='flex flex-col gap-4 font-medium uppercase text-right mt-14'>
+                <ul className='flex flex-col gap-6 text-base tracking-wide font-regular uppercase text-right mt-16'>
                     {navItems.map((item, index) => {
-                        const sectionId = item.href.startsWith('#') ? item.href.substring(1) : item.href;
-                        const isHashLink = item.href.startsWith('#');
-                        const isActive = isHashLink && activeSection === sectionId;
+                        const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
 
 
                         // Item Fade & Translate: Control individual item animation
@@ -78,9 +60,9 @@ const NavigationList: React.FC = () => {
                                         'hover:text-accent transition-colors duration-300',
                                         isActive && 'text-accent'
                                     )}
-                                    onClick={(e) => handleNavClick(e, item.href)}
+                                    onClick={closeMenu}
                                 >
-                                    {sectionId === 'intro' ? <House size={20}/> : item.label}
+                                    {item.href === '/' ? <House size={20}/> : item.label}
                                 </Link>
                             </li>
                         );
@@ -91,13 +73,12 @@ const NavigationList: React.FC = () => {
     );
 };
 
-const SocialLinksList: React.FC = () => {
+const ContactsLinkList = ({contacts}: { contacts: Contact[] }) => {
     const {isOpen, closeMenu} = useLayoutProvider();
-    const socials = siteConfig.socials;
     return (
         <div className='flex justify-start pb-4'>
-            <ul className='flex flex-row flex-wrap gap-3 text-sm text-foreground opacity-80'>
-                {socials.map((social) => {
+            <ul className='flex flex-col flex-wrap gap-3 text-base text-foreground opacity-80'>
+                {contacts.map((contact) => {
                     // Item Fade & Translate: Control individual item animation
                     const itemTranslate = isOpen
                         ? "translate-y-0 opacity-100"
@@ -105,19 +86,19 @@ const SocialLinksList: React.FC = () => {
 
                     return (
                         <li
-                            key={social.name}
+                            key={contact.sys.id}
                             className={`transition-all duration-300 ease-out ${itemTranslate}`}
                             style={{transitionDelay: isOpen ? "500ms" : "0ms"}}
                         >
-                            <a
-                                href={social.url}
+                            <Link
+                                href={contact.link}
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='hover:text-white transition-colors duration-300'
                                 onClick={closeMenu}
                             >
-                                {social.name}
-                            </a>
+                                {contact.label}
+                            </Link>
                         </li>
                     );
                 })}

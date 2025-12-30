@@ -25,7 +25,7 @@ const GET_WORK_QUERY = `
         endDate
         image {
           url
-          alt: title
+          title
         }
         linksCollection {
           items {

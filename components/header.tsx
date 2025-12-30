@@ -1,13 +1,15 @@
 "use client";
 
-import type React from "react";
+import React, {use} from "react";
 import {useLayoutProvider} from "@/components/layout-context";
 import {MobileMenu} from "@/components/mobile-menu";
 import {Hamburger} from "@/components/ui/hamburger";
 import {Logo} from "@/components/ui/logo";
 import {motion} from "framer-motion";
+import {Contact} from "@/type";
 
-export const Header: React.FC = () => {
+export const Header = ({contactLinks}: { contactLinks: Promise<Contact[]> }) => {
+    const contacts = use(contactLinks);
     const {isOpen, introDone, toggleMenu} = useLayoutProvider();
 
     if (!introDone) return null;
@@ -31,7 +33,7 @@ export const Header: React.FC = () => {
                     </div>
                 </div>
             </motion.header>
-            <MobileMenu/>
+            <MobileMenu contacts={contacts}/>
         </>
     );
 };

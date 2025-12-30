@@ -45,7 +45,7 @@ export const WorkGallery = ({items}: { items: AssetT[] }) => {
                         >
                             <Image
                                 src={item.url}
-                                alt={item.alt || index.toString()}
+                                alt={item.title || index.toString()}
                                 fill
                                 className="object-cover"
                                 sizes="(max-width: 768px) 100vw, 50vw"

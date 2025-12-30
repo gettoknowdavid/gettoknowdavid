@@ -10,8 +10,6 @@
 }
 
 @theme inline {
-    --font-sans: var(--font-satoshi);
-    --font-inter: var(--font-inter);
     --font-neue: var(--font-neue);
     --color-background: var(--background);
     --color-foreground: var(--foreground);
@@ -151,6 +149,10 @@
         @apply border-border outline-ring/50;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         @apply bg-background text-foreground;
         font-size: 18px;
@@ -231,178 +233,19 @@
     grid-auto-rows: minmax(0, 1fr);
     grid-template-columns: repeat(36, minmax(0, 1fr));
 
-    /*@media (max-width: 767px) {*/
-    /*    display: flex;*/
-    /*    gap: 1rem;*/
-    /*    flex-direction: column;*/
-    /*}*/
-    /*@media (min-width: 768px) {*/
-    /*    display: grid;*/
-    /*}*/
-    /*@media (max-width: 1023px) {*/
-    /*    grid-template-columns: repeat(6, minmax(0, 1fr));*/
-    /*}*/
+    @media (max-width: 767px) {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    @media (min-width: 768px) {
+        display: grid;
+    }
     @media (max-width: 1023px) {
-        /*grid-template-columns: repeat(6, minmax(0, 1fr));*/
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    @media (max-width: 1023px) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
     }
 
-}
-
-@layer components {
-    /*.section {*/
-    /*    @apply app-margin;*/
-    /*    !*@apply grid--app-columns;*!*/
-    /*    display: grid;*/
-    /*    width: 100%;*/
-    /*    grid-template-columns: repeat(3, minmax(0, 1fr));*/
-    /*}*/
-    .grid-four {
-        display: grid;
-        grid-template-columns: var(--grid--app-columns-4);
-        gap: var(--grid--app-gutter);
-    }
-
-    .grid-eight {
-        display: grid;
-        grid-template-columns: var(--grid--app-columns-8);
-        gap: var(--grid--app-gutter);
-    }
-
-
-    .gradient-border-card {
-        @apply relative;
-        @apply rounded-xl border border-neutral-800 bg-zinc-700;
-
-        isolation: isolate;
-    }
-
-
-    /* Styles for the pseudo-element that creates the gradient "border" */
-    .gradient-border-card::before {
-        @apply absolute inset-0 z-[-1];
-        @apply rounded-xl;
-
-        content: '';
-        mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
-        padding: 4px;
-        mix-blend-mode: soft-light;
-        background-image: linear-gradient(to bottom, theme('colors.neutral.200') 0%, transparent 100%);
-    }
-
-    .dashboard-card {
-        background-color: var(--card);
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        border-radius: 1.5rem;
-    }
-
-    .dashboard-card-content {
-        border: 1px solid var(--color-red-950);
-        background-color: hsla(0, 26%, 7%, 0.3);
-        border-radius: inherit;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        inset: 1px;
-        z-index: 2;
-    }
-
-    .card-tag {
-        z-index: 10;
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-        border-radius: calc(infinity * 1px);
-        border: 1px solid var(--color-red-950);
-        background-color: var(--background);
-        flex-shrink: 1;
-        padding-block: 0.5rem;
-        padding-left: 0.75rem;
-        padding-right: 1rem;
-        /*position: absolute;*/
-        /*left: 1rem;*/
-        /*top: 1rem;*/
-        font-size: 0.875rem;
-        color: var(--foreground);
-    }
-
-    .scrollbar::-webkit-scrollbar {
-        height: 4px;
-        background: transparent;
-    }
-
-    .scrollbar::-webkit-scrollbar-thumb {
-        height: 2px;
-        background-color: rgba(3, 7, 18, 0.4);
-        border-radius: 9999px;
-    }
-
-    .scrollbar:hover::-webkit-scrollbar-thumb {
-        background-color: var(--color-border);
-    }
-
-    .scrollbar::-webkit-scrollbar-thumb:active {
-        background-color: var(--color-border);
-    }
-
-    .tech-stack-component {
-        @apply motion-reduce:animate-none;
-        display: flex;
-        flex-direction: row;
-        flex-shrink: 0;
-        gap: var(--grid--app-columns);
-        height: 3rem;
-        width: 3rem;
-    }
-
-    /* Add to your globals.css or tailwind.css */
-    /* Custom Scrollbar - Default */
-    .custom-scrollbar::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 4px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 255, 255, 0.3);
-    }
-
-    /* For Firefox */
-    .custom-scrollbar {
-        scrollbar-width: thin;
-        scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
-    }
-
-    /* Enhanced scrollbar for code blocks - VS Code/Android Studio style */
-    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-    }
-
-    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-track {
-        background: #1e1e1e;
-        border-radius: 4px;
-    }
-
-    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-thumb {
-        background: #424242;
-        border-radius: 4px;
-        border: 2px solid #1e1e1e;
-    }
-
-    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-thumb:hover {
-        background: #4e4e4e;
-    }
-
-    .custom-scrollbar:has(.font-mono)::-webkit-scrollbar-corner {
-        background: #1e1e1e;
-    }
 }

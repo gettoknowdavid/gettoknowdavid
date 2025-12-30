@@ -10,7 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {BackButton} from "@/components/back-button";
 import {WorkGallery} from "@/app/works/_components/work-gallery";
-import {longDatesFormatter} from "@/lib/date-formatter";
+import {longDatesFormatter} from "@/utils/date-formatter";
 import {WorkLinkIcon} from "@/app/works/_components/work-link-icon";
 import {getWorks} from "@/lib/queries/get-works";
 import {getWork} from "@/lib/queries/get-work";
@@ -127,7 +127,7 @@ export default async function WorkDetails({params}: { params: Promise<{ slug: st
                     <div className="absolute inset-0 z-0">
                         <Image
                             src={work.image.url}
-                            alt={work.image.alt || work.title}
+                            alt={work.image.title || work.title}
                             fill
                             className="object-cover"
                             priority

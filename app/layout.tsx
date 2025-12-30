@@ -9,6 +9,7 @@ import {siteConfig} from "@/config/site";
 import {Nav} from "@/components/nav";
 import {WarpBackground} from "@/components/warp-background";
 import {SpeedInsights} from "@vercel/speed-insights/next";
+import {getContacts} from "@/lib/queries/get-contacts";
 
 export const metadata: Metadata = {
     title: {
@@ -21,14 +22,17 @@ export const metadata: Metadata = {
     keywords: siteConfig.keywords,
     other: siteConfig.other,
 };
+
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
+    const contactLinks = getContacts();
+
     return (
         <html lang='en'>
         <body className={`${neue.className} dark text-foreground font-sans antialiased p-0 m-0`}>
         <LayoutProvider>
             <WarpBackground/>
-            <Header/>
-            <Nav/>
+            <Header contactLinks={contactLinks}/>
+            <Nav contactLinks={contactLinks}/>
             <LayoutWrapper>
                 {children}
                 <SpeedInsights/>
