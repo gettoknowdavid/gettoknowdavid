@@ -18,46 +18,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="feat: Integrate dynamic contact links from Contentful&#10;&#10;Migrated social and contact links from hardcoded config to be&#10;dynamically fetched from Contentful. This includes new queries&#10;(`get-contact`, `get-contacts`) and a dedicated `Contacts` component.&#10;&#10;- Integrated dynamic contacts into `Header`, `Nav`, `MobileMenu`.&#10;- Added &quot;Get my Resume&quot; link to `Recent Works` and `Works` pages.&#10;- Updated `type.d.ts` with `Contact` interface and `AssetT` property.&#10;&#10;refactor: Simplify layout context and component structure&#10;&#10;- Removed complex scroll tracking and section management from&#10;  `LayoutContext`, leveraging native smooth scrolling.&#10;- Restructured `ReferenceItem` component, moving it into `references.tsx`.&#10;- Applied minor UI adjustments for consistency and responsiveness.&#10;&#10;build: Add `dev-new` script to package.json">
-      <change afterPath="$PROJECT_DIR$/app/_components/contacts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/queries/get-contact.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/queries/get-contacts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-client.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/intro.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/recent-works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/recent-works.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/reference-item.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_components/references.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_components/references.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+    <list default="true" id="838a5055-c740-4966-8182-00bffa861d94" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/works/_components/work-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-gallery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/works/_components/work-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/work-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/works/_components/works-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/_components/works-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/works/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/works/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout-context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout-wrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mobile-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mobile-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/carousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/hamburger.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/hamburger.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/skeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/skeleton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/spinner.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/fonts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/fonts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/site.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/site.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/date-formatter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/fake-projects.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/queries/get-work.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/queries/get-work.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/type.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/date-formatter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/date-formatter.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,23 +208,7 @@
       <workItem from="1766917195734" duration="2584000" />
       <workItem from="1766963036107" duration="16048000" />
       <workItem from="1767001362589" duration="11345000" />
-      <workItem from="1767060540187" duration="5247000" />
-    </task>
-    <task id="LOCAL-00003" summary="feat: restructure homepage and navigation&#10;&#10;- Split homepage into modular sections for better readability and scalability (Intro, Work, Blog, Shots, Contact).&#10;- Replaced the old navigation list with a new dedicated Nav component.&#10;- Implemented smooth scrolling for hash links.&#10;- Added Framer Motion animations for enhanced scrolling experience.&#10;- Updated layout context to support dynamic section registrations.">
-      <option name="closed" value="true" />
-      <created>1760987732921</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1760987732921</updated>
-    </task>
-    <task id="LOCAL-00004" summary="feat: Add call-to-action to home page intro section">
-      <option name="closed" value="true" />
-      <created>1761000893336</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1761000893336</updated>
+      <workItem from="1767060540187" duration="5558000" />
     </task>
     <task id="LOCAL-00005" summary="feat: Redesign homepage layout with new grid and components (17102025)&#10;&#10;Introduces a comprehensive redesign of the homepage, implementing a new&#10;CSS grid system and refactored components for a more structured and&#10;visually appealing layout.&#10;&#10;- Implemented a CSS grid-based layout system with new utility classes&#10;  (`section`, `content`, `app-margin`, `dashboard-card`) in globals.css.&#10;- Consolidated and removed deprecated section components (BlogSection,&#10;  ContactSection, ShotsSection).&#10;- Refactored IntroSection to Intro and ProjectsSection to RecentProjects,&#10;  integrating them with the new grid for a dashboard-like overview.&#10;- Migrated icon library from `lucide-react` to `@phosphor-icons/react`,&#10;  updating relevant files and Next.js configuration for optimization.&#10;- Aligned header and navigation components with the new margin variables&#10;  and grid structure for consistent spacing.">
       <option name="closed" value="true" />
@@ -640,7 +586,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767008810204</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="feat: Integrate dynamic contact links from Contentful&#10;&#10;Migrated social and contact links from hardcoded config to be&#10;dynamically fetched from Contentful. This includes new queries&#10;(`get-contact`, `get-contacts`) and a dedicated `Contacts` component.&#10;&#10;- Integrated dynamic contacts into `Header`, `Nav`, `MobileMenu`.&#10;- Added &quot;Get my Resume&quot; link to `Recent Works` and `Works` pages.&#10;- Updated `type.d.ts` with `Contact` interface and `AssetT` property.&#10;&#10;refactor: Simplify layout context and component structure&#10;&#10;- Removed complex scroll tracking and section management from&#10;  `LayoutContext`, leveraging native smooth scrolling.&#10;- Restructured `ReferenceItem` component, moving it into `references.tsx`.&#10;- Applied minor UI adjustments for consistency and responsiveness.&#10;&#10;build: Add `dev-new` script to package.json">
+      <option name="closed" value="true" />
+      <created>1767065870891</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1767065870892</updated>
+    </task>
+    <task id="LOCAL-00053" summary="refactor(cleanup): Remove unused files and restructure utilities (master)&#10;&#10;Remove unused Apollo Client type declaration.&#10;Delete `lib/fake-projects.ts` and `components/ui/spinner.tsx`.&#10;Consolidate date formatting utilities into `utils/date-formatter.ts`.&#10;Rename `lib/utils.ts` to `utils/utils.ts` for better organization.&#10;Update import paths across components to reflect the new `utils` location.&#10;Remove unused font configurations (`satoshi`, `inter`).&#10;Delete redundant UI components: CardDescription, CardAction,&#10;DialogTrigger, DialogClose, DialogFooter, DialogDescription.">
+      <option name="closed" value="true" />
+      <created>1767065912835</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1767065912835</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,10 +610,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="```&#10;fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned," />
-    <MESSAGE value="```&#10;fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned, rendering nothing instead&#10;of potentially crashing or showing an empty state.&#10;```" />
-    <MESSAGE value="fix(references): Handle undefined data gracefully (17102025)&#10;&#10;The `getReferences` query now supports `undefined` or `null` returns&#10;for `referenceCollection` and its `items`. This prevents potential&#10;runtime errors when data is not available from Contentful.&#10;&#10;The `References` component was updated to reflect this change in&#10;the data prop type. A guard clause was added to gracefully handle&#10;cases where no references are returned, rendering nothing instead&#10;of potentially crashing or showing an empty state." />
-    <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:" />
     <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors" />
     <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New" />
     <MESSAGE value="```&#10;feat(seo): Implement comprehensive metadata and PWA support (17102025)&#10;&#10;This commit introduces significant enhancements for SEO and Progressive&#10;Web App (PWA) capabilities across the site.&#10;&#10;Key additions include:&#10;- New `robots.ts` and `sitemap.ts` files for improved search engine&#10;  indexing and discoverability.&#10;- A new `manifest.ts` file to enable PWA features.&#10;- Global `authors` and `keywords` metadata added to `config/site.ts`.&#10;- `authors` and `keywords` are now applied to root, shots, and works&#10;  layouts, as well as dynamic work pages.&#10;- New `opengraph-image.alt.txt` and `twitter-image.alt.txt` files&#10;  provide descriptive alt text for social sharing images on main and&#10;  works pages.&#10;&#10;These changes aim to boost SEO performance and" />
@@ -673,6 +631,10 @@
     <MESSAGE value="```&#10;feat: Integrate dynamic contact links from Contentful&#10;&#10;Migrated social and contact links from hardcoded config to be&#10;dynamically fetched from Contentful. This includes new queries&#10;(`get-contact`, `get-contacts`) and a dedicated `Contacts` component.&#10;&#10;- Integrated dynamic contacts into `Header`, `Nav`, `MobileMenu`.&#10;- Added &quot;Get my Resume&quot; link to `Recent Works` and `Works` pages.&#10;- Updated `type.d.ts` with `Contact` interface and `AssetT` property.&#10;&#10;refactor: Simplify layout context and component structure&#10;&#10;- Removed complex scroll tracking and section management from&#10;  `LayoutContext`, leveraging native smooth scrolling.&#10;-" />
     <MESSAGE value="```&#10;feat: Integrate dynamic contact links from Contentful&#10;&#10;Migrated social and contact links from hardcoded config to be&#10;dynamically fetched from Contentful. This includes new queries&#10;(`get-contact`, `get-contacts`) and a dedicated `Contacts` component.&#10;&#10;- Integrated dynamic contacts into `Header`, `Nav`, `MobileMenu`.&#10;- Added &quot;Get my Resume&quot; link to `Recent Works` and `Works` pages.&#10;- Updated `type.d.ts` with `Contact` interface and `AssetT` property.&#10;&#10;refactor: Simplify layout context and component structure&#10;&#10;- Removed complex scroll tracking and section management from&#10;  `LayoutContext`, leveraging native smooth scrolling.&#10;- Restructured `ReferenceItem` component, moving it into `references.tsx`.&#10;- Applied minor UI adjustments for consistency and responsiveness.&#10;&#10;build: Add `dev-new` script to package.json&#10;```" />
     <MESSAGE value="feat: Integrate dynamic contact links from Contentful&#10;&#10;Migrated social and contact links from hardcoded config to be&#10;dynamically fetched from Contentful. This includes new queries&#10;(`get-contact`, `get-contacts`) and a dedicated `Contacts` component.&#10;&#10;- Integrated dynamic contacts into `Header`, `Nav`, `MobileMenu`.&#10;- Added &quot;Get my Resume&quot; link to `Recent Works` and `Works` pages.&#10;- Updated `type.d.ts` with `Contact` interface and `AssetT` property.&#10;&#10;refactor: Simplify layout context and component structure&#10;&#10;- Removed complex scroll tracking and section management from&#10;  `LayoutContext`, leveraging native smooth scrolling.&#10;- Restructured `ReferenceItem` component, moving it into `references.tsx`.&#10;- Applied minor UI adjustments for consistency and responsiveness.&#10;&#10;build: Add `dev-new` script to package.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Integrate dynamic contact links from Contentful&#10;&#10;Migrated social and contact links from hardcoded config to be&#10;dynamically fetched from Contentful. This includes new queries&#10;(`get-contact`, `get-contacts`) and a dedicated `Contacts` component.&#10;&#10;- Integrated dynamic contacts into `Header`, `Nav`, `MobileMenu`.&#10;- Added &quot;Get my Resume&quot; link to `Recent Works` and `Works` pages.&#10;- Updated `type.d.ts` with `Contact` interface and `AssetT` property.&#10;&#10;refactor: Simplify layout context and component structure&#10;&#10;- Removed complex scroll tracking and section management from&#10;  `LayoutContext`, leveraging native smooth scrolling.&#10;- Restructured `ReferenceItem` component, moving it into `references.tsx`.&#10;- Applied minor UI adjustments for consistency and responsiveness.&#10;&#10;build: Add `dev-new` script to package.json" />
+    <MESSAGE value="```&#10;refactor(cleanup): Remove unused files and restructure utilities (master)&#10;&#10;Remove unused Apollo Client type declaration.&#10;Delete `lib/fake-projects.ts` and `components/ui/spinner.tsx`.&#10;Consolidate" />
+    <MESSAGE value="```&#10;refactor(cleanup): Remove unused files and restructure utilities (master)&#10;&#10;Remove unused Apollo Client type declaration.&#10;Delete `lib/fake-projects.ts` and `components/ui/spinner.tsx`.&#10;Consolidate date formatting utilities into `utils/date-formatter.ts`.&#10;Rename `lib/utils.ts` to `utils/utils.ts` for better organization.&#10;Update import paths across components to reflect the new `utils` location" />
+    <MESSAGE value="```&#10;refactor(cleanup): Remove unused files and restructure utilities (master)&#10;&#10;Remove unused Apollo Client type declaration.&#10;Delete `lib/fake-projects.ts` and `components/ui/spinner.tsx`.&#10;Consolidate date formatting utilities into `utils/date-formatter.ts`.&#10;Rename `lib/utils.ts` to `utils/utils.ts` for better organization.&#10;Update import paths across components to reflect the new `utils` location.&#10;Remove unused font configurations (`satoshi`, `inter`).&#10;Delete redundant UI components: CardDescription, CardAction,&#10;DialogTrigger, DialogClose, DialogFooter, DialogDescription.&#10;```" />
+    <MESSAGE value="refactor(cleanup): Remove unused files and restructure utilities (master)&#10;&#10;Remove unused Apollo Client type declaration.&#10;Delete `lib/fake-projects.ts` and `components/ui/spinner.tsx`.&#10;Consolidate date formatting utilities into `utils/date-formatter.ts`.&#10;Rename `lib/utils.ts` to `utils/utils.ts` for better organization.&#10;Update import paths across components to reflect the new `utils` location.&#10;Remove unused font configurations (`satoshi`, `inter`).&#10;Delete redundant UI components: CardDescription, CardAction,&#10;DialogTrigger, DialogClose, DialogFooter, DialogDescription." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(cleanup): Remove unused files and restructure utilities (master)&#10;&#10;Remove unused Apollo Client type declaration.&#10;Delete `lib/fake-projects.ts` and `components/ui/spinner.tsx`.&#10;Consolidate date formatting utilities into `utils/date-formatter.ts`.&#10;Rename `lib/utils.ts` to `utils/utils.ts` for better organization.&#10;Update import paths across components to reflect the new `utils` location.&#10;Remove unused font configurations (`satoshi`, `inter`).&#10;Delete redundant UI components: CardDescription, CardAction,&#10;DialogTrigger, DialogClose, DialogFooter, DialogDescription." />
   </component>
 </project>

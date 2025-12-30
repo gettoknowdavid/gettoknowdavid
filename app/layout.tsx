@@ -35,9 +35,9 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
             <Nav contactLinks={contactLinks}/>
             <LayoutWrapper>
                 {children}
-                <SpeedInsights/>
             </LayoutWrapper>
         </LayoutProvider>
+        <SpeedInsights/>
         </body>
         </html>
     );
